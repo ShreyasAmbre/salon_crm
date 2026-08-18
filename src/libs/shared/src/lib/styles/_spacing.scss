@@ -1,0 +1,143 @@
+// Logical padding utilities
+.l-ps-1 {
+  padding-inline-start: 0.25rem;
+}
+.l-ps-2 {
+  padding-inline-start: 0.5rem;
+}
+.l-ps-3 {
+  padding-inline-start: 1rem;
+}
+.l-ps-4 {
+  padding-inline-start: 1.5rem;
+}
+.l-ps-5 {
+  padding-inline-start: 3rem;
+}
+
+.l-pe-1 {
+  padding-inline-end: 0.25rem;
+}
+.l-pe-2 {
+  padding-inline-end: 0.5rem;
+}
+.l-pe-3 {
+  padding-inline-end: 1rem;
+}
+.l-pe-4 {
+  padding-inline-end: 1.5rem;
+}
+.l-pe-5 {
+  padding-inline-end: 3rem;
+}
+
+.l-pt-1 {
+  padding-block-start: 0.25rem;
+}
+.l-pt-2 {
+  padding-block-start: 0.5rem;
+}
+.l-pt-3 {
+  padding-block-start: 1rem;
+}
+.l-pt-4 {
+  padding-block-start: 1.5rem;
+}
+.l-pt-5 {
+  padding-block-start: 3rem;
+}
+
+.l-pb-1 {
+  padding-block-end: 0.25rem;
+}
+.l-pb-2 {
+  padding-block-end: 0.5rem;
+}
+.l-pb-3 {
+  padding-block-end: 1rem;
+}
+.l-pb-4 {
+  padding-block-end: 1.5rem;
+}
+.l-pb-5 {
+  padding-block-end: 3rem;
+}
+
+// Logical margin utilities
+.l-ms-1 {
+  margin-inline-start: 0.25rem;
+}
+.l-ms-2 {
+  margin-inline-start: 0.5rem;
+}
+.l-ms-3 {
+  margin-inline-start: 1rem;
+}
+.l-ms-4 {
+  margin-inline-start: 1.5rem;
+}
+.l-ms-5 {
+  margin-inline-start: 3rem;
+}
+
+.l-me-1 {
+  margin-inline-end: 0.25rem;
+}
+.l-me-2 {
+  margin-inline-end: 0.5rem;
+}
+.l-me-3 {
+  margin-inline-end: 1rem;
+}
+.l-me-4 {
+  margin-inline-end: 1.5rem;
+}
+.l-me-5 {
+  margin-inline-end: 3rem;
+}
+
+.l-mt-1 {
+  margin-block-start: 0.25rem;
+}
+.l-mt-2 {
+  margin-block-start: 0.5rem;
+}
+.l-mt-3 {
+  margin-block-start: 1rem;
+}
+.l-mt-4 {
+  margin-block-start: 1.5rem;
+}
+.l-mt-5 {
+  margin-block-start: 3rem;
+}
+
+.l-mb-1 {
+  margin-block-end: 0.25rem;
+}
+.l-mb-2 {
+  margin-block-end: 0.5rem;
+}
+.l-mb-3 {
+  margin-block-end: 1rem;
+}
+.l-mb-4 {
+  margin-block-end: 1.5rem;
+}
+.l-mb-5 {
+  margin-block-end: 3rem;
+}
+
+// Auto margin classes
+.l-ms-auto {
+  margin-inline-start: auto;
+}
+.l-me-auto {
+  margin-inline-end: auto;
+}
+.l-mt-auto {
+  margin-block-start: auto;
+}
+.l-mb-auto {
+  margin-block-end: auto;
+}

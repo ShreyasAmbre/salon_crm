@@ -1,0 +1,157 @@
+label.form-label {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+// Note: Used for forms
+input.form-control,
+textarea.form-control,
+select.form-select {
+  background-color: var(--surface-page);
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+input.form-control::placeholder {
+  color: var(--text-primary);
+}
+
+// Note: This take the height according to row value provided
+textarea.form-control {
+  height: auto !important;
+}
+
+input.form-control:disabled {
+  background-color: var(--disabled-input-color);
+  opacity: 1;
+}
+
+// Note: Used for filter inputs
+input.form-control.filter-input {
+  background-color: #ffffff;
+  border-radius: 0.357rem;
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--black-dark-color);
+}
+
+input.form-control.filter-input::placeholder {
+  color: var(--primary);
+}
+
+input.form-control.filter-input:focus-visible {
+  // border: 1px solid #DFEAF2;
+  outline: none;
+}
+
+// Below Input Styling is for TanStack Table Checkbox only
+.tanstack-table,
+.tanstack-border-table {
+  input.form-check-input {
+    height: 18px;
+    width: 18px;
+
+    &:checked {
+      background-color: var(--primary);
+      border: none;
+    }
+
+    &:disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.5;
+      pointer-events: auto;
+    }
+  }
+}
+
+// Hide all but the first error message
+.invalid-feedback > .ngx-control-error-single {
+  &:not(:first-of-type) {
+    display: none;
+  }
+}
+
+// Hide the asterisk if the field is not required, for labelAsterisk directive
+.label-asterisk-hide {
+  .label-asterisk {
+    display: none;
+  }
+}
+
+.form-check-input.form-check-bg-white {
+  --bs-form-check-bg: #fff;
+}
+
+// Custom radio butto styling
+.custom-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.custom-radio input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-mark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+.custom-radio input:checked + .radio-mark {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.custom-radio input:checked + .radio-mark::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+// Checkbox Styling
+.custom-check .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.custom-check .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.custom-check {
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .form-check-label {
+    margin-inline-start: 10px;
+  }
+}
+

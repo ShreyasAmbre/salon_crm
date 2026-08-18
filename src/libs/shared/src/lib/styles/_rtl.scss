@@ -1,0 +1,42 @@
+[dir='rtl'] {
+  .footer::before {
+    transform: scaleX(-1);
+  }
+
+  ngb-datepicker {
+    direction: rtl;
+
+    ngb-datepicker-navigation-select select.form-select {
+      background-position: left 0.25rem center;
+    }
+
+    .ngb-dp-arrow-next .ngb-dp-navigation-chevron {
+      transform: rotate(-135deg);
+      margin: 0 0 0 0.25rem;
+    }
+
+    .ngb-dp-arrow-prev .ngb-dp-navigation-chevron {
+      transform: rotate(45deg);
+      margin: 0 0.25rem 0 0;
+    }
+  }
+
+  .accordion-button::after {
+    margin-inline-start: auto;
+    margin-left: unset;
+  }
+
+  // logical bootstrap overrides
+  .l-form-check {
+    &.form-check {
+      padding-left: unset;
+      padding-inline-start: 1.5em;
+
+      .form-check-input {
+        float: inline-start;
+        margin-left: unset;
+        margin-inline-start: -1.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fs-5x {
+  font-size: 1.75rem; // 22px - Mostly used for Main Header Title
+}
+
+.fs-6x {
+  font-size: 1.125rem; // 18px - Mostly used for Sub Section Tilte or Form Title
+}
+
+.fs-7 {
+  font-size: 1rem !important; // 16px - Mostly used Input Label Title
+}
+
+.fs-8 {
+  font-size: 0.85rem; // 14px
+}
+
+.fs-9 {
+  font-size: 0.75rem; // 12px
+}
+
+// Note: Currently used in Confirm Modal
+.text-success {
+  color: var(--dark-blue-color);
+}
+
+.text-danger {
+  color: var(--accent-color-red);
+}
