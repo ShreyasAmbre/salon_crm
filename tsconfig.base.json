@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "strict": true,
     "paths": {
-      "@salon-crm/core": ["./src/libs/core/src/index.ts"]
+      "@salon-crm/core": ["./src/libs/core/src/index.ts"],
+      "@salon-crm/shared": ["./src/libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
