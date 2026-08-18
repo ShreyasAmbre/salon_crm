@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'bootstrap/scss/bootstrap';
+
+// @use '@ng-select/ng-select/themes/default.theme.css';
+
+@use 'libs/shared/src/lib/styles/main.scss';
+
+/* Importing Flag Icon CSS file for Country Code Dropdown. */
+// @import 'flag-icons/css/flag-icons.min.css';
