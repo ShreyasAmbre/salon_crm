@@ -1,0 +1,26 @@
+.asset-creation {
+  .accordion {
+    .accordion-item {
+      border: 0;
+
+      .accordion-header {
+        .accordion-button {
+          height: 48px;
+          padding: 8px 16px;
+          border-radius: 5px;
+          background-color: #f3f6f9;
+          color: #3f4254;
+          font-family: var(--font-primary);
+          font-weight: 400;
+          font-size: 14px;
+          box-shadow: none;
+        }
+      }
+
+      .accordion-body {
+        padding-top: 2%;
+        padding-inline: 5px;
+      }
+    }
+  }
+}

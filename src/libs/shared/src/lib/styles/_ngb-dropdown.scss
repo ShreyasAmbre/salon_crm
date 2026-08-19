@@ -1,0 +1,48 @@
+// Glocal NGB Dropdown Styling
+.dropdown-menu {
+  .dropdown-item.active {
+    background-color: var(--secondary-color);
+  }
+}
+
+// NGB Language Dropdown Styling
+.lang-toggle-wrapper {
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+}
+
+.notification-wrapper {
+  .dropdown-menu {
+    border: 0;
+    padding: 0px;
+  }
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+}
+
+// NGB Action Dropdown Styling
+.table-actions-wrapper {
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .fa-icon-color {
+    color: #7e8299;
+  }
+}
+
+// NGB Action Dropdown Cell in All Table Action Column Styling
+.table-action-dropdown-wrapper {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+.table-action-dropdown {
+  .dropdown-item:active,
+  .dropdown-item.active{
+    background-color: transparent;
+  }
+}
+

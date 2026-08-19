@@ -1,0 +1,9 @@
+.custom-offcanvas-sidenav {
+  width: 260px !important;
+  overflow: auto;
+}
+
+/* Customize the open/close effect */
+.custom-offcanvas-sidenav.show {
+  transition: transform 0.3s ease-in-out;
+}
