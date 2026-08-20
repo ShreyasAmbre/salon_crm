@@ -16,7 +16,10 @@
     "strict": true,
     "paths": {
       "@salon-crm/core": ["./src/libs/core/src/index.ts"],
-      "@salon-crm/shared": ["./src/libs/shared/src/index.ts"]
+      "@salon-crm/shared": ["./src/libs/shared/src/index.ts"],
+      "@dm-inventory-admin/features/feature-shell": [
+        "./src/libs/features/feature-shell/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -29,16 +29,51 @@ export default [
         'error',
         {
           type: 'attribute',
-          prefix: 'app',
+          prefix: 'shared',
           style: 'camelCase',
         },
       ],
-      '@angular-eslint/component-selector': [
+      // '@angular-eslint/component-selector': [
+      //   'error',
+      //   {
+      //     type: 'element',
+      //     prefix: 'app',
+      //     style: 'kebab-case',
+      //   },
+      // ],
+      '@nx/enforce-module-boundaries': [
         'error',
         {
-          type: 'element',
-          prefix: 'app',
-          style: 'kebab-case',
+          enforceBuildableLibDependency: true,
+          depConstraints: [
+            {
+              sourceTag: '*',
+              onlyDependOnLibsWithTags: ['*'],
+            },
+            // Note: Core: can only depend on Core
+            {
+              sourceTag: 'scope:core',
+              onlyDependOnLibsWithTags: ['scope:core'],
+            },
+            // Note: Shared: can depend on Core & Shared
+            {
+              sourceTag: 'scope:shared',
+              onlyDependOnLibsWithTags: ['scope:core', 'scope:shared'],
+            },
+            // Note: Feature: can depend on Shared & Core
+            {
+              sourceTag: 'type:feature',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:core'],
+            },
+            // Note: feature-shell: can be depended on all features as it has all routes
+            {
+              sourceTag: 'type:shell',
+              onlyDependOnLibsWithTags: [
+                'scope:shared',
+                'scope:core',
+              ],
+            },
+          ],
         },
       ],
     },
