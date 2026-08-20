@@ -2,10 +2,18 @@
   "common": {
     "submit": "सबमिट करा"
   },
+  "header": {
+    "defaultHeader": "स्वागत आहे",
+    "dashboard": "डॅशबोर्ड",
+    "userProfile": "वापरकर्ता प्रोफाइल",
+    "changePassword": "पासवर्ड बदला",
+    "logout": "लॉगआउट"
+  },
   "pageTitle": {
     "defaultTitle": "सलून CRM",
     "auth": "प्रमाणीकरण",
     "login": "लॉगिन",
+    "dashboard": "{{ header.dashboard }}",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -28,5 +36,8 @@
     "titleForgotPassword": "पासवर्ड विसरलात",
     "sendOtp": "OTP पाठवा",
     "enterEmail": "ईमेल प्रविष्ट करा"
+  },
+  "footer": {
+    "footerText": "{{ _value }} Salon CRM सर्व हक्क राखीव"
   }
 }

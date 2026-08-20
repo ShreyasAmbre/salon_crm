@@ -1,0 +1,41 @@
+.main-header-wrapper {
+  // height: 80px;
+
+  .page-title {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: var(--blue-dark-color);
+  }
+
+  .cta-header-wrapper {
+    .lang-toggle-wrapper {
+      height: 50px;
+      width: 50px;
+      background-color: var(--body-bg);
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 50%;
+    }
+
+    .profile-container {
+      button[ngbDropdownToggle]::after {
+        display: none !important;
+      }
+
+      .profile-img-wrapper {
+        height: 50px;
+        width: 50px;
+        background-color: var(--surface-page);
+        border-radius: 50%;
+
+        .profile-img {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

@@ -2,10 +2,18 @@
   "common": {
     "submit": "Submit"
   },
+  "header": {
+    "defaultHeader": "Welcome",
+    "dashboard": "Dashboard",
+    "userProfile": "User Profile",
+    "changePassword": "Change Password",
+    "logout": "Logout"
+  },
   "pageTitle": {
     "defaultTitle": "Salon CRM",
     "auth": "Auth",
     "login": "Login",
+    "dashboard": "{{ header.dashboard }}",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -28,5 +36,8 @@
     "titleForgotPassword": "Forgot Password",
     "sendOtp": "Send OTP",
     "enterEmail": "Enter email"
+  },
+  "footer": {
+    "footerText": "{{ _value }} Salon CRM Rights Reserved"
   }
 }

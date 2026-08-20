@@ -1,1 +1,117 @@
-<p>main-header works!</p>
+<ng-container *transloco="let t; prefix: 'header'">
+  <nav class="navbar navbar-expand-lg bg-white main-header-wrapper">
+    <div class="container-fluid px-4 py-2">
+      @let is_navbar_collapsed = isNavbarCollapsed();
+      <div class="d-flex align-items-center justify-content-between w-100">
+        @let header_title = headerTitle();
+        <div class="d-flex align-items-center justify-content-between">
+          <button
+            class="btn p-0 d-xl-none"
+            type="button"
+            (click)="toggleSideNav()"
+            [attr.aria-expanded]="!is_navbar_collapsed"
+            aria-controls="navbarNav"
+            aria-label="Toggle navigation"
+          >
+            <fa-icon [icon]="['fas', 'ellipsis-vertical']" />
+          </button>
+          @if (header_title) {
+            <span class="page-title">{{ t(header_title) }}</span>
+          } @else {
+            <!-- TODO: Replace the hard code User into userName from localStorage  -->
+            <span class="page-title">{{ t('defaultHeader') }}, User</span>
+          }
+        </div>
+        <div class="cta-header-wrapper d-none d-md-flex align-items-center gap-4">
+          <div class="lang-toggle-wrapper">
+            <shared-lang-toggle />
+          </div>
+          <div
+            class="profile-container position-relative pointer"
+            role="button"
+            tabindex="0"
+            (click)="toggleProfileVisibility()"
+            ngbDropdown
+            placement="bottom-end"
+          >
+            <button
+              ngbDropdownToggle
+              type="button"
+              class="btn p-0 border-0 bg-transparent shadow-none"
+              aria-label="Language selector"
+            >
+              <div class="profile-img-wrapper">
+                <img src="assets/images/avatar.png" alt="profile-img" class="profile-img" />
+              </div>
+            </button>
+
+            <div
+              ngbDropdownMenu
+              class="my-1 bg-white profile-collapse"
+              [class]="isRtl() ? 'dropdown-menu-start' : 'dropdown-menu-end'"
+            >
+              <button ngbDropdownItem (click)="goToUserProfile()">{{ t('userProfile') }}</button>
+              <button ngbDropdownItem (click)="goToChangePassword()">{{ t('changePassword') }}</button>
+              <button ngbDropdownItem (click)="logout()">{{ t('logout') }}</button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn d-md-none p-0"
+          type="button"
+          (click)="collapse.toggle()"
+          [attr.aria-expanded]="!is_navbar_collapsed"
+          aria-controls="navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <fa-icon [icon]="['fas', 'bars']" class="p-0 m-0" />
+        </button>
+      </div>
+
+      <div
+        #collapse="ngbCollapse"
+        [ngbCollapse]="is_navbar_collapsed"
+        (ngbCollapseChange)="toggleNavbarVisibility()"
+        id="navbarNav"
+        class="d-md-none w-100"
+      >
+        <div class="collapse-container py-2">
+          <div class="cta-header-wrapper d-flex flex-wrap align-items-center justify-content-center gap-4">
+            <div class="lang-toggle-wrapper">
+              <shared-lang-toggle />
+            </div>
+            <div
+              class="profile-container position-relative pointer"
+              role="button"
+              tabindex="0"
+              (click)="toggleProfileVisibility()"
+              ngbDropdown
+              placement="bottom-end"
+            >
+              <button
+                ngbDropdownToggle
+                type="button"
+                class="btn p-0 border-0 bg-transparent shadow-none"
+                aria-label="Language selector"
+              >
+                <div class="profile-img-wrapper">
+                  <img src="assets/images/avatar.png" alt="profile-img" class="profile-img" />
+                </div>
+              </button>
+
+              <div
+                ngbDropdownMenu
+                class="my-1 bg-white profile-collapse"
+                [class]="isRtl() ? 'dropdown-menu-start' : 'dropdown-menu-end'"
+              >
+                <button ngbDropdownItem (click)="goToUserProfile()">{{ t('userProfile') }}</button>
+                <button ngbDropdownItem (click)="goToChangePassword()">{{ t('changePassword') }}</button>
+                <button ngbDropdownItem (click)="logout()">{{ t('logout') }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</ng-container>

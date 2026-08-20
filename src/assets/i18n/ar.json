@@ -2,10 +2,18 @@
   "common": {
     "submit": "إرسال"
   },
+  "header": {
+    "defaultHeader": "مرحبًا",
+    "dashboard": "لوحة التحكم",
+    "userProfile": "الملف الشخصي للمستخدم",
+    "changePassword": "تغيير كلمة المرور",
+    "logout": "تسجيل الخروج"
+  },
   "pageTitle": {
     "defaultTitle": "نظام إدارة الصالون",
     "auth": "المصادقة",
     "login": "تسجيل الدخول",
+    "dashboard": "{{ header.dashboard }}",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
     "auth": {
@@ -24,5 +32,8 @@
     "titleForgotPassword": "نسيت كلمة المرور",
     "sendOtp": "إرسال رمز التحقق",
     "enterEmail": "أدخل البريد الإلكتروني"
+  },
+  "footer": {
+    "footerText": "{{ _value }} حقوق نظام إدارة الصالون محفوظة"
   }
 }

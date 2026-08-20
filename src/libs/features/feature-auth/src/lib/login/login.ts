@@ -4,10 +4,12 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router } from '@angular/router';
+import { Footer } from '@salon-crm/shared';
+
 
 @Component({
   selector: 'auth-login',
-  imports: [TranslocoModule, CommonModule, ReactiveFormsModule, FormsModule, FontAwesomeModule],
+  imports: [TranslocoModule, CommonModule, ReactiveFormsModule, FormsModule, FontAwesomeModule, Footer],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })

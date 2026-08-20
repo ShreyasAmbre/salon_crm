@@ -1,0 +1,34 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-sidenav {
+  width: 260px;
+  flex-shrink: 0; // never allow side nav to shrink
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0; // It makes this flex allow to be smaller then its content
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0; // It makes this flex allow to be smaller then its content
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.app-router-content {
+  flex: 1;
+}
+
+.app-footer {
+  min-height: auto;
+}

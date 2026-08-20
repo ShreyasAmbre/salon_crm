@@ -1,1 +1,18 @@
-<p>main-layout works!</p>
+<div class="container-fluid p-0">
+  <div class="app-layout">
+    <shell-main-side-nav class="app-sidenav d-none d-xl-flex" />
+
+    <div class="app-main">
+      <shell-main-header [headerTitle]="headerTitle()" />
+
+      <main class="app-content">
+        <div class="app-router-content">
+          <router-outlet />
+        </div>
+        <div class="app-footer">
+          <shared-footer />
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
