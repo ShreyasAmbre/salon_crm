@@ -5,9 +5,14 @@
   "header": {
     "defaultHeader": "مرحبًا",
     "dashboard": "لوحة التحكم",
+    "customers": "العملاء",
     "userProfile": "الملف الشخصي للمستخدم",
     "changePassword": "تغيير كلمة المرور",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "subMenus": {
+      "subMenuAllCustomers": "جميع العملاء",
+      "subMenuCustomerHistory": "سجل العملاء"
+    }
   },
   "pageTitle": {
     "defaultTitle": "نظام إدارة الصالون",

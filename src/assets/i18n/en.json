@@ -5,9 +5,14 @@
   "header": {
     "defaultHeader": "Welcome",
     "dashboard": "Dashboard",
+    "customers": "Customers",
     "userProfile": "User Profile",
     "changePassword": "Change Password",
-    "logout": "Logout"
+    "logout": "Logout",
+    "subMenus": {
+      "subMenuAllCustomers": "All Customer",
+      "subMenuCustomerHistory": "Customer History"
+    }
   },
   "pageTitle": {
     "defaultTitle": "Salon CRM",

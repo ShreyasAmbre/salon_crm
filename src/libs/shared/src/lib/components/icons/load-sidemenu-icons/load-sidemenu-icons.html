@@ -1,0 +1,11 @@
+@switch (iconName()) {
+  @case ('DASHBOARD') {
+    <shared-home-svg [isActiveMenu]="isActiveMenu()" />
+  }
+  @case ('CUSTOMERS') {
+    <shared-customer-svg [isActiveMenu]="isActiveMenu()" />
+  }
+  @default {
+    <span>Icon not found</span>
+  }
+}

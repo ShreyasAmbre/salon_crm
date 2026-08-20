@@ -5,9 +5,14 @@
   "header": {
     "defaultHeader": "स्वागत आहे",
     "dashboard": "डॅशबोर्ड",
+    "customers": "ग्राहक",
     "userProfile": "वापरकर्ता प्रोफाइल",
     "changePassword": "पासवर्ड बदला",
-    "logout": "लॉगआउट"
+    "logout": "लॉगआउट",
+    "subMenus": {
+      "subMenuAllCustomers": "सर्व ग्राहक",
+      "subMenuCustomerHistory": "ग्राहकांचा इतिहास"
+    }
   },
   "pageTitle": {
     "defaultTitle": "सलून CRM",
