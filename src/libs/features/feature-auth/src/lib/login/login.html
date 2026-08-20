@@ -1,0 +1,66 @@
+<ng-container *transloco="let t; prefix: 'auth'">
+  <div class="row">
+    <div class="col-12 col-md-6 m-auto">
+      <!-- <div class="d-flex flex-column gap-sm-5 w-100"> -->
+      <div class="d-flex flex-column gap-sm-4 w-100">
+        <img src="assets/images/salon_crm_logo.png" alt="Salon CRM logo" class="logo-size m-auto" />
+        <form [formGroup]="form">
+          <div class="mb-4">
+            <label class="form-label" for="email">{{ t('email') }}</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+              [placeholder]="t('exampleEmail')"
+              formControlName="email"
+            />
+            <div class="invalid-feedback d-block">
+              @if (f.email.touched || f.email.dirty) {
+                @if (f.email.hasError('required')) {
+                  {{ 'formError.required' | transloco }}
+                }
+                @if (f.email.hasError('email')) {
+                  {{ 'formError.email' | transloco }}
+                }
+              }
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label" for="password">{{ t('password') }}</label>
+            <div class="position-relative">
+              <input
+                id="password"
+                name="password"
+                [type]="isPasswordVisible() ? 'text' : 'password'"
+                class="form-control password-input"
+                [placeholder]="t('passwordGuide')"
+                formControlName="password"
+              />
+              @if (isPasswordVisible()) {
+                <fa-icon [icon]="['far', 'eye-slash']" (click)="togglePasswordVisibility()" />
+              } @else {
+                <fa-icon [icon]="['far', 'eye']" (click)="togglePasswordVisibility()" />
+              }
+            </div>
+            <div class="invalid-feedback d-block">
+              @if (f.password.touched || f.password.dirty) {
+                @if (f.password.hasError('required')) {
+                  {{ 'formError.required' | transloco }}
+                }
+              }
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mb-4" role="button" tabindex="0" (click)="goToForgotPassword()">
+            <a class="link-primary text-decoration-none">{{ t('forgotPassword') }}</a>
+          </div>
+          <button class="btn btn-primary w-100" type="button" (click)="onSubmit()" [disabled]="form.invalid">
+            <span>{{ t('signIn') }}</span>
+          </button>
+        </form>
+        <!-- <shared-footer /> -->
+      </div>
+    </div>
+  </div>
+</ng-container>

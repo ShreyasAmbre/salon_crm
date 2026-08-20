@@ -1,0 +1,70 @@
+.language-toggle {
+  position: relative;
+  width: 80px;
+  user-select: none;
+}
+
+.language-switch-checkbox {
+  display: none;
+}
+
+.language-switch-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  background-color: #f5f6fb;
+  border-radius: 24px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #cfced1;
+}
+
+.language-option {
+  z-index: 1;
+  font-size: 14px;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding-inline-start: 2px;
+}
+
+.language-switch {
+  position: absolute;
+  inset-inline-start: 2px;
+  width: 36px;
+  height: 36px;
+  background-color: #898bff;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.language-switch-checkbox:checked + .language-switch-label .language-switch {
+  inset-inline-start: calc(100% - 36px - 2px);
+}
+
+.language-switch-checkbox:checked + .language-switch-label {
+  .language-option:first-child {
+    color: #1c1c1c;
+  }
+
+  .language-option:last-child {
+    color: #fff;
+  }
+}
+
+.language-switch-checkbox:not(:checked) + .language-switch-label {
+  .language-option:first-child {
+    color: #fff;
+  }
+
+  .language-option:last-child {
+    color: #1c1c1c;
+  }
+}

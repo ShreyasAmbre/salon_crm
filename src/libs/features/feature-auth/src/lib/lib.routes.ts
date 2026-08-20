@@ -1,4 +1,9 @@
 import { Route } from '@angular/router';
-import { FeatureAuth } from './feature-auth/feature-auth';
+import { Login } from './login/login';
+import { ForgotPassword } from './forgot-password/forgot-password';
 
-export const featureAuthRoutes: Route[] = [{ path: '', component: FeatureAuth }];
+export const featureAuthRoutes: Route[] = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: Login },
+  { path: 'forgot-password', component: ForgotPassword, title: 'pageTitle.forgotPassword' },
+];

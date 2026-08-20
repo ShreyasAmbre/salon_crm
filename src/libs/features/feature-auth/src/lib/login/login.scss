@@ -1,0 +1,44 @@
+.logo-size {
+  width: 15rem;
+  height: 11.25rem;
+}
+
+form {
+  label {
+    color: var(--text-primary);
+  }
+
+  input {
+    background-color: #f7fbff !important;
+    border-radius: 0.75rem;
+    padding: 13.6px;
+    font-size: 1rem;
+    // border: 1px solid #d4d7e3;
+    border: 1px solid var(--border);
+
+    ::placeholder {
+      color: var(--text-secondary)
+    }
+
+    &.password-input {
+      padding-inline-end: 2.5rem;
+
+      & + fa-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-end: 1rem;
+        color: var(--text-secondary);
+      }
+    }
+  }
+}
+
+.btn-primary {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: var(--primary);
+  border: none;
+}
