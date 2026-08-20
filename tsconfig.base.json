@@ -17,8 +17,10 @@
     "paths": {
       "@salon-crm/core": ["./src/libs/core/src/index.ts"],
       "@salon-crm/shared": ["./src/libs/shared/src/index.ts"],
-      "@dm-inventory-admin/features/feature-shell": [
-        "./src/libs/features/feature-shell/src/index.ts"
+      "@salon-crm/features/feature-shell": ["./src/libs/features/feature-shell/src/index.ts"],
+      "@salon-crm/features/feature-auth": ["./src/libs/features/feature-auth/src/index.ts"],
+      "@salon-crm/features/feature-dashboard": [
+        "./src/libs/features/feature-dashboard/src/index.ts"
       ]
     }
   },

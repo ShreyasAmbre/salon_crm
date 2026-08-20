@@ -68,10 +68,7 @@ export default [
             // Note: feature-shell: can be depended on all features as it has all routes
             {
               sourceTag: 'type:shell',
-              onlyDependOnLibsWithTags: [
-                'scope:shared',
-                'scope:core',
-              ],
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:core', 'scope:dashboard', 'scope:auth'],
             },
           ],
         },
