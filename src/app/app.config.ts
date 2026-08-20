@@ -51,6 +51,7 @@ export const appConfig: ApplicationConfig = {
       },
     }),
     { provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
+    preLoad,
     { provide: APP_CONFIG, useValue: environment },
     {
       provide: LOCALE_ID,

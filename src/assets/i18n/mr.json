@@ -4,7 +4,9 @@
   },
   "pageTitle": {
     "defaultTitle": "सलून CRM",
-    "login": "लॉगिन"
+    "auth": "प्रमाणीकरण",
+    "login": "लॉगिन",
+    "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
     "email": "ईमेल",

@@ -59,7 +59,7 @@ import { LanguageService } from '../../services';
           ngbDropdownItem
           (click)="changeLang('mr')"
           class="l-text-start"
-          [class.active]="currentLang === 'ar'"
+          [class.active]="currentLang === 'mr'"
         >
           मराठी
         </button>

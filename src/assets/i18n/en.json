@@ -4,7 +4,9 @@
   },
   "pageTitle": {
     "defaultTitle": "Salon CRM",
-    "login": "Login"
+    "auth": "Auth",
+    "login": "Login",
+    "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
     "email": "Email",

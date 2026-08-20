@@ -13,7 +13,7 @@ export const featureShellRoutes: Route[] = [
         path: '',
         loadChildren: () =>
         import('@salon-crm/features/feature-auth').then((m) => m.featureAuthRoutes),
-        title: 'pageTitle.login',
+        title: 'pageTitle.auth',
       },
     ],
   },
@@ -26,9 +26,6 @@ export const featureShellRoutes: Route[] = [
         loadChildren: () =>
         import('@salon-crm/features/feature-dashboard').then((m) => m.featureDashboardRoutes),
         title: 'pageTitle.dashboard',
-        data: {
-          headerTitle: 'dashboard',
-        },
       }
     ],
   },

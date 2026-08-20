@@ -1,25 +1,26 @@
 import { inject, Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TitleStrategy, RouterStateSnapshot } from '@angular/router';
+import { TranslocoService } from '@jsverse/transloco';
 
 @Injectable({ providedIn: 'root' })
 export class TemplatePageTitleStrategy extends TitleStrategy {
   #title = inject(Title);
-  defaultTitle = 'Salon CRM';
+  #translocoService = inject(TranslocoService);
   constructor() {
     super();
   }
   override updateTitle(routerState: RouterStateSnapshot) {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
-      // const pageTitle = this.#translocoService.translate(title);
-      // const suffix = this.#translocoService.translate('pageTitle.suffix');
-      const pageTitle = title;
-      const suffix = this.defaultTitle;
+      const pageTitle = this.#translocoService.translate(title);
+      console.log("pageTitle", pageTitle);
+
+      const suffix = this.#translocoService.translate('pageTitle.suffix');
       const newTitle = `${pageTitle} | ${suffix}`;
       this.#title.setTitle(newTitle);
     } else {
-      const pageTitle = this.defaultTitle;
+      const pageTitle = this.#translocoService.translate('pageTitle.defaultTitle');
       this.#title.setTitle(pageTitle);
     }
   }

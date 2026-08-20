@@ -4,7 +4,9 @@
   },
   "pageTitle": {
     "defaultTitle": "نظام إدارة الصالون",
-    "login": "تسجيل الدخول"
+    "auth": "المصادقة",
+    "login": "تسجيل الدخول",
+    "suffix": "{{ pageTitle.defaultTitle }}"
   },
     "auth": {
     "email": "البريد الإلكتروني",
