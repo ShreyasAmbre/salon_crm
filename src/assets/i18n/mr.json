@@ -1,0 +1,30 @@
+{
+  "common": {
+    "submit": "सबमिट करा"
+  },
+  "pageTitle": {
+    "defaultTitle": "सलून CRM",
+    "login": "लॉगिन"
+  },
+  "auth": {
+    "email": "ईमेल",
+    "exampleEmail": "Example@email.com",
+    "password": "पासवर्ड",
+    "passwordGuide": "किमान ८ अक्षरे",
+    "forgotPassword": "पासवर्ड विसरलात?",
+    "login": "लॉगिन",
+    "firstName": "पहिले नाव",
+    "enterFirstName": "पहिले नाव प्रविष्ट करा",
+    "lastName": "आडनाव",
+    "enterLastName": "आडनाव प्रविष्ट करा",
+    "newPassword": "नवीन पासवर्ड",
+    "enterNewPassword": "नवीन पासवर्ड प्रविष्ट करा",
+    "confirmPassword": "पासवर्डची पुष्टी करा",
+    "enterConfirmPassword": "पासवर्डची पुष्टी प्रविष्ट करा",
+    "submit": "{{ common.submit }}",
+    "passwordMismatch": "पासवर्ड आणि पुष्टी केलेला पासवर्ड जुळत नाही",
+    "titleForgotPassword": "पासवर्ड विसरलात",
+    "sendOtp": "OTP पाठवा",
+    "enterEmail": "ईमेल प्रविष्ट करा"
+  }
+}

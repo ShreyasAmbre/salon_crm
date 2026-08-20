@@ -13,8 +13,10 @@ import { TemplatePageTitleStrategy } from '@salon-crm/shared';
 import { environment } from '../environments/environment';
 import { lastValueFrom } from 'rxjs';
 import ar from '@angular/common/locales/ar';
+import mr from '@angular/common/locales/mr';
 
 registerLocaleData(ar);
+registerLocaleData(mr);
 
 export function preloadTranslations(transloco: TranslocoService) {
   return function () {
@@ -54,7 +56,17 @@ export const appConfig: ApplicationConfig = {
       provide: LOCALE_ID,
       useFactory: (transloco: TranslocoService) => {
         const currentLang = transloco.getActiveLang() || 'en';
-        return currentLang === 'ar' ? 'ar' : 'en';
+        // return currentLang === 'ar' ? 'ar' : 'en';
+        switch (currentLang) {
+          case 'ar':
+            return 'ar';
+
+          case 'mr':
+            return 'mr';
+
+          default:
+            return 'en';
+        }
       },
       deps: [TranslocoService],
     },

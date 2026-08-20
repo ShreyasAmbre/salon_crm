@@ -55,6 +55,14 @@ import { LanguageService } from '../../services';
         >
           عربي
         </button>
+        <button
+          ngbDropdownItem
+          (click)="changeLang('mr')"
+          class="l-text-start"
+          [class.active]="currentLang === 'ar'"
+        >
+          मराठी
+        </button>
       </div>
     </div>
   `,
@@ -71,7 +79,7 @@ export class LangToggle {
     return this.#transloco.getActiveLang();
   }
 
-  changeLang(lang: 'en' | 'ar') {
+  changeLang(lang: 'en' | 'ar' | 'mr') {
     console.log({ lang });
     this.#transloco.setActiveLang(lang);
   }

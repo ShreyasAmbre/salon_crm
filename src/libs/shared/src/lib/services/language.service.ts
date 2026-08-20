@@ -39,7 +39,7 @@ export class LanguageService {
   private setDocumentLangDir(lang: string) {
     this.#document.documentElement.lang = lang;
     this.#document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    this.setLanguageId(lang)
+    this.setLanguageId(lang);
   }
 
   get currentLang() {
@@ -47,8 +47,18 @@ export class LanguageService {
   }
 
   private setLanguageId(lang: string) {
-    const langId = lang === 'en' ? LANGUAGE_IDS.ENGLISH : LANGUAGE_IDS.ARABIC;
-    this.#storedLanguageId.set(langId);
+    // const langId = lang === 'en' ? LANGUAGE_IDS.ENGLISH : LANGUAGE_IDS.ARABIC;
+    // this.#storedLanguageId.set(langId);
+
+    const languageIdMap: Record<string, LanguageIdType> = {
+      en: LANGUAGE_IDS.ENGLISH,
+      ar: LANGUAGE_IDS.ARABIC,
+      mr: LANGUAGE_IDS.MARATHI,
+    };
+
+    const languageId = languageIdMap[lang] ?? LANGUAGE_IDS.ENGLISH;
+
+    this.#storedLanguageId.set(languageId);
   }
 
   getLanguageId() {
