@@ -1,0 +1,30 @@
+{
+  "common": {
+    "submit": "Submit"
+  },
+  "pageTitle": {
+    "defaultTitle": "Salon CRM",
+    "login": "Login"
+  },
+  "auth": {
+    "email": "Email",
+    "exampleEmail": "Example@email.com",
+    "password": "Password",
+    "passwordGuide": "At least 8 characters",
+    "forgotPassword": "Forgot password?",
+    "login": "Login",
+    "firstName": "First Name",
+    "enterFirstName": "Enter first name",
+    "lastName": "Last Name",
+    "enterLastName": "Enter last name",
+    "newPassword": "New Password",
+    "enterNewPassword": "Enter new password",
+    "confirmPassword": "Confirm Password",
+    "enterConfirmPassword": "Enter confirm password",
+    "submit": "{{ common.submit }}",
+    "passwordMismatch": "Password and confirm password does not match",
+    "titleForgotPassword": "Forgot Password",
+    "sendOtp": "Send OTP",
+    "enterEmail": "Enter email"
+  }
+}

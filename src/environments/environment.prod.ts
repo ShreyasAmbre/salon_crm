@@ -1,4 +1,7 @@
-export const environment = {
+import { Environment } from '@salon-crm/core';
+
+export const environment: Environment = {
   production: true,
-  apiUrl: 'https://api.example.com/api',
+  envcode: 'production',
+  baseUrl: '',
 };

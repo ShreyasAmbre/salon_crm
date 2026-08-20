@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LangToggle, PublicBanner } from '@salon-crm/shared';
+import { LangToggle, LanguageService, PublicBanner } from '@salon-crm/shared';
 @Component({
   selector: 'shell-public-layout',
   imports: [RouterModule, PublicBanner, LangToggle],
@@ -8,9 +8,9 @@ import { LangToggle, PublicBanner } from '@salon-crm/shared';
   styleUrl: './public-layout.scss',
 })
 export class PublicLayout {
-  // readonly #languageService = inject(LanguageService);
+  readonly #languageService = inject(LanguageService);
 
-  // constructor() {
-  //   this.#languageService.initialize();
-  // }
+  constructor() {
+    this.#languageService.initialize();
+  }
 }

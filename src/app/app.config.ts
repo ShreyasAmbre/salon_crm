@@ -1,12 +1,33 @@
-import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, importProvidersFrom, inject, LOCALE_ID, provideAppInitializer, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideRouter, TitleStrategy } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+import { DATE_PIPE_DEFAULT_OPTIONS, registerLocaleData } from '@angular/common';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { pendingRequestsInterceptor$ } from 'ng-http-loader';
+import { provideTransloco, TranslocoService } from '@jsverse/transloco';
+import { APP_CONFIG, translocoConfiguration, TranslocoHttpLoader } from '@salon-crm/core';
+import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
+import { TemplatePageTitleStrategy } from '@salon-crm/shared';
+import { environment } from '../environments/environment';
+import { lastValueFrom } from 'rxjs';
+import ar from '@angular/common/locales/ar';
 
+registerLocaleData(ar);
+
+export function preloadTranslations(transloco: TranslocoService) {
+  return function () {
+    const lang = transloco.getActiveLang() || 'en';
+    transloco.setActiveLang(lang);
+    return lastValueFrom(transloco.load(lang));
+  };
+}
+
+export const preLoad = provideAppInitializer(() => {
+  const initializerFn = preloadTranslations(inject(TranslocoService));
+  return initializerFn();
+});
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,6 +39,25 @@ export const appConfig: ApplicationConfig = {
         pendingRequestsInterceptor$,
       ]),
     ),
+    provideTransloco({
+      config: translocoConfiguration,
+      loader: TranslocoHttpLoader,
+    }),
+    provideTranslocoPersistLang({
+      storage: {
+        useValue: localStorage,
+      },
+    }),
+    { provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
+    { provide: APP_CONFIG, useValue: environment },
+    {
+      provide: LOCALE_ID,
+      useFactory: (transloco: TranslocoService) => {
+        const currentLang = transloco.getActiveLang() || 'en';
+        return currentLang === 'ar' ? 'ar' : 'en';
+      },
+      deps: [TranslocoService],
+    },
     provideEnvironmentNgxMask(),
     {
       provide: DATE_PIPE_DEFAULT_OPTIONS,

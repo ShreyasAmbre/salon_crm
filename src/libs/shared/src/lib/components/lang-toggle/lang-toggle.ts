@@ -1,28 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { LanguageService } from '../../services';
 // import { LanguageService } from '../../services';
 
 @Component({
   selector: 'shared-lang-toggle',
   imports: [NgbDropdownModule],
   template: `
-    <!-- <div class="language-toggle">
-    <input
-      type="checkbox"
-      id="language-switch"
-      class="language-switch-checkbox"
-      (change)="onLangChange($event)"
-      [checked]="currentLang === 'ar'"
-    />
-    <label for="language-switch" class="language-switch-label">
-      <span class="language-option">EN</span>
-      <span class="language-switch"></span>
-      <span class="language-option"
-        style="padding-inline-end: 4px; padding-inline-start: 0; line-height: 1; padding-block-end: 5px;">عربي</span>
-    </label>
-  </div> -->
-
     <div ngbDropdown class="lang-toggle-wrapper" placement="bottom-end">
       <button
         ngbDropdownToggle
@@ -78,10 +63,9 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class LangToggle {
   #transloco = inject(TranslocoService);
-  // #languageService = inject(LanguageService);
+  #languageService = inject(LanguageService);
 
-  // isRtl = this.#languageService.isRtl;
-  isRtl = signal<boolean>(false);
+  isRtl = this.#languageService.isRtl;
 
   get currentLang() {
     return this.#transloco.getActiveLang();

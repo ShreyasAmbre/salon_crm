@@ -1,0 +1,26 @@
+{
+  "common": {
+    "submit": "إرسال"
+  },
+  "pageTitle": {
+    "defaultTitle": "نظام إدارة الصالون",
+    "login": "تسجيل الدخول"
+  },
+    "auth": {
+    "email": "البريد الإلكتروني",
+    "exampleEmail": "Example@email.com",
+    "password": "كلمة المرور",
+    "passwordGuide": "يجب أن تتكون من 8 أحرف على الأقل",
+    "login": "تسجيل الدخول",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "newPassword": "كلمة المرور الجديدة",
+    "enterNewPassword": "أدخل كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "enterConfirmPassword": "أدخل تأكيد كلمة المرور",
+    "submit": "{{ common.submit }}",
+    "passwordMismatch": "كلمة المرور وتأكيد كلمة المرور غير متطابقين",
+    "titleForgotPassword": "نسيت كلمة المرور",
+    "sendOtp": "إرسال رمز التحقق",
+    "enterEmail": "أدخل البريد الإلكتروني"
+  }
+}

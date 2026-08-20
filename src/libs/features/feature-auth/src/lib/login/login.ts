@@ -35,7 +35,8 @@ export class Login {
   }
 
   goToForgotPassword() {
-    this.#router.navigate(['/forgot-password']);
+    console.log("Forgot Password Clicked");
+    // this.#router.navigate(['/forgot-password']);
   }
 
   togglePasswordVisibility() {

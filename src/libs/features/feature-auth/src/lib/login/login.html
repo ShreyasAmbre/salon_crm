@@ -3,7 +3,7 @@
     <div class="col-12 col-md-6 m-auto">
       <!-- <div class="d-flex flex-column gap-sm-5 w-100"> -->
       <div class="d-flex flex-column gap-sm-4 w-100">
-        <img src="assets/images/salon_crm_logo.png" alt="Salon CRM logo" class="logo-size m-auto" />
+        <img src="https://placehold.co/300x180" alt="Salon CRM logo" class="logo-size m-auto rounded-5" />
         <form [formGroup]="form">
           <div class="mb-4">
             <label class="form-label" for="email">{{ t('email') }}</label>
@@ -56,7 +56,7 @@
             <a class="link-primary text-decoration-none">{{ t('forgotPassword') }}</a>
           </div>
           <button class="btn btn-primary w-100" type="button" (click)="onSubmit()" [disabled]="form.invalid">
-            <span>{{ t('signIn') }}</span>
+            <span>{{ t('login') }}</span>
           </button>
         </form>
         <!-- <shared-footer /> -->
