@@ -26,7 +26,37 @@ export const featureShellRoutes: Route[] = [
         loadChildren: () =>
         import('@salon-crm/features/feature-dashboard').then((m) => m.featureDashboardRoutes),
         title: 'pageTitle.dashboard',
-      }
+      },
+      {
+        path: 'customers',
+        loadChildren: () =>
+        import('@salon-crm/features/feature-customer').then((m) => m.featureCustomerRoutes),
+        title: 'pageTitle.services',
+      },
+      {
+        path: 'services',
+        loadChildren: () =>
+        import('@salon-crm/features/feature-service').then((m) => m.featureServiceRoutes),
+        title: 'pageTitle.services',
+      },
+      {
+        path: 'category',
+        loadChildren: () =>
+        import('@salon-crm/features/feature-category').then((m) => m.featureCategoryRoutes),
+        title: 'pageTitle.services',
+      },
+      {
+        path: 'bookings',
+        loadChildren: () =>
+        import('@salon-crm/features/feature-bookings').then((m) => m.featureBookingsRoutes),
+        title: 'pageTitle.services',
+      },
+      {
+        path: 'settings',
+        loadChildren: () =>
+        import('@salon-crm/features/feature-settings').then((m) => m.featureSettingsRoutes),
+        title: 'pageTitle.services',
+      },
     ],
   },
   {
