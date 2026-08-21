@@ -1,0 +1,20 @@
+{
+  "name": "feature-settings",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src/libs/features/feature-settings/src",
+  "prefix": "settings",
+  "projectType": "library",
+  "tags": ["type:feature", "scope:settings"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "coverage/src/libs/features/feature-settings"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
