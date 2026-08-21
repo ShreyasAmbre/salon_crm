@@ -20,13 +20,27 @@ export interface SideNavSubItem {
 export type SideMenuIconName =
   | 'DASHBOARD'
   | 'CUSTOMERS'
-  | 'CUSTOMER_HISTORY';
+  | 'SETTINGS'
+  | 'SERVICES'
+  | 'CATEGORY'
+  | 'BOOKINGS';
 
 export type SideMenuId =
   | 'DASHBOARD'
-  | 'CUSTOMERS'
-  | 'CUSTOMER_HISTORY';
 
+  | 'CUSTOMERS'
+  | 'CUSTOMERS_CRUD'
+  | 'CUSTOMER_HISTORY'
+
+  | 'SETTINGS'
+  | 'GENERAL_SETTINGS'
+
+  | 'SERVICES'
+  | 'CATEGORY'
+
+  | 'BOOKINGS'
+  | 'BOOKINGS_CRUD'
+  | 'BOOKINGS_CALENDAR_VIEW';
 export interface SubMenuTabs {
   labelName: string;
   route: string;

@@ -1,10 +1,11 @@
 import { Component, input } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'shared-customer-svg',
-  imports: [],
+  imports: [FontAwesomeModule],
   template: `
-    <svg
+    <!-- <svg
       width="18"
       height="18"
       viewBox="0 0 18 18"
@@ -37,7 +38,8 @@ import { Component, input } from '@angular/core';
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-    </svg>
+    </svg> -->
+    <fa-icon [icon]="['fas', 'people-group']" class="icon" [class.active]="isActiveMenu()"/>
   `,
   styles: `
     .icon {

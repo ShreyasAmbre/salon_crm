@@ -5,6 +5,18 @@
   @case ('CUSTOMERS') {
     <shared-customer-svg [isActiveMenu]="isActiveMenu()" />
   }
+  @case ('SERVICES') {
+    <shared-services-svg [isActiveMenu]="isActiveMenu()" />
+  }
+  @case ('CATEGORY') {
+    <shared-category-svg [isActiveMenu]="isActiveMenu()" />
+  }
+  @case ('BOOKINGS') {
+    <shared-bookings-svg [isActiveMenu]="isActiveMenu()" />
+  }
+  @case ('SETTINGS') {
+    <shared-settings-svg [isActiveMenu]="isActiveMenu()" />
+  }
   @default {
     <span>Icon not found</span>
   }

@@ -17,7 +17,7 @@ export const SIDE_NAV_ITEMS: SideNavItem[] = [
     iconName: 'CUSTOMERS',
     children: [
       {
-        id: 'customer-crud',
+        id: 'CUSTOMERS_CRUD',
         subMenulabelName: 'subMenuAllCustomers',
         route: '/customer/customer-crud',
         children: [],
@@ -32,6 +32,63 @@ export const SIDE_NAV_ITEMS: SideNavItem[] = [
       },
     ],
   },
+  {
+    id: 'SERVICES',
+    mainMenuLabelName: 'services',
+    route: '/services',
+    children: [],
+    iconName: 'SERVICES',
+    moduleId: 0
+  },
+  {
+    id: 'CATEGORY',
+    mainMenuLabelName: 'category',
+    route: '/category',
+    children: [],
+    iconName: 'CATEGORY',
+    moduleId: 0
+  },
+  {
+    id: 'BOOKINGS',
+    mainMenuLabelName: 'bookings',
+    route: '/bookings',
+    moduleId: 0,
+    iconName: 'BOOKINGS',
+    children: [
+      {
+        id: 'BOOKINGS_CRUD',
+        subMenulabelName: 'subMenuCustomerBookings',
+        route: '/bookings/customer-bookings',
+        children: [],
+        moduleId: 0,
+      },
+      {
+        id: 'BOOKINGS_CALENDAR_VIEW',
+        subMenulabelName: 'subMenuBookingsCalendarView',
+        route: '/bookings/bookings-calendar-view',
+        children: [],
+        moduleId: 0
+      },
+    ],
+  },
+  {
+    id: 'SETTINGS',
+    mainMenuLabelName: 'settings',
+    route: '/settings',
+    moduleId: 0,
+    iconName: 'SETTINGS',
+    children: [
+      {
+        id: 'GENERAL_SETTINGS',
+        subMenulabelName: 'subMenuBusinessSettings',
+        route: '/settings/general-settings',
+        children: [],
+        moduleId: 0,
+      },
+    ],
+  },
+
+
 
 
 

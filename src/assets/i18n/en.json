@@ -6,12 +6,19 @@
     "defaultHeader": "Welcome",
     "dashboard": "Dashboard",
     "customers": "Customers",
+    "settings": "Settings",
+    "services": "Services",
+    "category": "Category",
+    "bookings": "Bookings",
     "userProfile": "User Profile",
     "changePassword": "Change Password",
     "logout": "Logout",
     "subMenus": {
       "subMenuAllCustomers": "All Customer",
-      "subMenuCustomerHistory": "Customer History"
+      "subMenuCustomerHistory": "Customer History",
+      "subMenuBusinessSettings": "Business Setting",
+      "subMenuCustomerBookings": "Customer Bookings",
+      "subMenuBookingsCalendarView": "Bookings Calendar View"
     }
   },
   "pageTitle": {

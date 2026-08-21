@@ -6,12 +6,19 @@
     "defaultHeader": "مرحبًا",
     "dashboard": "لوحة التحكم",
     "customers": "العملاء",
+    "settings": "الإعدادات",
+    "services": "الخدمات",
+    "category": "الفئة",
+    "bookings": "الحجوزات",
     "userProfile": "الملف الشخصي للمستخدم",
     "changePassword": "تغيير كلمة المرور",
     "logout": "تسجيل الخروج",
     "subMenus": {
       "subMenuAllCustomers": "جميع العملاء",
-      "subMenuCustomerHistory": "سجل العملاء"
+      "subMenuCustomerHistory": "سجل العملاء",
+      "subMenuBusinessSettings": "إعدادات النشاط التجاري",
+      "subMenuCustomerBookings": "حجوزات العملاء",
+      "subMenuBookingsCalendarView": "عرض الحجوزات في التقويم"
     }
   },
   "pageTitle": {
