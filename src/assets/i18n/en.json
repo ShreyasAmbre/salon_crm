@@ -1,6 +1,12 @@
 {
   "common": {
-    "submit": "Submit"
+    "submit": "Submit",
+    "active": "Active",
+    "inactive": "In Active",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete",
+    "actions": "Actions"
   },
   "header": {
     "defaultHeader": "Welcome",
@@ -26,6 +32,7 @@
     "auth": "Auth",
     "login": "Login",
     "dashboard": "{{ header.dashboard }}",
+    "services": "Services",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -48,6 +55,41 @@
     "titleForgotPassword": "Forgot Password",
     "sendOtp": "Send OTP",
     "enterEmail": "Enter email"
+  },
+  "services": {
+    "title": "All Services",
+    "createService": "Create Service",
+    "header": {
+      "id": "ID",
+      "name": "Name",
+      "categoryName": "Category Name",
+      "durationInMinutes": "Duration in Mins",
+      "price": "Price",
+      "status": "Status",
+      "actions": "{{ common.actions }}"
+    }
+  },
+  "tanStackTable": {
+    "actionsCell": {
+      "actions": "Actions",
+      "viewBtnLabel": "{{ common.view }}",
+      "editBtnLabel": "{{ common.edit }}",
+      "deleteBtnLabel": "{{ common.delete }}"
+    },
+    "actionsLinkCell": {
+      "acknowledgmentLinkLabel": "Acknowledgment Form",
+      "transferLinkLabel": "Transfer Form",
+      "returnLinkLabel": "Return Form"
+    },
+    "statusCell": {
+      "serviceStatusActive": "{{ common.active }}",
+      "serviceStatusInActive": "{{ common.inactive }}"
+    },
+    "pagination": {
+      "show": "Show",
+      "perPage": "per page",
+      "of": "of"
+    }
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM Rights Reserved"

@@ -8,7 +8,7 @@ export const featureServiceRoutes: Route[] = [
   {
     path:'allServices',
     component: AllServices,
-    title: 'pageTitle.allServices'
+    title: 'pageTitle.services'
   },
   {
     path:'createService',

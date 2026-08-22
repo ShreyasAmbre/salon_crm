@@ -43,6 +43,18 @@
   --bs-btn-active-border-color: var(--accent);
 }
 
+.btn.btn-outline-accent-red {
+  --bs-btn-color: var(--danger);
+  --bs-btn-border-color: var(--danger);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--danger);
+  --bs-btn-hover-border-color: var(--danger);
+  --bs-btn-focus-shadow-rgb: var(--danger);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--danger);
+  --bs-btn-active-border-color: var(--danger);
+}
+
 
 .btn-success {
   --bs-btn-font-weight: 600;

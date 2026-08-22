@@ -1,6 +1,12 @@
 {
   "common": {
-    "submit": "सबमिट करा"
+    "submit": "सबमिट करा",
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय",
+    "view": "पहा",
+    "edit": "संपादित करा",
+    "delete": "हटवा",
+    "actions": "कृती"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -26,6 +32,7 @@
     "auth": "प्रमाणीकरण",
     "login": "लॉगिन",
     "dashboard": "{{ header.dashboard }}",
+    "services": "सेवा",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -48,6 +55,41 @@
     "titleForgotPassword": "पासवर्ड विसरलात",
     "sendOtp": "OTP पाठवा",
     "enterEmail": "ईमेल प्रविष्ट करा"
+  },
+  "services": {
+    "title": "सर्व सेवा",
+    "createService": "सेवा तयार करा",
+    "header": {
+      "id": "क्रमांक",
+      "name": "नाव",
+      "categoryName": "श्रेणीचे नाव",
+      "durationInMinutes": "कालावधी (मिनिटे)",
+      "price": "किंमत",
+      "status": "स्थिती",
+      "actions": "{{ common.actions }}"
+    }
+  },
+  "tanStackTable": {
+    "actionsCell": {
+      "actions": "कृती",
+      "viewBtnLabel": "{{ common.view }}",
+      "editBtnLabel": "{{ common.edit }}",
+      "deleteBtnLabel": "{{ common.delete }}"
+    },
+    "actionsLinkCell": {
+      "acknowledgmentLinkLabel": "पोचपावती फॉर्म",
+      "transferLinkLabel": "हस्तांतरण फॉर्म",
+      "returnLinkLabel": "परतावा फॉर्म"
+    },
+    "statusCell": {
+      "serviceStatusActive": "{{ common.active }}",
+      "serviceStatusInActive": "{{ common.inactive }}"
+    },
+    "pagination": {
+      "show": "दाखवा",
+      "perPage": "प्रति पृष्ठ",
+      "of": "पैकी"
+    }
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM सर्व हक्क राखीव"

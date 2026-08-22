@@ -1,0 +1,61 @@
+<ng-container *transloco="let t; prefix: 'tanStackTable.pagination'">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pagination-controls">
+    <div class="d-flex gap-2 align-items-center">
+      <span class="pagination-text">
+        {{ t('show') }}
+      </span>
+
+      <ng-select
+        id="pagination-ng-select"
+        class="d-inline-block"
+        [items]="allPageSizes"
+        [clearable]="false"
+        [searchable]="false"
+        [ngModel]="paginationState().pageSize"
+        (ngModelChange)="changePageSize($event)"
+        appendTo="body"
+        size="small"
+      >
+      </ng-select>
+
+      <span class="pagination-text ms-2">
+        {{ t('perPage') }}
+      </span>
+    </div>
+
+    <div class="pagination-nav-wrapper d-flex flex-wrap align-items-center">
+      <span class="px-1 align-self-center pagination-text" >
+        {{ firstItem() }}–{{ lastItem() }}
+        {{ t('of') }}
+        {{ totalRows() }}
+      </span>
+
+      <div class="d-flex align-items-center">
+        <button
+          type="button"
+          class="btn border-0 p-2"
+          (click)="previousPage()"
+          [disabled]="!table().getCanPreviousPage()"
+          [class.rtl-flip]="isRtl()">
+
+          <fa-icon [icon]="['fas', 'arrow-left']" class="pagination-nav-arrow"/>
+        </button>
+
+        <span class="page-index-wrapper">
+          {{ currentPage() }}
+        </span>
+
+        <button
+          type="button"
+          class="btn border-0 p-2"
+          (click)="nextPage()"
+          [disabled]="!table().getCanNextPage()"
+          [class.rtl-flip]="isRtl()">
+
+          <fa-icon [icon]="['fas', 'arrow-right']" class="pagination-nav-arrow" />
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

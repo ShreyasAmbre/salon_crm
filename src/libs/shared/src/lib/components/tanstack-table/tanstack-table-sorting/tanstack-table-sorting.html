@@ -1,0 +1,16 @@
+<div class="sort-icon-wrapper h-100" (click)="toggleSort()" role="button" tabindex="0">
+  <span class="sort-icon-wrapper">
+    @if (!sortDirection()) {
+      <fa-icon [icon]="['fas', 'chevron-up']" />
+      <fa-icon [icon]="['fas', 'chevron-down']" />
+    }
+
+    @if (sortDirection() === 'asc') {
+      <fa-icon [icon]="['fas', 'chevron-up']" />
+    }
+
+    @if (sortDirection() === 'desc') {
+      <fa-icon [icon]="['fas', 'chevron-down']" />
+    }
+  </span>
+</div>

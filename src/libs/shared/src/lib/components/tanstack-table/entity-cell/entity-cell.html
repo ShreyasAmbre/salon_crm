@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center gap-2">
+  <!-- @if (isAvatarVisible()) {
+    <shared-user-avatar [src]="avatarImgUrl()" [name]="cellTitle()" />
+  } -->
+
+  <div class="d-flex flex-column lh-sm gap-1">
+    <span class="cell-title">{{ cellTitle() }}</span>
+    @if (cellSubTitle()) {
+      <span class="cell-subtitle">
+        {{ cellSubTitle() }}
+      </span>
+    }
+  </div>
+</div>

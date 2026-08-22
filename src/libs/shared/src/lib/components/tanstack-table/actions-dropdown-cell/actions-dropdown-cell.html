@@ -1,0 +1,49 @@
+<ng-container *transloco="let t; prefix: 'tanStackTable.actionsCell'">
+  <div class="table-action-dropdown-wrapper">
+    <div ngbDropdown display="dynamic" container="body" dropdownClass="table-action-dropdown">
+      <button class="btn btn-sm btn-wrapper" ngbDropdownToggle [title]="t('actions')">
+        <fa-icon [icon]="['fas', 'ellipsis']"></fa-icon>
+      </button>
+      @let is_rtl = isRtl();
+      <div
+        ngbDropdownMenu
+        class="my-1 bg-white profile-collapse"
+        [class]="is_rtl ? 'dropdown-menu-start' : 'dropdown-menu-end'"
+      >
+        @if (isEditVisible()) {
+          <div ngbDropdownItem class="d-grid">
+            <button
+              class="btn btn-outline-primary btn-sm px-3"
+              NgbDropdownButtonItem
+              (click)="onEdit()"
+              [disabled]="isEditBtnDisabled()"
+            >
+              <fa-icon [icon]="['fas', 'pen-to-square']" [class.rtl-flip]="is_rtl" />
+              {{ t(editBtnLabel()) }}
+            </button>
+          </div>
+        }
+
+        @if (isViewVisible()) {
+          <div ngbDropdownItem class="d-grid">
+            <button class="btn btn-outline-primary btn-sm px-3" NgbDropdownButtonItem (click)="onView()">
+              <fa-icon [icon]="['fas', 'eye']" />
+              {{ t(viewBtnLabel()) }}
+            </button>
+          </div>
+        }
+
+        @if (isDeleteVisible()) {
+          <div ngbDropdownItem class="d-grid">
+            <button class="btn btn-outline-accent-red btn-sm px-3" NgbDropdownButtonItem (click)="onDelete()">
+              <fa-icon [icon]="['fas', 'trash']" />
+              {{ t(deleteBtnLabel()) }}
+            </button>
+          </div>
+        }
+
+
+      </div>
+    </div>
+  </div>
+</ng-container>

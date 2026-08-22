@@ -1,0 +1,27 @@
+// TanStack Table Pagination Styles
+.pagination-controls {
+  .pagination-text {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--blue-dark-color);
+  }
+
+  .pagination-nav-wrapper {
+    .pagination-nav-arrow {
+      font-size: 14px;
+      color: #9f9fa9;
+    }
+
+    .page-index-wrapper {
+      padding: 5px 10px;
+      border-radius: 6px;
+      background-color: #f3f4f6;
+      color: #9f9fa9;
+
+      font-family: var(--font-primary);
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

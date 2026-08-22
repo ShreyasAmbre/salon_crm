@@ -3,4 +3,6 @@ export * from './lang-toggle/lang-toggle';
 export * from './public-banner/public-banner';
 export * from './footer/footer';
 export * from './icons/index';
+export * from './tanstack-table';
+export * from './user-avatar/user-avatar';
 

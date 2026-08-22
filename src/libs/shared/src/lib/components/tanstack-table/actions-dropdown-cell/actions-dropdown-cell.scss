@@ -1,0 +1,21 @@
+.btn-wrapper {
+  background-color: #f3f6f9;
+  border-radius: 6px;
+  padding: 6px;
+
+  // Note: Action main button border removed
+  border: none;
+  box-shadow: none;
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &.show {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  fa-icon {
+    color: #7e8299;
+  }
+}

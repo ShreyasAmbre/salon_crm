@@ -1,6 +1,12 @@
 {
   "common": {
-    "submit": "إرسال"
+    "submit": "إرسال",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "view": "عرض",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "actions": "الإجراءات"
   },
   "header": {
     "defaultHeader": "مرحبًا",
@@ -26,15 +32,20 @@
     "auth": "المصادقة",
     "login": "تسجيل الدخول",
     "dashboard": "{{ header.dashboard }}",
+    "services": "الخدمات",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
-    "auth": {
+  "auth": {
     "email": "البريد الإلكتروني",
     "exampleEmail": "Example@email.com",
     "password": "كلمة المرور",
     "passwordGuide": "يجب أن تتكون من 8 أحرف على الأقل",
-    "login": "تسجيل الدخول",
     "forgotPassword": "هل نسيت كلمة المرور؟",
+    "login": "تسجيل الدخول",
+    "firstName": "الاسم الأول",
+    "enterFirstName": "أدخل الاسم الأول",
+    "lastName": "اسم العائلة",
+    "enterLastName": "أدخل اسم العائلة",
     "newPassword": "كلمة المرور الجديدة",
     "enterNewPassword": "أدخل كلمة المرور الجديدة",
     "confirmPassword": "تأكيد كلمة المرور",
@@ -44,6 +55,41 @@
     "titleForgotPassword": "نسيت كلمة المرور",
     "sendOtp": "إرسال رمز التحقق",
     "enterEmail": "أدخل البريد الإلكتروني"
+  },
+  "services": {
+    "title": "جميع الخدمات",
+    "createService": "إنشاء خدمة",
+    "header": {
+      "id": "المعرّف",
+      "name": "الاسم",
+      "categoryName": "اسم الفئة",
+      "durationInMinutes": "المدة بالدقائق",
+      "price": "السعر",
+      "status": "الحالة",
+      "actions": "{{ common.actions }}"
+    }
+  },
+  "tanStackTable": {
+    "actionsCell": {
+      "actions": "الإجراءات",
+      "viewBtnLabel": "{{ common.view }}",
+      "editBtnLabel": "{{ common.edit }}",
+      "deleteBtnLabel": "{{ common.delete }}"
+    },
+    "actionsLinkCell": {
+      "acknowledgmentLinkLabel": "نموذج الإقرار",
+      "transferLinkLabel": "نموذج التحويل",
+      "returnLinkLabel": "نموذج الإرجاع"
+    },
+    "statusCell": {
+      "serviceStatusActive": "{{ common.active }}",
+      "serviceStatusInActive": "{{ common.inactive }}"
+    },
+    "pagination": {
+      "show": "عرض",
+      "perPage": "لكل صفحة",
+      "of": "من"
+    }
   },
   "footer": {
     "footerText": "{{ _value }} حقوق نظام إدارة الصالون محفوظة"

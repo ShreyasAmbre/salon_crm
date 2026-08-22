@@ -1,0 +1,27 @@
+.status-active {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.375rem;
+  background-color: #e6f4ea;
+  color: #1e7e34;
+}
+
+.status-inactive {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #ffe2e5;
+  color: #f64e60;
+}
+
+.status-pending {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fce5a1;
+  color: #ffc107;
+}

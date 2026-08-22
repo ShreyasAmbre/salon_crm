@@ -1,0 +1,15 @@
+<ng-container *transloco="let t; prefix: 'tanStackTable.statusCell'">
+  <div class="status-wrapper">
+    @if (isServiceStatus()) {
+      @switch (serviceStatusId()) {
+        @case (ServiceStatusType.ACTIVE) {
+          <span class="badge status-active">{{ t('serviceStatusActive') }}</span>
+        }
+        @case (ServiceStatusType.INACTIVE) {
+          <span class="badge status-inactive">{{ t('serviceStatusInActive') }}</span>
+        }
+        @default {
+          <span class="badge badge-primary">NA</span>
+        }
+      }
+    }
