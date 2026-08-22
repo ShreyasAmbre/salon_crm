@@ -1,12 +1,16 @@
 {
   "common": {
-    "submit": "Submit",
     "active": "Active",
     "inactive": "In Active",
     "view": "View",
     "edit": "Edit",
     "delete": "Delete",
-    "actions": "Actions"
+    "actions": "Actions",
+    "noDataAvailable": "No Data Available",
+    "mins": "mins",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "create": "Create"
   },
   "header": {
     "defaultHeader": "Welcome",
@@ -33,6 +37,7 @@
     "login": "Login",
     "dashboard": "{{ header.dashboard }}",
     "services": "Services",
+    "createService": "Create Service",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -58,7 +63,8 @@
   },
   "services": {
     "title": "All Services",
-    "createService": "Create Service",
+    "createServiceBtnLabel": "Create Service",
+    "noDataAvailable":"{{ common.noDataAvailable }}",
     "header": {
       "id": "ID",
       "name": "Name",
@@ -67,6 +73,24 @@
       "price": "Price",
       "status": "Status",
       "actions": "{{ common.actions }}"
+    },
+    "createService": {
+      "createServiceTitle": "Create Service",
+      "serviceName": "Service Name",
+      "enterServiceName": "Enter service name",
+      "category": "Category",
+      "duration": "Duration",
+      "selectDuration": "Select duration",
+      "selectCategory": "Select category",
+      "price": "Price",
+      "enterPrice": "Enter price",
+      "gender": "Gender",
+      "selectGender": "Select gender",
+      "status": "Status",
+      "selectStatus": "Select status",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}"
     }
   },
   "tanStackTable": {
@@ -90,6 +114,23 @@
       "perPage": "per page",
       "of": "of"
     }
+  },
+  "formError": {
+    "required": "Field is required",
+    "email": "Invalid email address",
+    "minlength": "Minimum allowed character is {{ _value }}",
+    "maxlength": "Maximum allowed character is {{ _value }}",
+    "passwordMinLength": "Password must be at least {{ _val }} characters",
+    "passwordUppercase": "Password must contain at least one uppercase letter",
+    "passwordLowercase": "Password must contain at least one lowercase letter",
+    "passwordNumber": "Password must contain at least one number",
+    "passwordSpecialChar": "Password must contain at least one special character",
+    "requiredFileType": "Allowed file types are {{ _value }}",
+    "maxFileSize": "Max file size should be {{ _value }} MB",
+    "minValue": "Minimum value allowed: {{_value}}",
+    "maxValue": "Maximum value allowed: {{_value}}",
+    "pattern": "Field should be valid",
+    "minimumAge": "Minimum {{_value}} years of age is required"
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM Rights Reserved"

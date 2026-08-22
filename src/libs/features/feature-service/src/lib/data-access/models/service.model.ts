@@ -7,7 +7,7 @@ export interface ServiceDetails {
   durationInMinutes: number;
   price: number;
   gender: GenderTypeInterface;
-  status: ServiceStatusTypeInterface;
+  isActive: ServiceStatusTypeInterface;
   displayOrder: number;
   createdAt: string;
   updatedAt: string;

@@ -1,12 +1,16 @@
 {
   "common": {
-    "submit": "إرسال",
     "active": "نشط",
     "inactive": "غير نشط",
     "view": "عرض",
     "edit": "تعديل",
     "delete": "حذف",
-    "actions": "الإجراءات"
+    "actions": "الإجراءات",
+    "noDataAvailable": "لا توجد بيانات متاحة",
+    "mins": "دقائق",
+    "submit": "إرسال",
+    "cancel": "إلغاء",
+    "create": "إنشاء"
   },
   "header": {
     "defaultHeader": "مرحبًا",
@@ -33,6 +37,7 @@
     "login": "تسجيل الدخول",
     "dashboard": "{{ header.dashboard }}",
     "services": "الخدمات",
+    "createService": "إنشاء خدمة",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -58,7 +63,8 @@
   },
   "services": {
     "title": "جميع الخدمات",
-    "createService": "إنشاء خدمة",
+    "createServiceBtnLabel": "إنشاء خدمة",
+    "noDataAvailable": "{{ common.noDataAvailable }}",
     "header": {
       "id": "المعرّف",
       "name": "الاسم",
@@ -67,6 +73,24 @@
       "price": "السعر",
       "status": "الحالة",
       "actions": "{{ common.actions }}"
+    },
+    "createService": {
+      "createServiceTitle": "إنشاء خدمة",
+      "serviceName": "اسم الخدمة",
+      "enterServiceName": "أدخل اسم الخدمة",
+      "category": "الفئة",
+      "duration": "المدة",
+      "selectDuration": "اختر المدة",
+      "selectCategory": "اختر الفئة",
+      "price": "السعر",
+      "enterPrice": "أدخل السعر",
+      "gender": "الجنس",
+      "selectGender": "اختر الجنس",
+      "status": "الحالة",
+      "selectStatus": "اختر الحالة",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}"
     }
   },
   "tanStackTable": {
@@ -91,7 +115,24 @@
       "of": "من"
     }
   },
+  "formError": {
+    "required": "هذا الحقل مطلوب",
+    "email": "عنوان البريد الإلكتروني غير صالح",
+    "minlength": "الحد الأدنى المسموح به لعدد الأحرف هو {{ _value }}",
+    "maxlength": "الحد الأقصى المسموح به لعدد الأحرف هو {{ _value }}",
+    "passwordMinLength": "يجب أن تتكون كلمة المرور من {{ _val }} أحرف على الأقل",
+    "passwordUppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+    "passwordLowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
+    "passwordNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+    "passwordSpecialChar": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل",
+    "requiredFileType": "أنواع الملفات المسموح بها هي {{ _value }}",
+    "maxFileSize": "يجب ألا يتجاوز حجم الملف {{ _value }} ميجابايت",
+    "minValue": "الحد الأدنى للقيمة المسموح بها: {{_value}}",
+    "maxValue": "الحد الأقصى للقيمة المسموح بها: {{_value}}",
+    "pattern": "يجب أن يكون الحقل صالحًا",
+    "minimumAge": "يجب ألا يقل العمر عن {{_value}} عامًا"
+  },
   "footer": {
-    "footerText": "{{ _value }} حقوق نظام إدارة الصالون محفوظة"
+    "footerText": "{{ _value }} جميع الحقوق محفوظة لنظام إدارة الصالون"
   }
 }

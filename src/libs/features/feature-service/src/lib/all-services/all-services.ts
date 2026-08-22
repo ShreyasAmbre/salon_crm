@@ -9,7 +9,7 @@ import { FlexRender } from '@tanstack/angular-table';
 import { AllServicesSampleData } from '../data-access/sample-data';
 import { ServiceDetails } from '../data-access/models/service.model';
 import { DEFAULT_PAGE_SIZE, injectAppTable } from '@salon-crm/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { createAllServicesListingColumn } from './service-list-column';
 
 @Component({
@@ -20,6 +20,7 @@ import { createAllServicesListingColumn } from './service-list-column';
 })
 export class AllServices {
   readonly #router = inject(Router);
+  readonly #route = inject(ActivatedRoute);
 
   readonly dataList = signal<ServiceDetails[]>(AllServicesSampleData);
 
@@ -51,7 +52,9 @@ export class AllServices {
   }
 
   navigateToCreateService() {
-    this.#router.navigate(['../createService']);
+    this.#router.navigate(['../createService'], {
+      relativeTo: this.#route,
+    });
   }
 
 }

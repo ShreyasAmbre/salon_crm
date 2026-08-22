@@ -7,13 +7,15 @@ import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { pendingRequestsInterceptor$ } from 'ng-http-loader';
 import { provideTransloco, TranslocoService } from '@jsverse/transloco';
-import { APP_CONFIG, translocoConfiguration, TranslocoHttpLoader } from '@salon-crm/core';
+import { APP_CONFIG, errorTailorConfig, translocoConfiguration, TranslocoHttpLoader } from '@salon-crm/core';
 import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
 import { TemplatePageTitleStrategy } from '@salon-crm/shared';
 import { environment } from '../environments/environment';
 import { lastValueFrom } from 'rxjs';
 import ar from '@angular/common/locales/ar';
 import mr from '@angular/common/locales/mr';
+import { provideErrorTailorConfig } from '@ngneat/error-tailor';
+
 
 registerLocaleData(ar);
 registerLocaleData(mr);
@@ -53,6 +55,7 @@ export const appConfig: ApplicationConfig = {
     { provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
     preLoad,
     { provide: APP_CONFIG, useValue: environment },
+    provideErrorTailorConfig(errorTailorConfig),
     {
       provide: LOCALE_ID,
       useFactory: (transloco: TranslocoService) => {

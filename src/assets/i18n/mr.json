@@ -1,12 +1,16 @@
 {
   "common": {
-    "submit": "सबमिट करा",
     "active": "सक्रिय",
     "inactive": "निष्क्रिय",
     "view": "पहा",
     "edit": "संपादित करा",
     "delete": "हटवा",
-    "actions": "कृती"
+    "actions": "कृती",
+    "noDataAvailable": "कोणताही डेटा उपलब्ध नाही",
+    "mins": "मिनिटे",
+    "submit": "सबमिट करा",
+    "cancel": "रद्द करा",
+    "create": "तयार करा"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -33,6 +37,7 @@
     "login": "लॉगिन",
     "dashboard": "{{ header.dashboard }}",
     "services": "सेवा",
+    "createService": "सेवा तयार करा",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -58,7 +63,8 @@
   },
   "services": {
     "title": "सर्व सेवा",
-    "createService": "सेवा तयार करा",
+    "createServiceBtnLabel": "सेवा तयार करा",
+    "noDataAvailable": "{{ common.noDataAvailable }}",
     "header": {
       "id": "क्रमांक",
       "name": "नाव",
@@ -67,6 +73,24 @@
       "price": "किंमत",
       "status": "स्थिती",
       "actions": "{{ common.actions }}"
+    },
+    "createService": {
+      "createServiceTitle": "सेवा तयार करा",
+      "serviceName": "सेवेचे नाव",
+      "enterServiceName": "सेवेचे नाव प्रविष्ट करा",
+      "category": "श्रेणी",
+      "duration": "कालावधी",
+      "selectDuration": "कालावधी निवडा",
+      "selectCategory": "श्रेणी निवडा",
+      "price": "किंमत",
+      "enterPrice": "किंमत प्रविष्ट करा",
+      "gender": "लिंग",
+      "selectGender": "लिंग निवडा",
+      "status": "स्थिती",
+      "selectStatus": "स्थिती निवडा",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}"
     }
   },
   "tanStackTable": {
@@ -90,6 +114,23 @@
       "perPage": "प्रति पृष्ठ",
       "of": "पैकी"
     }
+  },
+  "formError": {
+    "required": "फील्ड आवश्यक आहे",
+    "email": "अवैध ईमेल पत्ता",
+    "minlength": "किमान {{ _value }} अक्षरे आवश्यक आहेत",
+    "maxlength": "कमाल {{ _value }} अक्षरे अनुमत आहेत",
+    "passwordMinLength": "पासवर्डमध्ये किमान {{ _val }} अक्षरे असणे आवश्यक आहे",
+    "passwordUppercase": "पासवर्डमध्ये किमान एक मोठे अक्षर असणे आवश्यक आहे",
+    "passwordLowercase": "पासवर्डमध्ये किमान एक छोटे अक्षर असणे आवश्यक आहे",
+    "passwordNumber": "पासवर्डमध्ये किमान एक अंक असणे आवश्यक आहे",
+    "passwordSpecialChar": "पासवर्डमध्ये किमान एक विशेष अक्षर असणे आवश्यक आहे",
+    "requiredFileType": "अनुमत फाइल प्रकार: {{ _value }}",
+    "maxFileSize": "कमाल फाइल आकार {{ _value }} MB असावा",
+    "minValue": "किमान अनुमत मूल्य: {{_value}}",
+    "maxValue": "कमाल अनुमत मूल्य: {{_value}}",
+    "pattern": "फील्ड वैध असणे आवश्यक आहे",
+    "minimumAge": "किमान {{_value}} वर्षे वय आवश्यक आहे"
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM सर्व हक्क राखीव"

@@ -4,3 +4,4 @@ export * from './lib/tokens';
 export * from './lib/enums';
 export * from './lib/constants';
 export * from './lib/configs';
+export * from './lib/services';

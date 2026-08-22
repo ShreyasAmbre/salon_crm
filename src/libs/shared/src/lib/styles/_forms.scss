@@ -9,7 +9,7 @@ label.form-label {
 input.form-control,
 textarea.form-control,
 select.form-select {
-  background-color: var(--surface-muted);
+  background-color: #ffffff;
   border-radius: 15px;
   border: 1px solid var(--border);
   padding: 1rem;
@@ -18,7 +18,8 @@ select.form-select {
 }
 
 input.form-control::placeholder {
-  color: var(--text-primary);
+  // color: var(--text-primary);
+  color: var(--secondary);
 }
 
 // Note: This take the height according to row value provided

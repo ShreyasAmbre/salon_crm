@@ -1,6 +1,6 @@
 export const SERVICE_STATUS_TYPE = {
-  INACTIVE: 0,
-  ACTIVE: 1,
+  INACTIVE: false,
+  ACTIVE: true,
 } as const;
 
 export type ServiceStatusTypeInterface =

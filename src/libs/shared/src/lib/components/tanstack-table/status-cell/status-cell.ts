@@ -10,7 +10,7 @@ import { SERVICE_STATUS_TYPE } from '@salon-crm/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StatusCell {
-  serviceStatusId = input<number>();
+  serviceStatusId = input<boolean>();
   isServiceStatus = input<boolean>(false);
   ServiceStatusType = SERVICE_STATUS_TYPE;
 

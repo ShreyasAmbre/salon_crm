@@ -4,7 +4,8 @@
       border-radius: 15px;
       background-color: #ffffff;
       border: 1px solid #dfeaf2;
-      font-size: 0.875rem;
+      // font-size: 0.875rem;
+      font-size: 0.85rem;
       padding: 1rem;
       height: 50px;
       display: flex;
@@ -27,7 +28,7 @@
         }
 
         .ng-placeholder {
-          color: #718ebf;
+          color: var(--secondary);
         }
       }
 
@@ -38,6 +39,14 @@
           border-color: #dfeaf2 transparent transparent;
           border-style: solid;
           border-width: 5px 5px 2.5px;
+        }
+      }
+
+      &.ng-has-value {
+        .ng-value-container {
+          .ng-placeholder {
+            display: none;
+          }
         }
       }
     }
@@ -150,6 +159,7 @@
           border-width: 5px 5px 2.5px;
         }
       }
+
     }
   }
 }

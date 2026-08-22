@@ -34,7 +34,7 @@ export const createAllServicesListingColumn = (component: AllServices) => column
     enableSorting: true,
   }),
 
-  columnHelper.accessor('status', {
+  columnHelper.accessor('isActive', {
     header: 'header.status',
     enableSorting: true,
 
