@@ -14,7 +14,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
       const pageTitle = this.#translocoService.translate(title);
-      console.log("pageTitle", pageTitle);
+      // console.log("pageTitle", pageTitle);
 
       const suffix = this.#translocoService.translate('pageTitle.suffix');
       const newTitle = `${pageTitle} | ${suffix}`;

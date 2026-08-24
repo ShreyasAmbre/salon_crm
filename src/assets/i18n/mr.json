@@ -10,7 +10,8 @@
     "mins": "मिनिटे",
     "submit": "सबमिट करा",
     "cancel": "रद्द करा",
-    "create": "तयार करा"
+    "create": "तयार करा",
+    "update": "अपडेट करा"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -38,6 +39,8 @@
     "dashboard": "{{ header.dashboard }}",
     "services": "सेवा",
     "createService": "सेवा तयार करा",
+    "updateService": "सेवा अपडेट करा",
+    "serviceDetails": "सेवेचे तपशील",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -91,6 +94,25 @@
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "create": "{{ common.create }}"
+    },
+    "updateService": {
+      "updateServiceTitle": "सेवा अपडेट करा",
+      "serviceDetails": "सेवेचे तपशील",
+      "serviceName": "सेवेचे नाव",
+      "enterServiceName": "सेवेचे नाव प्रविष्ट करा",
+      "category": "श्रेणी",
+      "duration": "कालावधी",
+      "selectDuration": "कालावधी निवडा",
+      "selectCategory": "श्रेणी निवडा",
+      "price": "किंमत",
+      "enterPrice": "किंमत प्रविष्ट करा",
+      "gender": "लिंग",
+      "selectGender": "लिंग निवडा",
+      "status": "स्थिती",
+      "selectStatus": "स्थिती निवडा",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {

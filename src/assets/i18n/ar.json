@@ -10,7 +10,8 @@
     "mins": "دقائق",
     "submit": "إرسال",
     "cancel": "إلغاء",
-    "create": "إنشاء"
+    "create": "إنشاء",
+    "update": "تحديث"
   },
   "header": {
     "defaultHeader": "مرحبًا",
@@ -38,6 +39,8 @@
     "dashboard": "{{ header.dashboard }}",
     "services": "الخدمات",
     "createService": "إنشاء خدمة",
+    "updateService": "تحديث الخدمة",
+    "serviceDetails": "تفاصيل الخدمة",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -91,6 +94,25 @@
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "create": "{{ common.create }}"
+    },
+    "updateService": {
+      "updateServiceTitle": "تحديث الخدمة",
+      "serviceDetails": "تفاصيل الخدمة",
+      "serviceName": "اسم الخدمة",
+      "enterServiceName": "أدخل اسم الخدمة",
+      "category": "الفئة",
+      "duration": "المدة",
+      "selectDuration": "اختر المدة",
+      "selectCategory": "اختر الفئة",
+      "price": "السعر",
+      "enterPrice": "أدخل السعر",
+      "gender": "الجنس",
+      "selectGender": "اختر الجنس",
+      "status": "الحالة",
+      "selectStatus": "اختر الحالة",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {

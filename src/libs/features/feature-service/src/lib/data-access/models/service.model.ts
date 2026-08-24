@@ -11,4 +11,5 @@ export interface ServiceDetails {
   displayOrder: number;
   createdAt: string;
   updatedAt: string;
+  description?: string;
 }

@@ -40,11 +40,17 @@ export class AllServices {
   }));
 
   onView(row: ServiceDetails) {
-    console.log('View clicked:', row);
+    this.#router.navigate(['../serviceDetails'], {
+      relativeTo: this.#route,
+      state: { serviceDetails: row },
+    });
   }
 
   onEdit(row: ServiceDetails) {
-    console.log('Edit clicked:', row);
+    this.#router.navigate(['../updateService'], {
+      relativeTo: this.#route,
+      state: { serviceDetails: row },
+    });
   }
 
   onDelete(row: ServiceDetails) {

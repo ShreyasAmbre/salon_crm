@@ -1,1 +1,154 @@
-<p>update-service works!</p>
+<ng-container *transloco="let t; prefix: 'services.updateService'">
+  <div class="section-wrapper">
+    @let is_readonly = isReadonly();
+    <div class="section-title-wrapper pt-2 pb-4">
+      @if(is_readonly){
+        <span class="fs-6x section-title">{{ t('serviceDetails') }}</span>
+      }@else {
+        <span class="fs-6x section-title">{{ t('updateServiceTitle') }}</span>
+      }
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body asset-creation">
+        <form [formGroup]="form" errorTailor>
+          <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="serviceName" sharedRequiredStar>
+                {{ t('serviceName') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterServiceName')" formControlName="serviceName" />
+              <div class="invalid-feedback d-block">
+                @if (f.serviceName.touched || f.serviceName.dirty) {
+                  @if (f.serviceName.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="category" sharedRequiredStar>
+                {{ t('category') }}
+              </label>
+              <ng-select
+                labelForId="category"
+                [items]="categoryList()"
+                formControlName="category"
+                [placeholder]="t('selectCategory')"
+                bindLabel="name"
+                bindValue="id"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.category.touched || f.category.dirty) {
+                  @if (f.category.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="duration" sharedRequiredStar>
+                {{ t('duration') }}
+              </label>
+              <ng-select
+                labelForId="duration"
+                [items]="durationList()"
+                formControlName="duration"
+                [placeholder]="t('selectDuration')"
+                bindLabel="value"
+                bindValue="id"
+              >
+                <ng-template ng-label-tmp let-item="item">
+                  {{ item.value }} {{ t('mins') }}
+                </ng-template>
+
+                <ng-template ng-option-tmp let-item="item">
+                  {{ item.value }} {{ t('mins') }}
+                </ng-template>
+              </ng-select>
+              <div class="invalid-feedback d-block">
+                @if (f.duration.touched || f.duration.dirty) {
+                  @if (f.duration.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="price" sharedRequiredStar>
+                {{ t('price') }}
+              </label>
+              <input mask="9*" type="text" class="form-control" [placeholder]="t('enterPrice')" formControlName="price" />
+              <div class="invalid-feedback d-block">
+                @if (f.price.touched || f.price.dirty) {
+                  @if (f.price.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="gender" sharedRequiredStar>
+                {{ t('gender') }}
+              </label>
+              <ng-select
+                labelForId="gender"
+                [items]="genderList()"
+                formControlName="gender"
+                [placeholder]="t('selectGender')"
+                bindLabel="name"
+                bindValue="id"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.gender.touched || f.gender.dirty) {
+                  @if (f.gender.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="status" sharedRequiredStar>
+                {{ t('status') }}
+              </label>
+              <ng-select
+                labelForId="status"
+                formControlName="status"
+                [items]="statusList()"
+                [placeholder]="t('selectStatus')"
+                bindLabel="name"
+                bindValue="value"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.status.touched || f.status.dirty) {
+                  @if (f.status.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end flex-wrap gap-3 my-5">
+              <button type="button" class="btn btn-outline-primary form-btn rounded-3" (click)="clearForm()">
+                {{ t('cancel') }}
+              </button>
+
+              @if(!is_readonly){
+                <button type="submit" class="btn btn-primary form-btn rounded-3" [disabled]="form.invalid" (click)="onSubmitForm()">
+                  {{ t('update') }}
+                </button>
+              }
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

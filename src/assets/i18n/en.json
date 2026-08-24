@@ -10,7 +10,8 @@
     "mins": "mins",
     "submit": "Submit",
     "cancel": "Cancel",
-    "create": "Create"
+    "create": "Create",
+    "update": "Update"
   },
   "header": {
     "defaultHeader": "Welcome",
@@ -38,6 +39,8 @@
     "dashboard": "{{ header.dashboard }}",
     "services": "Services",
     "createService": "Create Service",
+    "updateService": "Update Service",
+    "serviceDetails": "Service Details",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -91,6 +94,25 @@
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "create": "{{ common.create }}"
+    },
+    "updateService": {
+      "updateServiceTitle": "Update Service",
+      "serviceDetails": "Service Details",
+      "serviceName": "Service Name",
+      "enterServiceName": "Enter service name",
+      "category": "Category",
+      "duration": "Duration",
+      "selectDuration": "Select duration",
+      "selectCategory": "Select category",
+      "price": "Price",
+      "enterPrice": "Enter price",
+      "gender": "Gender",
+      "selectGender": "Select gender",
+      "status": "Status",
+      "selectStatus": "Select status",
+      "mins": "{{ common.mins }}",
+      "cancel": "{{ common.cancel }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {

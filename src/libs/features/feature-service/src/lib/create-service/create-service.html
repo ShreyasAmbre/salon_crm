@@ -101,7 +101,7 @@
               />
               <div class="invalid-feedback d-block">
                 @if (f.gender.touched || f.gender.dirty) {
-                  @if (f.category.hasError('required')) {
+                  @if (f.gender.hasError('required')) {
                     {{ 'formError.required' | transloco }}
                   }
                 }

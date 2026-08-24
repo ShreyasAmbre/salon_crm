@@ -18,7 +18,6 @@ import { CategoryDetailsLookup, DurationLookup, GenderLookup, LookupService, Sta
     NgSelectModule,
     RequiredStarDirective,
     NgxMaskDirective,
-    // NgxControlError,
   ],
   templateUrl: './create-service.html',
   styleUrl: './create-service.scss',
@@ -30,14 +29,14 @@ export class CreateService {
   readonly #fb = inject(FormBuilder);
   readonly #lookupService = inject(LookupService);
 
-  isRtl = this.#languageService.isRtl;
+  protected isRtl = this.#languageService.isRtl;
 
-  statusList = signal<StatusLookup[]>(this.#lookupService.statusList);
-  genderList = signal<GenderLookup[]>(this.#lookupService.genderList);
-  durationList = signal<DurationLookup[]>(this.#lookupService.durationList);
-  categoryList = signal<CategoryDetailsLookup[]>(this.#lookupService.categoryList);
+  protected readonly statusList = signal<StatusLookup[]>(this.#lookupService.statusList);
+  protected readonly genderList = signal<GenderLookup[]>(this.#lookupService.genderList);
+  protected readonly durationList = signal<DurationLookup[]>(this.#lookupService.durationList);
+  protected readonly categoryList = signal<CategoryDetailsLookup[]>(this.#lookupService.categoryList);
 
-  form = this.#fb.group({
+  protected readonly form = this.#fb.group({
     serviceName: ['', [Validators.required]],
     category: [null as number | null, [Validators.required]],
     duration: [null as number | null, [Validators.required]],
@@ -47,21 +46,21 @@ export class CreateService {
     description: [''],
   });
 
-  get f() {
+  protected get f() {
     return this.form.controls
   }
 
-  onSubmitForm() {
+  protected onSubmitForm() {
     console.log("On Submit");
     this.navigateToList();
   }
 
-  clearForm() {
+  protected clearForm() {
     this.form.reset();
     this.navigateToList();
   }
 
-  navigateToList(){
+  private navigateToList(){
     this.#router.navigate(['../allServices'], {
       relativeTo: this.#route,
     });
