@@ -1,17 +1,38 @@
 {
   "common": {
-    "active": "Active",
-    "inactive": "In Active",
-    "view": "View",
-    "edit": "Edit",
-    "delete": "Delete",
-    "actions": "Actions",
-    "noDataAvailable": "No Data Available",
-    "mins": "mins",
     "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
     "cancel": "Cancel",
     "create": "Create",
-    "update": "Update"
+    "update": "Update",
+    "view": "View",
+    "list": "List",
+    "edit": "Edit",
+    "delete": "Delete",
+    "resend": "Resend",
+    "copy": "Copy",
+    "history": "History",
+    "transfer": "Transfer",
+    "approve": "Approve",
+    "return": "Return",
+    "seeAll": "See All",
+    "close": "Close",
+    "noDataAvailable": "No Data Available",
+    "filter": "Filter",
+    "export": "Export",
+    "search": "Search",
+    "clear": "Clear",
+    "before": "Before",
+    "after": "After",
+    "range": "Range",
+    "done": "Done",
+    "active": "Active",
+    "inactive": "In Active",
+    "goToLogin": "Go to login",
+    "add": "Add",
+    "next": "Next"
   },
   "header": {
     "defaultHeader": "Welcome",
@@ -156,5 +177,26 @@
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM Rights Reserved"
+  },
+  "modal": {
+    "defaultErrorTitle": "Error",
+    "defaultErrorMessage": "Something went wrong!",
+    "defaultErrorButtonText": "{{ common.close }}",
+    "defaultSuccessTitle": "Success",
+    "defaultSuccessMessage": "Success!",
+    "defaultSuccessButtonText": "{{ common.close }}",
+    "submit": "{{ common.submit }}",
+    "confirm": "{{ common.confirm }}",
+    "cancel": "{{ common.cancel }}",
+    "close": "{{ common.close }}",
+    "yes": "{{ common.yes }}",
+    "no": "{{ common.no }}",
+    "areYouSure": "Are you sure?",
+    "areYouSureMessage": "Once completed, this action can’t be reversed.",
+    "servicesCrud": {
+      "newServiceCreationSuccessMsg": "You have created the service {{ _value }}.",
+      "newServiceUpdateSuccessMsg": "You have updated the service {{ _value }}.",
+      "serviceDeleteSuccessMsg": "Service deleted successfully"
+    }
   }
 }

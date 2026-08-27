@@ -1,17 +1,38 @@
 {
   "common": {
-    "active": "सक्रिय",
-    "inactive": "निष्क्रिय",
-    "view": "पहा",
-    "edit": "संपादित करा",
-    "delete": "हटवा",
-    "actions": "कृती",
-    "noDataAvailable": "कोणताही डेटा उपलब्ध नाही",
-    "mins": "मिनिटे",
     "submit": "सबमिट करा",
+    "confirm": "पुष्टी करा",
+    "yes": "होय",
+    "no": "नाही",
     "cancel": "रद्द करा",
     "create": "तयार करा",
-    "update": "अपडेट करा"
+    "update": "अपडेट करा",
+    "view": "पहा",
+    "list": "यादी",
+    "edit": "संपादित करा",
+    "delete": "हटवा",
+    "resend": "पुन्हा पाठवा",
+    "copy": "कॉपी करा",
+    "history": "इतिहास",
+    "transfer": "हस्तांतरित करा",
+    "approve": "मंजूर करा",
+    "return": "परत करा",
+    "seeAll": "सर्व पहा",
+    "close": "बंद करा",
+    "noDataAvailable": "कोणताही डेटा उपलब्ध नाही",
+    "filter": "फिल्टर",
+    "export": "निर्यात करा",
+    "search": "शोधा",
+    "clear": "पुसून टाका",
+    "before": "पूर्वी",
+    "after": "नंतर",
+    "range": "श्रेणी",
+    "done": "पूर्ण झाले",
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय",
+    "goToLogin": "लॉगिनवर जा",
+    "add": "जोडा",
+    "next": "पुढे"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -156,5 +177,26 @@
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM सर्व हक्क राखीव"
+  },
+  "modal": {
+    "defaultErrorTitle": "त्रुटी",
+    "defaultErrorMessage": "काहीतरी चूक झाली!",
+    "defaultErrorButtonText": "{{ common.close }}",
+    "defaultSuccessTitle": "यशस्वी",
+    "defaultSuccessMessage": "यशस्वी!",
+    "defaultSuccessButtonText": "{{ common.close }}",
+    "submit": "{{ common.submit }}",
+    "confirm": "{{ common.confirm }}",
+    "cancel": "{{ common.cancel }}",
+    "close": "{{ common.close }}",
+    "yes": "{{ common.yes }}",
+    "no": "{{ common.no }}",
+    "areYouSure": "तुम्हाला खात्री आहे का?",
+    "areYouSureMessage": "एकदा पूर्ण केल्यानंतर ही कृती पूर्ववत करता येणार नाही.",
+    "servicesCrud": {
+      "newServiceCreationSuccessMsg": "तुम्ही {{ _value }} ही सेवा तयार केली आहे.",
+      "newServiceUpdateSuccessMsg": "तुम्ही {{ _value }} ही सेवा अपडेट केली आहे.",
+      "serviceDeleteSuccessMsg": "सेवा यशस्वीरित्या हटवली"
+    }
   }
 }

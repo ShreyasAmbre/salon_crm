@@ -1,17 +1,38 @@
 {
   "common": {
-    "active": "نشط",
-    "inactive": "غير نشط",
-    "view": "عرض",
-    "edit": "تعديل",
-    "delete": "حذف",
-    "actions": "الإجراءات",
-    "noDataAvailable": "لا توجد بيانات متاحة",
-    "mins": "دقائق",
     "submit": "إرسال",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
     "cancel": "إلغاء",
     "create": "إنشاء",
-    "update": "تحديث"
+    "update": "تحديث",
+    "view": "عرض",
+    "list": "قائمة",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "resend": "إعادة الإرسال",
+    "copy": "نسخ",
+    "history": "السجل",
+    "transfer": "تحويل",
+    "approve": "موافقة",
+    "return": "إرجاع",
+    "seeAll": "عرض الكل",
+    "close": "إغلاق",
+    "noDataAvailable": "لا توجد بيانات متاحة",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "search": "بحث",
+    "clear": "مسح",
+    "before": "قبل",
+    "after": "بعد",
+    "range": "النطاق",
+    "done": "تم",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "goToLogin": "الانتقال إلى تسجيل الدخول",
+    "add": "إضافة",
+    "next": "التالي"
   },
   "header": {
     "defaultHeader": "مرحبًا",
@@ -156,5 +177,26 @@
   },
   "footer": {
     "footerText": "{{ _value }} جميع الحقوق محفوظة لنظام إدارة الصالون"
+  },
+  "modal": {
+    "defaultErrorTitle": "خطأ",
+    "defaultErrorMessage": "حدث خطأ ما!",
+    "defaultErrorButtonText": "{{ common.close }}",
+    "defaultSuccessTitle": "نجاح",
+    "defaultSuccessMessage": "تمت العملية بنجاح!",
+    "defaultSuccessButtonText": "{{ common.close }}",
+    "submit": "{{ common.submit }}",
+    "confirm": "{{ common.confirm }}",
+    "cancel": "{{ common.cancel }}",
+    "close": "{{ common.close }}",
+    "yes": "{{ common.yes }}",
+    "no": "{{ common.no }}",
+    "areYouSure": "هل أنت متأكد؟",
+    "areYouSureMessage": "بمجرد إكمال هذه العملية، لا يمكن التراجع عنها.",
+    "servicesCrud": {
+      "newServiceCreationSuccessMsg": "لقد قمت بإنشاء الخدمة {{ _value }}.",
+      "newServiceUpdateSuccessMsg": "لقد قمت بتحديث الخدمة {{ _value }}.",
+      "serviceDeleteSuccessMsg": "تم حذف الخدمة بنجاح"
+    }
   }
 }

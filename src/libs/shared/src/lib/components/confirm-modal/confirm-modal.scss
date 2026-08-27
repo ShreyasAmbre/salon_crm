@@ -1,0 +1,20 @@
+.confirm-wrapper {
+  .confirm-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.125rem;
+    font-size: 1.75rem;
+    color: var(--black-dark-color);
+  }
+
+  .confirm-msg {
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-size: 1rem !important;
+    color: var(--black-dark-color);
+  }
+
+  .btn-h-48 {
+    height: 48px;
+  }
+}

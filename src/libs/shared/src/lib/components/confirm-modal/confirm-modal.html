@@ -1,0 +1,28 @@
+<ng-container *transloco="let t; prefix: 'modal'">
+  <div class="card bg-body p-4">
+    <div class="confirm-wrapper d-flex flex-column card-body align-items-center justify-content-center">
+      <h4 class="confirm-title text-center fw-semibold mb-5">
+        {{ t(title()) }}
+      </h4>
+      <p
+        class="confirm-msg text-center fs-6x fw-semibold mb-5"
+        [class.text-danger]="messageType() === 'danger'"
+        [class.text-success]="messageType() === 'success'"
+      >
+        @if (messageParams()) {
+          {{ t(message(), messageParams()) }}
+        } @else {
+          {{ t(message()) }}
+        }
+      </p>
+      <div class="d-flex align-items-center justify-content-between w-100 gap-3 mt-3">
+        <button class="btn btn-h-sm btn-outline-primary rounded-3 btn-sm w-50 btn-h-48" (click)="activeModal.close('cancel')">
+          {{ t(cancelButtonText()) }}
+        </button>
+        <button class="btn btn-h-sm btn-primary rounded-3 btn-sm w-50 btn-h-48" (click)="activeModal.close('submit')">
+          {{ t(confirmButtonText()) }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>

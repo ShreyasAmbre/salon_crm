@@ -5,4 +5,8 @@ export * from './footer/footer';
 export * from './icons/index';
 export * from './tanstack-table';
 export * from './user-avatar/user-avatar';
+export * from './confirm-modal/confirm-modal';
+export * from './confirm-modal/confirm-modal.decorator';
+export * from './error-modal/error-modal';
+export * from './success-modal/success-modal';
 

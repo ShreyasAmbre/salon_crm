@@ -1,0 +1,33 @@
+<ng-container *transloco="let t; prefix: 'modal'">
+  @let success_title = successTitle();
+  @let is_message_translate_key = isMessageTranslateKey();
+  @let success_message = successMessage();
+  @let translate_params = translateParams();
+  @let success_button_text = successButtonText();
+  <div class="card p-4">
+    <div class="success-wrapper card-body d-flex flex-column align-items-center justify-content-center gap-3">
+      <img src="/assets/images/success-check.svg" class="mb-2" alt="success icon" />
+      <p class="success-title text-center fs-4 fw-semibold" [class.mb-0]="success_message">
+        {{ t(success_title) }}
+      </p>
+      @if (success_message) {
+        <p class="success-msg text-center fs-6">
+          @if (is_message_translate_key) {
+            @if (translate_params) {
+              {{ t(success_message, translate_params) }}
+            } @else {
+              {{ t(success_message) }}
+            }
+          } @else {
+            {{ success_message }}
+          }
+        </p>
+      }
+      <div class="d-flex flex-column align-items-center w-100 gap-3">
+        <button class="btn btn-primary btn-h-48 w-100" (click)="activeModal.close('cancel')">
+          {{ t(success_button_text) }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>

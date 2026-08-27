@@ -1,0 +1,19 @@
+.success-wrapper {
+  .success-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--black-dark-color);
+  }
+
+  .success-msg {
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-size: 1rem !important;
+    color: var(--black-dark-color);
+  }
+
+  .btn-h-48 {
+    height: 48px;
+  }
+}

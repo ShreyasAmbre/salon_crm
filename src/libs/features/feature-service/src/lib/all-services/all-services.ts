@@ -3,6 +3,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import {
   TanstackTableSorting,
   Pagination,
+  ConfirmModalAction,
 } from '@salon-crm/shared';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlexRender } from '@tanstack/angular-table';
@@ -53,6 +54,10 @@ export class AllServices {
     });
   }
 
+  @ConfirmModalAction({
+    confirmButtonText: signal('confirm'),
+    messageType: signal('danger'),
+  })
   onDelete(row: ServiceDetails) {
     console.log('Delete clicked:', row);
   }
