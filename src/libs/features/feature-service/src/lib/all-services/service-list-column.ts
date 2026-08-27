@@ -1,8 +1,8 @@
 import { tanstackTableColumnHelper } from '@salon-crm/core';
 import { flexRenderComponent } from '@tanstack/angular-table';
-import { ServiceDetails } from '../data-access/models/service.model';
 import { AllServices } from './all-services';
 import { ActionsDropdownCell, StatusCell } from '@salon-crm/shared';
+import { ServiceDetails } from '../data-access';
 
 
 const columnHelper = tanstackTableColumnHelper<ServiceDetails>();

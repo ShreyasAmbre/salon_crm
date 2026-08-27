@@ -8,10 +8,10 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlexRender } from '@tanstack/angular-table';
 import { AllServicesSampleData } from '../data-access/sample-data';
-import { ServiceDetails } from '../data-access/models/service.model';
 import { DEFAULT_PAGE_SIZE, injectAppTable } from '@salon-crm/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { createAllServicesListingColumn } from './service-list-column';
+import { ServiceDetails } from '../data-access';
 
 @Component({
   selector: 'service-all-services',
@@ -62,7 +62,7 @@ export class AllServices {
     console.log('Delete clicked:', row);
   }
 
-  navigateToCreateService() {
+  navigateToCreate() {
     this.#router.navigate(['../createService'], {
       relativeTo: this.#route,
     });

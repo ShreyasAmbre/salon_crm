@@ -8,7 +8,6 @@ export interface ServiceDetails {
   price: number;
   gender: GenderTypeInterface;
   isActive: ServiceStatusTypeInterface;
-  displayOrder: number;
   createdAt: string;
   updatedAt: string;
   description?: string;

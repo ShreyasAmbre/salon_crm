@@ -8,7 +8,7 @@ import { LookupService, StatusLookup, GenderLookup, DurationLookup, CategoryDeta
 import { LanguageService, RequiredStarDirective } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 import { injectRouteData } from 'ngxtension/inject-route-data';
-import { ServiceDetails } from '../data-access/models/service.model';
+import { ServiceDetails } from '../data-access';
 
 @Component({
   selector: 'service-update-service',

@@ -1,6 +1,6 @@
 import { GENDER_TYPE, SERVICE_STATUS_TYPE } from '@salon-crm/core';
+import { ServiceDetails } from './models';
 
-import { ServiceDetails } from './models/service.model';
 
 export const AllServicesSampleData: ServiceDetails[] = [
   {
@@ -12,7 +12,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 500,
     gender: GENDER_TYPE.UNISEX,
     isActive: SERVICE_STATUS_TYPE.ACTIVE,
-    displayOrder: 1,
     createdAt: '2026-08-15T10:30:00Z',
     updatedAt: '2026-08-15T10:30:00Z',
   },
@@ -25,7 +24,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 1500,
     gender: GENDER_TYPE.FEMALE,
     isActive: SERVICE_STATUS_TYPE.ACTIVE,
-    displayOrder: 2,
     createdAt: '2026-08-16T11:15:00Z',
     updatedAt: '2026-08-16T11:15:00Z',
   },
@@ -38,7 +36,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 300,
     gender: GENDER_TYPE.MALE,
     isActive: SERVICE_STATUS_TYPE.ACTIVE,
-    displayOrder: 3,
     createdAt: '2026-08-17T12:00:00Z',
     updatedAt: '2026-08-17T12:00:00Z',
   },
@@ -51,7 +48,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 800,
     gender: GENDER_TYPE.FEMALE,
     isActive: SERVICE_STATUS_TYPE.ACTIVE,
-    displayOrder: 4,
     createdAt: '2026-08-18T14:30:00Z',
     updatedAt: '2026-08-18T14:30:00Z',
   },
@@ -64,7 +60,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 1200,
     gender: GENDER_TYPE.UNISEX,
     isActive: SERVICE_STATUS_TYPE.INACTIVE,
-    displayOrder: 5,
     createdAt: '2026-08-19T15:45:00Z',
     updatedAt: '2026-08-20T09:20:00Z',
   },
@@ -77,7 +72,6 @@ export const AllServicesSampleData: ServiceDetails[] = [
     price: 5000,
     gender: GENDER_TYPE.FEMALE,
     isActive: SERVICE_STATUS_TYPE.ACTIVE,
-    displayOrder: 6,
     createdAt: '2026-08-20T16:00:00Z',
     updatedAt: '2026-08-20T16:00:00Z',
   },
