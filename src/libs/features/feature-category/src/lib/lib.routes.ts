@@ -8,7 +8,7 @@ export const featureCategoryRoutes: Route[] = [
   {
     path:'allCategories',
     component: AllCategories,
-    title: 'pageTitle.allCategories'
+    title: 'pageTitle.categories'
   },
   {
     path:'createCategory',

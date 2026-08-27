@@ -32,7 +32,8 @@
     "inactive": "निष्क्रिय",
     "goToLogin": "लॉगिनवर जा",
     "add": "जोडा",
-    "next": "पुढे"
+    "next": "पुढे",
+    "actions": "कृती"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -62,6 +63,10 @@
     "createService": "सेवा तयार करा",
     "updateService": "सेवा अपडेट करा",
     "serviceDetails": "सेवेचे तपशील",
+    "categories": "श्रेणी",
+    "createCategory": "श्रेणी तयार करा",
+    "updateCategory": "श्रेणी अपडेट करा",
+    "categoryDetails": "श्रेणीचे तपशील",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -134,6 +139,20 @@
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "update": "{{ common.update }}"
+    }
+  },
+  "categories": {
+    "title": "सर्व श्रेणी",
+    "createCategoryBtnLabel": "श्रेणी तयार करा",
+    "noDataAvailable": "{{ common.noDataAvailable }}",
+    "header": {
+      "id": "क्रमांक",
+      "name": "नाव",
+      "servicesCount": "सेवांची संख्या",
+      "status": "स्थिती",
+      "createdAt": "तयार केले",
+      "updatedAt": "अपडेट केले",
+      "actions": "{{ common.actions }}"
     }
   },
   "tanStackTable": {
