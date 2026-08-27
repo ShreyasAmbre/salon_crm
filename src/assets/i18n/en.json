@@ -117,6 +117,8 @@
       "selectGender": "Select gender",
       "status": "Status",
       "selectStatus": "Select status",
+      "description": "Description",
+      "enterDescription": "Enter description",
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "create": "{{ common.create }}"
@@ -136,6 +138,8 @@
       "selectGender": "Select gender",
       "status": "Status",
       "selectStatus": "Select status",
+      "description": "Description",
+      "enterDescription": "Enter description",
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
       "update": "{{ common.update }}"
@@ -153,6 +157,29 @@
       "createdAt": "Created At",
       "updatedAt": "Updated At",
       "actions": "{{ common.actions }}"
+    },
+    "createCategory": {
+      "createCategoryTitle": "Create Category",
+      "categoryName": "Category Name",
+      "enterCategoryName": "Enter category name",
+      "status": "Status",
+      "selectStatus": "Select status",
+      "description": "Description",
+      "enterDescription": "Enter description",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}"
+    },
+    "updateCategory": {
+      "updateCategoryTitle": "Update Category",
+      "categoryDetails": "Category Details",
+      "categoryName": "Category Name",
+      "enterCategoryName": "Enter category name",
+      "status": "Status",
+      "selectStatus": "Select status",
+      "description": "Description",
+      "enterDescription": "Enter description",
+      "cancel": "{{ common.cancel }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {

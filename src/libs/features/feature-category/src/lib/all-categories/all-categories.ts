@@ -39,14 +39,14 @@ export class AllCategories {
   onView(row: CategoryDetails) {
     this.#router.navigate(['../categoryDetails'], {
       relativeTo: this.#route,
-      state: { serviceDetails: row },
+      state: { categoryDetails: row },
     });
   }
 
   onEdit(row: CategoryDetails) {
     this.#router.navigate(['../updateCategory'], {
       relativeTo: this.#route,
-      state: { serviceDetails: row },
+      state: { categoryDetails: row },
     });
   }
 

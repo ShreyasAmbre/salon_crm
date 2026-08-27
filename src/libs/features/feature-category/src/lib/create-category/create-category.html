@@ -1,1 +1,76 @@
-<p>create-category works!</p>
+<ng-container *transloco="let t; prefix: 'categories.createCategory'">
+  <div class="section-wrapper">
+    <div class="section-title-wrapper pt-2 pb-4">
+      <span class="fs-6x section-title">{{ t('createCategoryTitle') }}</span>
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body asset-creation">
+        <form [formGroup]="form" errorTailor>
+          <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="categoryName" sharedRequiredStar>
+                {{ t('categoryName') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterCategoryName')" formControlName="categoryName" />
+              <div class="invalid-feedback d-block">
+                @if (f.categoryName.touched || f.categoryName.dirty) {
+                  @if (f.categoryName.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="status" sharedRequiredStar>
+                {{ t('status') }}
+              </label>
+              <ng-select
+                labelForId="status"
+                formControlName="status"
+                [items]="statusList()"
+                [placeholder]="t('selectStatus')"
+                bindLabel="name"
+                bindValue="value"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.status.touched || f.status.dirty) {
+                  @if (f.status.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="description">
+                {{ t('description') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterDescription')" formControlName="description" />
+              <div class="invalid-feedback d-block">
+                @if (f.description.touched || f.description.dirty) {
+                  @if (f.description.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end flex-wrap gap-3 my-5">
+              <button type="button" class="btn btn-outline-primary form-btn rounded-3" (click)="clearForm()">
+                {{ t('cancel') }}
+              </button>
+
+              <button type="submit" class="btn btn-primary form-btn rounded-3" [disabled]="form.invalid" (click)="onSubmitForm()">
+                {{ t('create') }}
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>
