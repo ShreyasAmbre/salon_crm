@@ -129,6 +129,20 @@
               </div>
             </div>
 
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="description">
+                {{ t('description') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterDescription')" formControlName="description" />
+              <div class="invalid-feedback d-block">
+                @if (f.description.touched || f.description.dirty) {
+                  @if (f.description.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
             <div class="col-12 d-flex justify-content-end flex-wrap gap-3 my-5">
               <button type="button" class="btn btn-outline-primary form-btn rounded-3" (click)="clearForm()">
                 {{ t('cancel') }}

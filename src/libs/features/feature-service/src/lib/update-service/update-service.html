@@ -59,7 +59,7 @@
                 formControlName="duration"
                 [placeholder]="t('selectDuration')"
                 bindLabel="value"
-                bindValue="id"
+                bindValue="value"
               >
                 <ng-template ng-label-tmp let-item="item">
                   {{ item.value }} {{ t('mins') }}
@@ -128,6 +128,20 @@
               <div class="invalid-feedback d-block">
                 @if (f.status.touched || f.status.dirty) {
                   @if (f.status.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="description">
+                {{ t('description') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterDescription')" formControlName="description" />
+              <div class="invalid-feedback d-block">
+                @if (f.description.touched || f.description.dirty) {
+                  @if (f.description.hasError('required')) {
                     {{ 'formError.required' | transloco }}
                   }
                 }
