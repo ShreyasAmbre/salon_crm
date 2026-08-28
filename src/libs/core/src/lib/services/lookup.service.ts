@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 import { GENDER_TYPE, SERVICE_STATUS_TYPE } from '../enums';
-import { CategoryDetailsLookup, DurationLookup, GenderLookup, StatusLookup } from '../models';
+import { CategoryDetailsLookup, DurationLookup, GenderLookup, NationalityLookup, StatusLookup } from '../models';
 
 @Service()
 export class LookupService {
@@ -30,4 +30,37 @@ export class LookupService {
     { id: 2, name: 'Grooming', nameEn: '', nameAr: '', nameMr: '',  },
     { id: 3, name: 'Skin Care', nameEn: '', nameAr: '', nameMr: '',  },
   ]
+
+  readonly nationalityList: NationalityLookup[] = [
+    {
+      code: 'IN',
+      countryName: 'India',
+      dialingCode: '+91',
+      codeWithDialing: 'IN (+91)',
+    },
+    {
+      code: 'QA',
+      countryName: 'Qatar',
+      dialingCode: '+974',
+      codeWithDialing: 'QA (+974)',
+    },
+    {
+      code: 'AE',
+      countryName: 'United Arab Emirates',
+      dialingCode: '+971',
+      codeWithDialing: 'AE (+971)',
+    },
+    {
+      code: 'SA',
+      countryName: 'Saudi Arabia',
+      dialingCode: '+966',
+      codeWithDialing: 'SA (+966)',
+    },
+    {
+      code: 'US',
+      countryName: 'United States',
+      dialingCode: '+1',
+      codeWithDialing: 'US (+1)',
+    },
+  ];
 }

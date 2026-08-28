@@ -1,1 +1,163 @@
-<p>create-customer works!</p>
+<ng-container *transloco="let t; prefix: 'customers.createCustomer'">
+  <div class="section-wrapper">
+    <div class="section-title-wrapper pt-2 pb-4">
+      <span class="fs-6x section-title">{{ t('createCustomerTitle') }}</span>
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body asset-creation">
+        <form [formGroup]="form" errorTailor>
+          <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="firstName" sharedRequiredStar>
+                {{ t('firstName') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterFirstName')" formControlName="firstName" />
+              <div class="invalid-feedback d-block">
+                @if (f.firstName.touched || f.firstName.dirty) {
+                  @if (f.firstName.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="lastName" sharedRequiredStar>
+                {{ t('lastName') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterLastName')" formControlName="lastName" />
+              <div class="invalid-feedback d-block">
+                @if (f.lastName.touched || f.lastName.dirty) {
+                  @if (f.lastName.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="name" sharedRequiredStar>
+                {{ t('whatsappNumber') }}
+              </label>
+              <div class="d-flex gap-2">
+                <div class="country-code-wrapper">
+                  <shared-country-code-select formControlName="phoneCode" [countryCodes]="nationalityList()" />
+                </div>
+                <div class="w-100">
+                  <input
+                    type="text"
+                    class="form-control"
+                    [placeholder]="t('enterWhatsAppNo')"
+                    mask="9*"
+                    [dropSpecialCharacters]="true"
+                    formControlName="whatsAppNo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="email">
+                {{ t('email') }}
+              </label>
+              <input type="email" class="form-control" [placeholder]="t('enterEmail')" formControlName="email" />
+              <div class="invalid-feedback d-block">
+                @if (f.email.touched || f.email.dirty) {
+                  @if (f.email.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  } @else if (f.email.hasError('email')) {
+                    {{ 'formError.email' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <!-- TODO: Need to integrate date npm package and global styling for that -->
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="dateOfBirth" sharedRequiredStar>
+                {{ t('dateOfBirth') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('selectDateOfBirth')" formControlName="dateOfBirth" />
+              <div class="invalid-feedback d-block">
+                @if (f.dateOfBirth.touched || f.dateOfBirth.dirty) {
+                  @if (f.dateOfBirth.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="gender" sharedRequiredStar>
+                {{ t('gender') }}
+              </label>
+              <ng-select
+                labelForId="gender"
+                [items]="genderList()"
+                formControlName="gender"
+                [placeholder]="t('selectGender')"
+                bindLabel="name"
+                bindValue="id"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.gender.touched || f.gender.dirty) {
+                  @if (f.gender.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="status" sharedRequiredStar>
+                {{ t('status') }}
+              </label>
+              <ng-select
+                labelForId="status"
+                formControlName="status"
+                [items]="statusList()"
+                [placeholder]="t('selectStatus')"
+                bindLabel="name"
+                bindValue="value"
+              />
+              <div class="invalid-feedback d-block">
+                @if (f.status.touched || f.status.dirty) {
+                  @if (f.status.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="notes">
+                {{ t('notes') }}
+              </label>
+              <input type="text" class="form-control" [placeholder]="t('enterNotes')" formControlName="notes" />
+              <div class="invalid-feedback d-block">
+                @if (f.notes.touched || f.notes.dirty) {
+                  @if (f.notes.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end flex-wrap gap-3 my-5">
+              <button type="button" class="btn btn-outline-primary form-btn rounded-3" (click)="clearForm()">
+                {{ t('cancel') }}
+              </button>
+
+              <button type="submit" class="btn btn-primary form-btn rounded-3" [disabled]="form.invalid" (click)="onSubmitForm()">
+                {{ t('create') }}
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

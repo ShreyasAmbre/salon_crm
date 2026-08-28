@@ -27,3 +27,14 @@ export interface CategoryDetailsLookup {
   nameAr: string;
   nameMr: string;
 }
+
+export type NationalityLookup = {
+  id?: number;
+  code: string;
+  name?: string | null;
+  countryName: string;
+  dialingCode: string;
+  codeWithDialing: string;
+  isEnabled?: boolean;
+};
+

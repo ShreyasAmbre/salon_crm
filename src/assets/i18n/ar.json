@@ -81,7 +81,7 @@
     "email": "البريد الإلكتروني",
     "exampleEmail": "Example@email.com",
     "password": "كلمة المرور",
-    "passwordGuide": "يجب أن تتكون من 8 أحرف على الأقل",
+    "passwordGuide": "8 أحرف على الأقل",
     "forgotPassword": "هل نسيت كلمة المرور؟",
     "login": "تسجيل الدخول",
     "firstName": "الاسم الأول",
@@ -216,14 +216,14 @@
       "enterFirstName": "أدخل الاسم الأول",
       "lastName": "اسم العائلة",
       "enterLastName": "أدخل اسم العائلة",
-      "Email": "البريد الإلكتروني",
+      "email": "البريد الإلكتروني",
       "enterEmail": "أدخل البريد الإلكتروني",
       "whatsappNumber": "رقم واتساب",
       "enterWhatsAppNo": "أدخل رقم واتساب",
       "gender": "الجنس",
       "selectGender": "اختر الجنس",
       "dateOfBirth": "تاريخ الميلاد",
-      "selectDOB": "اختر تاريخ الميلاد",
+      "selectDateOfBirth": "اختر تاريخ الميلاد",
       "status": "الحالة",
       "selectStatus": "اختر الحالة",
       "notes": "ملاحظات",
@@ -291,7 +291,7 @@
     "minValue": "الحد الأدنى للقيمة المسموح بها: {{_value}}",
     "maxValue": "الحد الأقصى للقيمة المسموح بها: {{_value}}",
     "pattern": "يجب أن يكون الحقل صالحًا",
-    "minimumAge": "يجب ألا يقل العمر عن {{_value}} عامًا"
+    "minimumAge": "يجب أن يكون العمر {{_value}} عامًا على الأقل"
   },
   "footer": {
     "footerText": "{{ _value }} جميع الحقوق محفوظة لنظام إدارة الصالون"
