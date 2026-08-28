@@ -9,7 +9,7 @@ export const featureCustomerRoutes: Route[] = [
   {
     path:'allCustomers',
     component: AllCustomers,
-    title: 'pageTitle.allCustomers'
+    title: 'pageTitle.customers'
   },
   {
     path:'createCustomer',

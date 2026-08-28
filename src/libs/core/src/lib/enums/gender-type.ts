@@ -6,3 +6,9 @@ export const GENDER_TYPE = {
 
 export type GenderTypeInterface =
   (typeof GENDER_TYPE)[keyof typeof GENDER_TYPE];
+
+export const GenderTranslationKeys: Record<GenderTypeInterface, string> = {
+  [GENDER_TYPE.MALE]: 'male',
+  [GENDER_TYPE.FEMALE]: 'female',
+  [GENDER_TYPE.UNISEX]: 'unisex',
+};

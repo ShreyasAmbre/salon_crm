@@ -1,1 +1,81 @@
-<p>all-customers works!</p>
+<ng-container *transloco="let t; prefix: 'customers'">
+  <div class="section-wrapper">
+    <div class="section-title-wrapper pt-2 pb-4">
+      <span class="fs-6x section-title">{{ t('title') }}</span>
+        <button type="button" class="btn create-btn"
+          (click)="navigateToCreate()">
+          {{ t('createCustomerBtnLabel') }}
+        </button>
+    </div>
+
+    <div class="card page-card">
+      <div class="card-body">
+        <div class="sub-section-wrapper">
+          <!-- <shared-table-search-input
+            [placeholder]="t('searchRecord')"
+            [minSearchLen]="minSearchLen()"
+            (searchTerm)="onSearch($event)"
+            (clearSearch)="onClearSearch()"
+          /> -->
+        </div>
+        <div class="table-wrapper">
+          <table class="table tanstack-border-table">
+            <thead>
+              @for (headerGroup of customerListingTable.getHeaderGroups(); track headerGroup.id) {
+                <tr>
+                  @for (header of headerGroup.headers; track header.id) {
+                    <th (click)="header.column.toggleSorting()" style="cursor: pointer">
+                      <ng-container
+                        *flexRender="header.column.columnDef.header; props: header.getContext(); let content"
+                      >
+                        <div class="sorting-wrapper">
+                          {{ t(content) }}
+                          <!-- Added "enableSorting" Flag in columnDef -->
+                          @if (header.column.getCanSort()) {
+                            <shared-tanstack-table-sorting [column]="header.column" />
+                          }
+                        </div>
+                      </ng-container>
+                    </th>
+                  }
+                </tr>
+              }
+            </thead>
+            <tbody>
+              @for (row of customerListingTable.getRowModel().rows; track row.id) {
+                <tr>
+                  @for (cell of row.getVisibleCells(); track cell.id) {
+                    <td>
+                      <ng-container *flexRender="cell.column.columnDef.cell; props: cell.getContext(); let cellContent">
+                        @if (cellContent?.component) {
+                          <ng-container *flexRender="cellContent; props: cellContent.props"></ng-container>
+                        } @else {
+                          <span class="title-col-text">
+                            {{ cellContent }}
+                          </span>
+                        }
+                      </ng-container>
+                    </td>
+                  }
+                </tr>
+              } @empty {
+                <td class="no-data-cell" [attr.colspan]="8">
+                  <div class="no-data-wrapper">
+                    <fa-icon [icon]="['fas', 'tachograph-digital']" class="no-data-icon" />
+                    <span>{{ t('noDataAvailable') }}</span>
+                  </div>
+                </td>
+              }
+            </tbody>
+          </table>
+        </div>
+        <!-- PAGINATION CONTROLS -->
+        <div class="pagination-container">
+          <shared-pagination
+            [table]="customerListingTable"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
