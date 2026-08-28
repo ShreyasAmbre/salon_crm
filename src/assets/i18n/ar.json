@@ -232,13 +232,13 @@
       "create": "{{ common.create }}"
     },
     "updateCustomer": {
-      "createCustomerTitle": "تحديث العميل",
+      "updateCustomerTitle": "تحديث العميل",
       "customerDetails": "تفاصيل العميل",
       "firstName": "الاسم الأول",
       "enterFirstName": "أدخل الاسم الأول",
       "lastName": "اسم العائلة",
       "enterLastName": "أدخل اسم العائلة",
-      "Email": "البريد الإلكتروني",
+      "email": "البريد الإلكتروني",
       "enterEmail": "أدخل البريد الإلكتروني",
       "whatsappNumber": "رقم واتساب",
       "enterWhatsAppNo": "أدخل رقم واتساب",

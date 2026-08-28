@@ -39,14 +39,14 @@ export class AllCustomers {
   onView(row: CustomerDetails) {
     this.#router.navigate(['../customerDetails'], {
       relativeTo: this.#route,
-      state: { serviceDetails: row },
+      state: { customerDetails: row },
     });
   }
 
   onEdit(row: CustomerDetails) {
     this.#router.navigate(['../updateCustomer'], {
       relativeTo: this.#route,
-      state: { serviceDetails: row },
+      state: { customerDetails: row },
     });
   }
 

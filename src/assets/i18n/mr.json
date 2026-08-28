@@ -232,13 +232,13 @@
       "create": "{{ common.create }}"
     },
     "updateCustomer": {
-      "createCustomerTitle": "ग्राहक अपडेट करा",
+      "updateCustomerTitle": "ग्राहक अपडेट करा",
       "customerDetails": "ग्राहकांचे तपशील",
       "firstName": "पहिले नाव",
       "enterFirstName": "पहिले नाव प्रविष्ट करा",
       "lastName": "आडनाव",
       "enterLastName": "आडनाव प्रविष्ट करा",
-      "Email": "ईमेल",
+      "email": "ईमेल",
       "enterEmail": "ईमेल प्रविष्ट करा",
       "whatsappNumber": "WhatsApp क्रमांक",
       "enterWhatsAppNo": "WhatsApp क्रमांक प्रविष्ट करा",

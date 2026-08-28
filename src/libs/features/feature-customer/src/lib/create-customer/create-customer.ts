@@ -40,7 +40,7 @@ export class CreateCustomer {
     firstName: ['', [Validators.required]],
     lastName: ['', [Validators.required]],
     email: ['', [Validators.email]],
-    phoneCode: ['+91'],
+    phoneCode: [{ value: '+91', disabled: true },],
     whatsAppNo:  [
       '',
       [Validators.required, Validators.pattern(SHARED_PATTERNS.INDIAN_CONTACT_NUMBER)],

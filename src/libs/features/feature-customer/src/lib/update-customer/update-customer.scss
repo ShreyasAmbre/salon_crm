@@ -1,0 +1,37 @@
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .section-title-wrapper {
+    .section-title {
+      margin: 5% 0%;
+      font-family: var(--font-primary);
+      font-weight: 600;
+      color: var(--blue-dark-color);
+    }
+  }
+
+  .page-card {
+    // min-height: 65vh;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+
+    .form-control,
+    .form-select {
+      height: 3rem;
+    }
+
+    .form-btn {
+      height: 48px;
+      min-width: 11.8rem;
+    }
+
+    .country-code-wrapper {
+      width: 25%;
+    }
+
+  }
+}
