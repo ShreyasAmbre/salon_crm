@@ -74,12 +74,71 @@
               </div>
             </div>
 
-            <!-- TODO: Need to integrate date npm package and global styling for that -->
+            <!-- TODO: ngxDaterangepickerBootstrap - UI bug present in below code -->
+            <!-- <div class="col-12 col-md-6">
+              <label
+                class="form-label"
+                for="dateOfBirth"
+                sharedRequiredStar
+              >
+                {{ t('dateOfBirth') }}
+              </label>
+
+              <div class="position-relative">
+                <input
+                  id="dateOfBirth"
+                  type="text"
+                  class="form-control"
+                  [placeholder]="t('selectDateOfBirth')"
+                  formControlName="dateOfBirth"
+                  ngxDaterangepickerBootstrap
+                  [singleDatePicker]="true"
+                  [autoApply]="true"
+                  [maxDate]="maxDate"
+                  [locale]="datePickerLocale()"
+                  [showDropdowns]="true"
+                  [opens]="isRtl() ? 'left' : 'right'"
+                  readonly
+                />
+
+                <fa-icon
+                  class="position-absolute top-50 end-0 translate-middle-y me-3"
+                  [icon]="['far', 'calendar']"
+                />
+              </div>
+
+              <div class="invalid-feedback d-block">
+                @if (f.dateOfBirth.touched || f.dateOfBirth.dirty) {
+                  @if (f.dateOfBirth.hasError('required')) {
+                    {{ 'formError.required' | transloco }}
+                  }
+                }
+              </div>
+            </div> -->
+
+
             <div class="col-12 col-md-6">
               <label class="form-label" for="dateOfBirth" sharedRequiredStar>
                 {{ t('dateOfBirth') }}
               </label>
-              <input type="text" class="form-control" [placeholder]="t('selectDateOfBirth')" formControlName="dateOfBirth" />
+              <div class="date-input-wrapper position-relative">
+                <input
+                  class="form-control"
+                  name="dateOfBirth"
+                  formControlName="dateOfBirth"
+                  placeholder="{{ t('selectDateOfBirth') }}"
+                  ngbDatepicker
+                  #dateOfBirth="ngbDatepicker"
+                  (click)="dateOfBirth.open()"
+                  readonly
+                  [placement]="'top-end'"
+                />
+                <div class="align-cal-icon">
+                  <button class="btn p-2 m-0 border-0" (click)="dateOfBirth.open()">
+                    <shared-calendar-svg />
+                  </button>
+                </div>
+              </div>
               <div class="invalid-feedback d-block">
                 @if (f.dateOfBirth.touched || f.dateOfBirth.dirty) {
                   @if (f.dateOfBirth.hasError('required')) {
@@ -88,6 +147,8 @@
                 }
               </div>
             </div>
+
+
 
             <div class="col-12 col-md-6">
               <label class="form-label" for="gender" sharedRequiredStar>

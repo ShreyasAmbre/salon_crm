@@ -39,4 +39,14 @@
       }
     }
   }
+
+  // Note: ngx-daterangepicker-bootstrap - Date Picker Global RTL Styling
+  .daterangepicker {
+    direction: rtl;
+    text-align: right;
+
+    .drp-buttons {
+      text-align: left;
+    }
+  }
 }

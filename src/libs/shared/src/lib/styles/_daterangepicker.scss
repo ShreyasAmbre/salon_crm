@@ -1,0 +1,120 @@
+// ngx-daterangepicker-bootstrap global styling
+
+.daterangepicker {
+  font-family: var(--font-primary);
+  // background-color: var(--surface-page);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  .calendar-table {
+    background-color: transparent;
+    border: 0;
+
+    .month > .dropdowns {
+      // .dropdowns{
+        width: 60px !important;
+      // }
+    }
+
+  }
+
+  .calendar-table table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  th {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  td {
+    color: var(--text-primary);
+    border-radius: 0.375rem;
+  }
+
+  td.available:hover {
+    background-color: var(--primary-on-hover);
+    color: var(--primary);
+  }
+
+  td.active,
+  td.active:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+
+  td.in-range {
+    background-color: var(--primary-on-hover);
+    color: var(--text-primary);
+  }
+
+  td.off,
+  td.disabled {
+    color: var(--text-secondary);
+    opacity: 0.5;
+  }
+
+  select {
+    color: var(--text-primary);
+    background-color: var(--surface-page);
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.5rem;
+
+
+  }
+
+  .ranges {
+    li {
+      color: var(--text-primary);
+      border-radius: 0.375rem;
+
+      &:hover {
+        background-color: var(--primary-on-hover);
+        color: var(--primary);
+      }
+
+      &.active {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+  }
+
+  .drp-buttons {
+    border-top: 1px solid var(--border);
+
+    .btn {
+      border-radius: 0.375rem;
+      font-family: var(--font-primary);
+    }
+
+    .cancelBtn {
+      color: var(--text-primary);
+      background-color: transparent;
+      border: 1px solid var(--border);
+
+      &:hover {
+        background-color: var(--surface-muted);
+      }
+    }
+
+    .applyBtn {
+      color: #fff;
+      background-color: var(--primary);
+      border: 1px solid var(--primary);
+
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+  }
+}

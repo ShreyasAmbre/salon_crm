@@ -4,7 +4,7 @@ import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { TranslocoService } from '@jsverse/transloco';
 import { delay, distinctUntilChanged, map, startWith } from 'rxjs';
 import { injectLocalStorage } from 'ngxtension/inject-local-storage';
-import { LanguageIdType, LANGUAGE_IDS } from '../constants';
+import { LanguageIdType, LANGUAGE_IDS, languageIdMap } from '../constants';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +14,16 @@ export class LanguageService {
   #destroyRef = inject(DestroyRef);
   #document = inject(DOCUMENT);
   #storedLanguageId = injectLocalStorage<LanguageIdType>('languageId', { defaultValue: LANGUAGE_IDS.ENGLISH });
+
+  currentLanguage = toSignal(
+    this.#transloco.langChanges$.pipe(
+      startWith(this.#transloco.getActiveLang() || 'en'),
+      distinctUntilChanged(),
+    ),
+    {
+      initialValue: this.#transloco.getActiveLang() || 'en',
+    },
+  );
 
   isRtl = toSignal(
     this.#transloco.langChanges$.pipe(
@@ -49,12 +59,6 @@ export class LanguageService {
   private setLanguageId(lang: string) {
     // const langId = lang === 'en' ? LANGUAGE_IDS.ENGLISH : LANGUAGE_IDS.ARABIC;
     // this.#storedLanguageId.set(langId);
-
-    const languageIdMap: Record<string, LanguageIdType> = {
-      en: LANGUAGE_IDS.ENGLISH,
-      ar: LANGUAGE_IDS.ARABIC,
-      mr: LANGUAGE_IDS.MARATHI,
-    };
 
     const languageId = languageIdMap[lang] ?? LANGUAGE_IDS.ENGLISH;
 

@@ -15,7 +15,7 @@ import { lastValueFrom } from 'rxjs';
 import ar from '@angular/common/locales/ar';
 import mr from '@angular/common/locales/mr';
 import { provideErrorTailorConfig } from '@ngneat/error-tailor';
-
+import {provideDaterangepickerLocale} from "ngx-daterangepicker-bootstrap";
 
 registerLocaleData(ar);
 registerLocaleData(mr);
@@ -37,6 +37,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(appRoutes),
+    provideDaterangepickerLocale({
+      separator: ' - ',
+      applyLabel: 'Okay',
+    }),
     importProvidersFrom(NgbModule),
     provideHttpClient(
       withInterceptors([

@@ -1,13 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LookupService, StatusLookup, GenderLookup, NationalityLookup } from '@salon-crm/core';
-import { CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS } from '@salon-crm/shared';
+import { CalendarSvg, CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
-
+// import { NgxDaterangepickerBootstrapDirective } from 'ngx-daterangepicker-bootstrap';
+import { DatePickerLocaleConfig } from '@salon-crm/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import dayjs from 'dayjs';
+import { NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'customer-create-customer',
   imports: [
@@ -17,7 +21,11 @@ import { NgxMaskDirective } from 'ngx-mask';
     NgSelectModule,
     RequiredStarDirective,
     NgxMaskDirective,
-    CountryCodeSelect
+    CountryCodeSelect,
+    // NgxDaterangepickerBootstrapDirective,
+    NgbDatepickerModule,
+    CalendarSvg,
+    FontAwesomeModule,
   ],
   templateUrl: './create-customer.html',
   styleUrl: './create-customer.scss',
@@ -30,6 +38,13 @@ export class CreateCustomer {
   readonly #lookupService = inject(LookupService);
 
   protected isRtl = this.#languageService.isRtl;
+  protected currentLanguage = this.#languageService.currentLanguage();
+
+  protected readonly maxDate = dayjs();
+  protected readonly datePickerLocale = computed(() => {
+    const lang = this.currentLanguage;
+    return DatePickerLocaleConfig[lang] ?? DatePickerLocaleConfig?.['en'];
+  });
 
   protected readonly statusList = signal<StatusLookup[]>(this.#lookupService.statusList);
   protected readonly genderList = signal<GenderLookup[]>(this.#lookupService.genderList);
@@ -45,7 +60,7 @@ export class CreateCustomer {
       '',
       [Validators.required, Validators.pattern(SHARED_PATTERNS.INDIAN_CONTACT_NUMBER)],
     ],
-    dateOfBirth: ['', [Validators.required]],
+    dateOfBirth: [null as NgbDateStruct | null, [Validators.required]],
     gender: [null as number | null, [Validators.required]],
     status: [{ value: true, disabled: true }, [Validators.required]],
     notes: [''],
