@@ -5,13 +5,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LookupService, StatusLookup, GenderLookup, NationalityLookup } from '@salon-crm/core';
-import { CalendarSvg, CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS } from '@salon-crm/shared';
+import { CalendarSvg, CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 // import { NgxDaterangepickerBootstrapDirective } from 'ngx-daterangepicker-bootstrap';
 import { DatePickerLocaleConfig } from '@salon-crm/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import dayjs from 'dayjs';
-import { NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'customer-create-customer',
   imports: [
@@ -23,8 +22,7 @@ import { NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
     NgxMaskDirective,
     CountryCodeSelect,
     // NgxDaterangepickerBootstrapDirective,
-    NgbDatepickerModule,
-    CalendarSvg,
+    SingleDatePicker,
     FontAwesomeModule,
   ],
   templateUrl: './create-customer.html',
@@ -60,7 +58,7 @@ export class CreateCustomer {
       '',
       [Validators.required, Validators.pattern(SHARED_PATTERNS.INDIAN_CONTACT_NUMBER)],
     ],
-    dateOfBirth: [null as NgbDateStruct | null, [Validators.required]],
+    dateOfBirth: [null as string | null, [Validators.required]],
     gender: [null as number | null, [Validators.required]],
     status: [{ value: true, disabled: true }, [Validators.required]],
     notes: [''],
@@ -71,7 +69,7 @@ export class CreateCustomer {
   }
 
   protected onSubmitForm() {
-    console.log("On Submit");
+    console.log("On Submit", this.form.getRawValue());
     this.navigateToList();
   }
 

@@ -111,27 +111,8 @@
       "status": "Status",
       "actions": "{{ common.actions }}"
     },
-    "createService": {
+    "createUpdateService": {
       "createServiceTitle": "Create Service",
-      "serviceName": "Service Name",
-      "enterServiceName": "Enter service name",
-      "category": "Category",
-      "duration": "Duration",
-      "selectDuration": "Select duration",
-      "selectCategory": "Select category",
-      "price": "Price",
-      "enterPrice": "Enter price",
-      "gender": "Gender",
-      "selectGender": "Select gender",
-      "status": "Status",
-      "selectStatus": "Select status",
-      "description": "Description",
-      "enterDescription": "Enter description",
-      "mins": "{{ common.mins }}",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateService": {
       "updateServiceTitle": "Update Service",
       "serviceDetails": "Service Details",
       "serviceName": "Service Name",
@@ -150,6 +131,7 @@
       "enterDescription": "Enter description",
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -166,18 +148,8 @@
       "updatedAt": "Updated At",
       "actions": "{{ common.actions }}"
     },
-    "createCategory": {
+    "createUpdateCategory": {
       "createCategoryTitle": "Create Category",
-      "categoryName": "Category Name",
-      "enterCategoryName": "Enter category name",
-      "status": "Status",
-      "selectStatus": "Select status",
-      "description": "Description",
-      "enterDescription": "Enter description",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCategory": {
       "updateCategoryTitle": "Update Category",
       "categoryDetails": "Category Details",
       "categoryName": "Category Name",
@@ -187,6 +159,7 @@
       "description": "Description",
       "enterDescription": "Enter description",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -210,28 +183,8 @@
       "status": "Status",
       "actions": "{{ common.actions }}"
     },
-    "createCustomer": {
+    "createUpdateCustomer": {
       "createCustomerTitle": "Create Customer",
-      "firstName": "First Name",
-      "enterFirstName": "Enter first name",
-      "lastName": "Last Name",
-      "enterLastName": "Enter last name",
-      "email": "Email",
-      "enterEmail": "Enter email",
-      "whatsappNumber": "WhatsApp No.",
-      "enterWhatsAppNo": "Enter whatsapp no.",
-      "gender": "Gender",
-      "selectGender": "Select gender",
-      "dateOfBirth": "Date of Birth",
-      "selectDateOfBirth": "Select date of birth",
-      "status": "Status",
-      "selectStatus": "Select status",
-      "notes": "Notes",
-      "enterNotes": "Enter Notes",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCustomer": {
       "updateCustomerTitle": "Update Customer",
       "customerDetails": "Customer Details",
       "firstName": "First Name",
@@ -242,15 +195,17 @@
       "enterEmail": "Enter email",
       "whatsappNumber": "WhatsApp No.",
       "enterWhatsAppNo": "Enter whatsapp no.",
+      "mobileNumberInvalid": "Invalid mobile no.",
       "gender": "Gender",
       "selectGender": "Select gender",
       "dateOfBirth": "Date of Birth",
-      "selectDOB": "Select DOB",
+      "selectDateOfBirth": "Select date of birth",
       "status": "Status",
       "selectStatus": "Select status",
       "notes": "Notes",
       "enterNotes": "Enter Notes",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -316,5 +271,11 @@
       "newServiceUpdateSuccessMsg": "You have updated the service {{ _value }}.",
       "serviceDeleteSuccessMsg": "Service deleted successfully"
     }
+  },
+  "countryCodeInput": {
+    "countryCodeInputPlaceholder": "Select code"
+  },
+  "singleDatePicker": {
+    "selectDate": "Select date"
   }
 }

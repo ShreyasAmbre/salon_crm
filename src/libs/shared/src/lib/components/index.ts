@@ -10,4 +10,5 @@ export * from './confirm-modal/confirm-modal.decorator';
 export * from './error-modal/error-modal';
 export * from './success-modal/success-modal';
 export * from './country-code-select/country-code-select';
+export * from './single-date-picker/single-date-picker';
 

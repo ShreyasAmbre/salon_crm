@@ -11,10 +11,10 @@
     "list": "قائمة",
     "edit": "تعديل",
     "delete": "حذف",
-    "resend": "إعادة الإرسال",
+    "resend": "إعادة إرسال",
     "copy": "نسخ",
     "history": "السجل",
-    "transfer": "تحويل",
+    "transfer": "نقل",
     "approve": "موافقة",
     "return": "إرجاع",
     "seeAll": "عرض الكل",
@@ -46,7 +46,7 @@
     "services": "الخدمات",
     "category": "الفئة",
     "bookings": "الحجوزات",
-    "userProfile": "الملف الشخصي للمستخدم",
+    "userProfile": "الملف الشخصي",
     "changePassword": "تغيير كلمة المرور",
     "logout": "تسجيل الخروج",
     "subMenus": {
@@ -54,7 +54,7 @@
       "subMenuCustomerHistory": "سجل العملاء",
       "subMenuBusinessSettings": "إعدادات النشاط التجاري",
       "subMenuCustomerBookings": "حجوزات العملاء",
-      "subMenuBookingsCalendarView": "عرض الحجوزات في التقويم"
+      "subMenuBookingsCalendarView": "عرض تقويم الحجوزات"
     }
   },
   "pageTitle": {
@@ -74,7 +74,7 @@
     "createCustomer": "إنشاء عميل",
     "updateCustomer": "تحديث العميل",
     "customerDetails": "تفاصيل العميل",
-    "customerHistory": "سجل العملاء",
+    "customerHistory": "سجل العميل",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -111,27 +111,8 @@
       "status": "الحالة",
       "actions": "{{ common.actions }}"
     },
-    "createService": {
+    "createUpdateService": {
       "createServiceTitle": "إنشاء خدمة",
-      "serviceName": "اسم الخدمة",
-      "enterServiceName": "أدخل اسم الخدمة",
-      "category": "الفئة",
-      "duration": "المدة",
-      "selectDuration": "اختر المدة",
-      "selectCategory": "اختر الفئة",
-      "price": "السعر",
-      "enterPrice": "أدخل السعر",
-      "gender": "الجنس",
-      "selectGender": "اختر الجنس",
-      "status": "الحالة",
-      "selectStatus": "اختر الحالة",
-      "description": "الوصف",
-      "enterDescription": "أدخل الوصف",
-      "mins": "{{ common.mins }}",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateService": {
       "updateServiceTitle": "تحديث الخدمة",
       "serviceDetails": "تفاصيل الخدمة",
       "serviceName": "اسم الخدمة",
@@ -150,6 +131,7 @@
       "enterDescription": "أدخل الوصف",
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -166,18 +148,8 @@
       "updatedAt": "تاريخ التحديث",
       "actions": "{{ common.actions }}"
     },
-    "createCategory": {
+    "createUpdateCategory": {
       "createCategoryTitle": "إنشاء فئة",
-      "categoryName": "اسم الفئة",
-      "enterCategoryName": "أدخل اسم الفئة",
-      "status": "الحالة",
-      "selectStatus": "اختر الحالة",
-      "description": "الوصف",
-      "enterDescription": "أدخل الوصف",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCategory": {
       "updateCategoryTitle": "تحديث الفئة",
       "categoryDetails": "تفاصيل الفئة",
       "categoryName": "اسم الفئة",
@@ -187,6 +159,7 @@
       "description": "الوصف",
       "enterDescription": "أدخل الوصف",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -210,28 +183,8 @@
       "status": "الحالة",
       "actions": "{{ common.actions }}"
     },
-    "createCustomer": {
+    "createUpdateCustomer": {
       "createCustomerTitle": "إنشاء عميل",
-      "firstName": "الاسم الأول",
-      "enterFirstName": "أدخل الاسم الأول",
-      "lastName": "اسم العائلة",
-      "enterLastName": "أدخل اسم العائلة",
-      "email": "البريد الإلكتروني",
-      "enterEmail": "أدخل البريد الإلكتروني",
-      "whatsappNumber": "رقم واتساب",
-      "enterWhatsAppNo": "أدخل رقم واتساب",
-      "gender": "الجنس",
-      "selectGender": "اختر الجنس",
-      "dateOfBirth": "تاريخ الميلاد",
-      "selectDateOfBirth": "اختر تاريخ الميلاد",
-      "status": "الحالة",
-      "selectStatus": "اختر الحالة",
-      "notes": "ملاحظات",
-      "enterNotes": "أدخل الملاحظات",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCustomer": {
       "updateCustomerTitle": "تحديث العميل",
       "customerDetails": "تفاصيل العميل",
       "firstName": "الاسم الأول",
@@ -242,15 +195,17 @@
       "enterEmail": "أدخل البريد الإلكتروني",
       "whatsappNumber": "رقم واتساب",
       "enterWhatsAppNo": "أدخل رقم واتساب",
+      "mobileNumberInvalid": "رقم الهاتف المحمول غير صالح",
       "gender": "الجنس",
       "selectGender": "اختر الجنس",
       "dateOfBirth": "تاريخ الميلاد",
-      "selectDOB": "اختر تاريخ الميلاد",
+      "selectDateOfBirth": "اختر تاريخ الميلاد",
       "status": "الحالة",
       "selectStatus": "اختر الحالة",
       "notes": "ملاحظات",
       "enterNotes": "أدخل الملاحظات",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -263,7 +218,7 @@
     },
     "actionsLinkCell": {
       "acknowledgmentLinkLabel": "نموذج الإقرار",
-      "transferLinkLabel": "نموذج التحويل",
+      "transferLinkLabel": "نموذج النقل",
       "returnLinkLabel": "نموذج الإرجاع"
     },
     "statusCell": {
@@ -279,8 +234,8 @@
   "formError": {
     "required": "هذا الحقل مطلوب",
     "email": "عنوان البريد الإلكتروني غير صالح",
-    "minlength": "الحد الأدنى المسموح به لعدد الأحرف هو {{ _value }}",
-    "maxlength": "الحد الأقصى المسموح به لعدد الأحرف هو {{ _value }}",
+    "minlength": "الحد الأدنى المسموح به هو {{ _value }} حرفًا",
+    "maxlength": "الحد الأقصى المسموح به هو {{ _value }} حرفًا",
     "passwordMinLength": "يجب أن تتكون كلمة المرور من {{ _val }} أحرف على الأقل",
     "passwordUppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
     "passwordLowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
@@ -290,8 +245,8 @@
     "maxFileSize": "يجب ألا يتجاوز حجم الملف {{ _value }} ميجابايت",
     "minValue": "الحد الأدنى للقيمة المسموح بها: {{_value}}",
     "maxValue": "الحد الأقصى للقيمة المسموح بها: {{_value}}",
-    "pattern": "يجب أن يكون الحقل صالحًا",
-    "minimumAge": "يجب أن يكون العمر {{_value}} عامًا على الأقل"
+    "pattern": "يجب أن تكون قيمة الحقل صالحة",
+    "minimumAge": "الحد الأدنى للعمر المطلوب هو {{_value}} سنة"
   },
   "footer": {
     "footerText": "{{ _value }} جميع الحقوق محفوظة لنظام إدارة الصالون"
@@ -310,11 +265,17 @@
     "yes": "{{ common.yes }}",
     "no": "{{ common.no }}",
     "areYouSure": "هل أنت متأكد؟",
-    "areYouSureMessage": "بمجرد إكمال هذه العملية، لا يمكن التراجع عنها.",
+    "areYouSureMessage": "بمجرد إتمام هذا الإجراء، لا يمكن التراجع عنه.",
     "servicesCrud": {
-      "newServiceCreationSuccessMsg": "لقد قمت بإنشاء الخدمة {{ _value }}.",
-      "newServiceUpdateSuccessMsg": "لقد قمت بتحديث الخدمة {{ _value }}.",
+      "newServiceCreationSuccessMsg": "تم إنشاء الخدمة {{ _value }} بنجاح.",
+      "newServiceUpdateSuccessMsg": "تم تحديث الخدمة {{ _value }} بنجاح.",
       "serviceDeleteSuccessMsg": "تم حذف الخدمة بنجاح"
     }
+  },
+  "countryCodeInput": {
+    "countryCodeInputPlaceholder": "اختر رمز الدولة"
+  },
+  "singleDatePicker": {
+    "selectDate": "اختر التاريخ"
   }
 }

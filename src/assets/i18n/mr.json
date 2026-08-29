@@ -19,11 +19,11 @@
     "return": "परत करा",
     "seeAll": "सर्व पहा",
     "close": "बंद करा",
-    "noDataAvailable": "कोणताही डेटा उपलब्ध नाही",
+    "noDataAvailable": "डेटा उपलब्ध नाही",
     "filter": "फिल्टर",
-    "export": "निर्यात करा",
+    "export": "एक्सपोर्ट",
     "search": "शोधा",
-    "clear": "पुसून टाका",
+    "clear": "साफ करा",
     "before": "पूर्वी",
     "after": "नंतर",
     "range": "श्रेणी",
@@ -36,7 +36,7 @@
     "actions": "कृती",
     "male": "पुरुष",
     "female": "महिला",
-    "unisex": "युनिसेक्स"
+    "unisex": "सर्वांसाठी"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -51,7 +51,7 @@
     "logout": "लॉगआउट",
     "subMenus": {
       "subMenuAllCustomers": "सर्व ग्राहक",
-      "subMenuCustomerHistory": "ग्राहकांचा इतिहास",
+      "subMenuCustomerHistory": "ग्राहक इतिहास",
       "subMenuBusinessSettings": "व्यवसाय सेटिंग्ज",
       "subMenuCustomerBookings": "ग्राहक बुकिंग",
       "subMenuBookingsCalendarView": "बुकिंग कॅलेंडर दृश्य"
@@ -65,23 +65,23 @@
     "services": "सेवा",
     "createService": "सेवा तयार करा",
     "updateService": "सेवा अपडेट करा",
-    "serviceDetails": "सेवेचे तपशील",
-    "categories": "श्रेणी",
+    "serviceDetails": "सेवेचा तपशील",
+    "categories": "श्रेण्या",
     "createCategory": "श्रेणी तयार करा",
     "updateCategory": "श्रेणी अपडेट करा",
-    "categoryDetails": "श्रेणीचे तपशील",
+    "categoryDetails": "श्रेणीचा तपशील",
     "customers": "ग्राहक",
     "createCustomer": "ग्राहक तयार करा",
     "updateCustomer": "ग्राहक अपडेट करा",
-    "customerDetails": "ग्राहकांचे तपशील",
-    "customerHistory": "ग्राहकांचा इतिहास",
+    "customerDetails": "ग्राहकाचा तपशील",
+    "customerHistory": "ग्राहक इतिहास",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
     "email": "ईमेल",
     "exampleEmail": "Example@email.com",
     "password": "पासवर्ड",
-    "passwordGuide": "किमान ८ अक्षरे",
+    "passwordGuide": "किमान 8 अक्षरे",
     "forgotPassword": "पासवर्ड विसरलात?",
     "login": "लॉगिन",
     "firstName": "पहिले नाव",
@@ -103,7 +103,7 @@
     "createServiceBtnLabel": "सेवा तयार करा",
     "noDataAvailable": "{{ common.noDataAvailable }}",
     "header": {
-      "id": "क्रमांक",
+      "id": "ID",
       "name": "नाव",
       "categoryName": "श्रेणीचे नाव",
       "durationInMinutes": "कालावधी (मिनिटे)",
@@ -111,29 +111,10 @@
       "status": "स्थिती",
       "actions": "{{ common.actions }}"
     },
-    "createService": {
+    "createUpdateService": {
       "createServiceTitle": "सेवा तयार करा",
-      "serviceName": "सेवेचे नाव",
-      "enterServiceName": "सेवेचे नाव प्रविष्ट करा",
-      "category": "श्रेणी",
-      "duration": "कालावधी",
-      "selectDuration": "कालावधी निवडा",
-      "selectCategory": "श्रेणी निवडा",
-      "price": "किंमत",
-      "enterPrice": "किंमत प्रविष्ट करा",
-      "gender": "लिंग",
-      "selectGender": "लिंग निवडा",
-      "status": "स्थिती",
-      "selectStatus": "स्थिती निवडा",
-      "description": "वर्णन",
-      "enterDescription": "वर्णन प्रविष्ट करा",
-      "mins": "{{ common.mins }}",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateService": {
       "updateServiceTitle": "सेवा अपडेट करा",
-      "serviceDetails": "सेवेचे तपशील",
+      "serviceDetails": "सेवेचा तपशील",
       "serviceName": "सेवेचे नाव",
       "enterServiceName": "सेवेचे नाव प्रविष्ट करा",
       "category": "श्रेणी",
@@ -150,15 +131,16 @@
       "enterDescription": "वर्णन प्रविष्ट करा",
       "mins": "{{ common.mins }}",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
   "categories": {
-    "title": "सर्व श्रेणी",
+    "title": "सर्व श्रेण्या",
     "createCategoryBtnLabel": "श्रेणी तयार करा",
     "noDataAvailable": "{{ common.noDataAvailable }}",
     "header": {
-      "id": "क्रमांक",
+      "id": "ID",
       "name": "नाव",
       "servicesCount": "सेवांची संख्या",
       "status": "स्थिती",
@@ -166,20 +148,10 @@
       "updatedAt": "अपडेट केल्याची तारीख",
       "actions": "{{ common.actions }}"
     },
-    "createCategory": {
+    "createUpdateCategory": {
       "createCategoryTitle": "श्रेणी तयार करा",
-      "categoryName": "श्रेणीचे नाव",
-      "enterCategoryName": "श्रेणीचे नाव प्रविष्ट करा",
-      "status": "स्थिती",
-      "selectStatus": "स्थिती निवडा",
-      "description": "वर्णन",
-      "enterDescription": "वर्णन प्रविष्ट करा",
-      "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCategory": {
       "updateCategoryTitle": "श्रेणी अपडेट करा",
-      "categoryDetails": "श्रेणीचे तपशील",
+      "categoryDetails": "श्रेणीचा तपशील",
       "categoryName": "श्रेणीचे नाव",
       "enterCategoryName": "श्रेणीचे नाव प्रविष्ट करा",
       "status": "स्थिती",
@@ -187,6 +159,7 @@
       "description": "वर्णन",
       "enterDescription": "वर्णन प्रविष्ट करा",
       "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -198,20 +171,22 @@
     "female": "{{ common.female }}",
     "unisex": "{{ common.unisex }}",
     "header": {
-      "id": "क्रमांक",
+      "id": "ID",
       "name": "नाव",
       "whatsappNumber": "WhatsApp क्रमांक",
       "gender": "लिंग",
       "bookings": "बुकिंग",
       "totalSpent": "एकूण खर्च",
-      "lastVisitAt": "शेवटची भेट",
+      "lastVisitAt": "शेवटच्या भेटीची तारीख",
       "createdAt": "तयार केल्याची तारीख",
       "updatedAt": "अपडेट केल्याची तारीख",
       "status": "स्थिती",
       "actions": "{{ common.actions }}"
     },
-    "createCustomer": {
+    "createUpdateCustomer": {
       "createCustomerTitle": "ग्राहक तयार करा",
+      "updateCustomerTitle": "ग्राहक अपडेट करा",
+      "customerDetails": "ग्राहकाचा तपशील",
       "firstName": "पहिले नाव",
       "enterFirstName": "पहिले नाव प्रविष्ट करा",
       "lastName": "आडनाव",
@@ -220,37 +195,17 @@
       "enterEmail": "ईमेल प्रविष्ट करा",
       "whatsappNumber": "WhatsApp क्रमांक",
       "enterWhatsAppNo": "WhatsApp क्रमांक प्रविष्ट करा",
+      "mobileNumberInvalid": "अवैध मोबाइल क्रमांक",
       "gender": "लिंग",
       "selectGender": "लिंग निवडा",
       "dateOfBirth": "जन्मतारीख",
       "selectDateOfBirth": "जन्मतारीख निवडा",
       "status": "स्थिती",
       "selectStatus": "स्थिती निवडा",
-      "notes": "टिप्पणी",
-      "enterNotes": "टिप्पणी प्रविष्ट करा",
+      "notes": "नोंदी",
+      "enterNotes": "नोंद प्रविष्ट करा",
       "cancel": "{{ common.cancel }}",
-      "create": "{{ common.create }}"
-    },
-    "updateCustomer": {
-      "updateCustomerTitle": "ग्राहक अपडेट करा",
-      "customerDetails": "ग्राहकांचे तपशील",
-      "firstName": "पहिले नाव",
-      "enterFirstName": "पहिले नाव प्रविष्ट करा",
-      "lastName": "आडनाव",
-      "enterLastName": "आडनाव प्रविष्ट करा",
-      "email": "ईमेल",
-      "enterEmail": "ईमेल प्रविष्ट करा",
-      "whatsappNumber": "WhatsApp क्रमांक",
-      "enterWhatsAppNo": "WhatsApp क्रमांक प्रविष्ट करा",
-      "gender": "लिंग",
-      "selectGender": "लिंग निवडा",
-      "dateOfBirth": "जन्मतारीख",
-      "selectDOB": "जन्मतारीख निवडा",
-      "status": "स्थिती",
-      "selectStatus": "स्थिती निवडा",
-      "notes": "टिप्पणी",
-      "enterNotes": "टिप्पणी प्रविष्ट करा",
-      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
       "update": "{{ common.update }}"
     }
   },
@@ -279,22 +234,22 @@
   "formError": {
     "required": "फील्ड आवश्यक आहे",
     "email": "अवैध ईमेल पत्ता",
-    "minlength": "किमान {{ _value }} अक्षरे आवश्यक आहेत",
-    "maxlength": "कमाल {{ _value }} अक्षरे अनुमत आहेत",
+    "minlength": "किमान अनुमत अक्षरे {{ _value }} आहेत",
+    "maxlength": "कमाल अनुमत अक्षरे {{ _value }} आहेत",
     "passwordMinLength": "पासवर्डमध्ये किमान {{ _val }} अक्षरे असणे आवश्यक आहे",
     "passwordUppercase": "पासवर्डमध्ये किमान एक मोठे अक्षर असणे आवश्यक आहे",
-    "passwordLowercase": "पासवर्डमध्ये किमान एक छोटे अक्षर असणे आवश्यक आहे",
+    "passwordLowercase": "पासवर्डमध्ये किमान एक लहान अक्षर असणे आवश्यक आहे",
     "passwordNumber": "पासवर्डमध्ये किमान एक अंक असणे आवश्यक आहे",
-    "passwordSpecialChar": "पासवर्डमध्ये किमान एक विशेष अक्षर असणे आवश्यक आहे",
+    "passwordSpecialChar": "पासवर्डमध्ये किमान एक विशेष चिन्ह असणे आवश्यक आहे",
     "requiredFileType": "अनुमत फाइल प्रकार: {{ _value }}",
-    "maxFileSize": "कमाल फाइल आकार {{ _value }} MB असावा",
+    "maxFileSize": "फाइलचा कमाल आकार {{ _value }} MB असावा",
     "minValue": "किमान अनुमत मूल्य: {{_value}}",
     "maxValue": "कमाल अनुमत मूल्य: {{_value}}",
     "pattern": "फील्ड वैध असणे आवश्यक आहे",
     "minimumAge": "किमान {{_value}} वर्षे वय आवश्यक आहे"
   },
   "footer": {
-    "footerText": "{{ _value }} Salon CRM सर्व हक्क राखीव"
+    "footerText": "{{ _value }} सलून CRM सर्व हक्क राखीव"
   },
   "modal": {
     "defaultErrorTitle": "त्रुटी",
@@ -312,9 +267,15 @@
     "areYouSure": "तुम्हाला खात्री आहे का?",
     "areYouSureMessage": "एकदा पूर्ण केल्यानंतर ही कृती पूर्ववत करता येणार नाही.",
     "servicesCrud": {
-      "newServiceCreationSuccessMsg": "तुम्ही {{ _value }} ही सेवा तयार केली आहे.",
-      "newServiceUpdateSuccessMsg": "तुम्ही {{ _value }} ही सेवा अपडेट केली आहे.",
+      "newServiceCreationSuccessMsg": "तुम्ही {{ _value }} ही सेवा यशस्वीरित्या तयार केली आहे.",
+      "newServiceUpdateSuccessMsg": "तुम्ही {{ _value }} ही सेवा यशस्वीरित्या अपडेट केली आहे.",
       "serviceDeleteSuccessMsg": "सेवा यशस्वीरित्या हटवली"
     }
+  },
+  "countryCodeInput": {
+    "countryCodeInputPlaceholder": "कोड निवडा"
+  },
+  "singleDatePicker": {
+    "selectDate": "तारीख निवडा"
   }
 }

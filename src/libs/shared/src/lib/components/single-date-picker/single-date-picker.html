@@ -1,0 +1,33 @@
+<ng-container *transloco="let t; prefix: 'singleDatePicker'">
+
+  <div class="date-input-wrapper position-relative">
+
+    <input
+      #datePickerInput="ngbDatepicker"
+      ngbDatepicker
+      type="text"
+      class="form-control"
+      [placeholder]="t(placeholder())"
+      [minDate]="minDate()!"
+      [maxDate]="maxDate()!"
+      [disabled]="disabled"
+      readonly
+      (click)="open()"
+      (dateSelect)="selectDate($event)"
+    />
+
+    <div class="align-cal-icon">
+      <button
+        type="button"
+        class="btn p-2 m-0 border-0"
+        [disabled]="disabled"
+        [attr.aria-label]="t('selectDate')"
+        (click)="open()"
+      >
+        <shared-calendar-svg />
+      </button>
+    </div>
+
+  </div>
+
+</ng-container>

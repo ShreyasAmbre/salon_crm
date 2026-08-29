@@ -48,3 +48,19 @@ export function appendUtcSuffix(date: string): string {
 
   return date.endsWith('Z') ? date : date + 'Z';
 }
+
+export const ngbDateToISOString = (ngbDate: NgbDateStruct | null): string | null => {
+  if (!ngbDate)  return null;
+
+  return ngbDateToDateUTC(ngbDate).toISOString();
+};
+
+export const isoStringToNgbDate = (value: string | null,): NgbDateStruct | null => {
+  if (!value) return null;
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return null;
+
+  return dateToNgbDateUTC(date);
+};

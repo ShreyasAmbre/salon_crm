@@ -1,4 +1,4 @@
-<ng-container *transloco="let t; prefix: 'customers.createCustomer'">
+<ng-container *transloco="let t; prefix: 'customers.createUpdateCustomer'">
   <div class="section-wrapper">
     <div class="section-title-wrapper pt-2 pb-4">
       <span class="fs-6x section-title">{{ t('createCustomerTitle') }}</span>
@@ -54,6 +54,16 @@
                     [dropSpecialCharacters]="true"
                     formControlName="whatsAppNo"
                   />
+                  <div class="invalid-feedback d-block">
+                    @if (f.whatsAppNo.touched || f.whatsAppNo.dirty) {
+                      @if (f.whatsAppNo.hasError('required')) {
+                        {{ 'formError.required' | transloco }}
+                      }
+                      @if (f.whatsAppNo.hasError('pattern')) {
+                        {{ t('mobileNumberInvalid') }}
+                      }
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,7 +84,7 @@
               </div>
             </div>
 
-            <!-- TODO: ngxDaterangepickerBootstrap - UI bug present in below code -->
+            <!-- TODO: ngxDateRangePickerBootstrap - UI bug present in below code so used ngb-date-picker -->
             <!-- <div class="col-12 col-md-6">
               <label
                 class="form-label"
@@ -115,30 +125,11 @@
                 }
               </div>
             </div> -->
-
-
             <div class="col-12 col-md-6">
               <label class="form-label" for="dateOfBirth" sharedRequiredStar>
                 {{ t('dateOfBirth') }}
               </label>
-              <div class="date-input-wrapper position-relative">
-                <input
-                  class="form-control"
-                  name="dateOfBirth"
-                  formControlName="dateOfBirth"
-                  placeholder="{{ t('selectDateOfBirth') }}"
-                  ngbDatepicker
-                  #dateOfBirth="ngbDatepicker"
-                  (click)="dateOfBirth.open()"
-                  readonly
-                  [placement]="'top-end'"
-                />
-                <div class="align-cal-icon">
-                  <button class="btn p-2 m-0 border-0" (click)="dateOfBirth.open()">
-                    <shared-calendar-svg />
-                  </button>
-                </div>
-              </div>
+              <shared-single-date-picker formControlName="dateOfBirth" />
               <div class="invalid-feedback d-block">
                 @if (f.dateOfBirth.touched || f.dateOfBirth.dirty) {
                   @if (f.dateOfBirth.hasError('required')) {
@@ -147,8 +138,6 @@
                 }
               </div>
             </div>
-
-
 
             <div class="col-12 col-md-6">
               <label class="form-label" for="gender" sharedRequiredStar>
