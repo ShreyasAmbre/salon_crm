@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LookupService, StatusLookup, GenderLookup, NationalityLookup } from '@salon-crm/core';
-import { RequiredStarDirective, CountryCodeSelect, LanguageService, SHARED_PATTERNS } from '@salon-crm/shared';
+import { RequiredStarDirective, CountryCodeSelect, LanguageService, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 import { injectRouteData } from 'ngxtension/inject-route-data';
 import { CustomerDetails } from '../data-access';
@@ -19,7 +19,8 @@ import { CustomerDetails } from '../data-access';
     NgSelectModule,
     RequiredStarDirective,
     NgxMaskDirective,
-    CountryCodeSelect
+    CountryCodeSelect,
+    SingleDatePicker,
   ],
   templateUrl: './update-customer.html',
   styleUrl: './update-customer.scss',
@@ -65,6 +66,7 @@ export class UpdateCustomer implements OnInit {
 
   private patchFormValues() {
     const data = this.customerDetails();
+    console.log(data);
     this.form.patchValue({
       firstName: data?.firstName,
       lastName: data?.lastName,

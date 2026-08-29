@@ -11,6 +11,8 @@
       [minDate]="minDate()!"
       [maxDate]="maxDate()!"
       [disabled]="disabled"
+      [(ngModel)]="value"
+      [ngModelOptions]="{ standalone: true }"
       readonly
       (click)="open()"
       (dateSelect)="selectDate($event)"

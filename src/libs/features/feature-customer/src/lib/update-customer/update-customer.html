@@ -1,4 +1,4 @@
-<ng-container *transloco="let t; prefix: 'customers.updateCustomer'">
+<ng-container *transloco="let t; prefix: 'customers.createUpdateCustomer'">
   <div class="section-wrapper">
     @let is_readonly = isReadonly();
     <div class="section-title-wrapper pt-2 pb-4">
@@ -59,6 +59,16 @@
                     [dropSpecialCharacters]="true"
                     formControlName="whatsAppNo"
                   />
+                  <div class="invalid-feedback d-block">
+                    @if (f.whatsAppNo.touched || f.whatsAppNo.dirty) {
+                      @if (f.whatsAppNo.hasError('required')) {
+                        {{ 'formError.required' | transloco }}
+                      }
+                      @if (f.whatsAppNo.hasError('pattern')) {
+                        {{ t('mobileNumberInvalid') }}
+                      }
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -84,7 +94,7 @@
               <label class="form-label" for="dateOfBirth" sharedRequiredStar>
                 {{ t('dateOfBirth') }}
               </label>
-              <input type="text" class="form-control" [placeholder]="t('selectDateOfBirth')" formControlName="dateOfBirth" />
+              <shared-single-date-picker formControlName="dateOfBirth" />
               <div class="invalid-feedback d-block">
                 @if (f.dateOfBirth.touched || f.dateOfBirth.dirty) {
                   @if (f.dateOfBirth.hasError('required')) {
