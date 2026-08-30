@@ -1,101 +1,126 @@
-# SalonCrm
+# Salon CRM Portal
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<img src="src/assets/images/salon_crm_logo.png" alt="Salon CRM Portal logo" width="250">
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+## Project Structure
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-standalone-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+1. Core -
+2. Shared -
+3. Features -
 
-## Run tasks
+- feature-\*
+  Note: Core feature library should not depend on any other library, Shared feature library depend only on Core and Shared and Feature libraries can depend on Core, Shared but not other library only dependent on within itself.
 
-To run the dev server for your app, use:
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server for a specific app:
 
 ```sh
-npx nx serve salon_crm
+npx nx serve
 ```
 
 To create a production bundle:
 
 ```sh
-npx nx build salon_crm
+npx nx build
 ```
 
-To see all available targets to run for a project, run:
+## Required VsCode Extension
 
-```sh
-npx nx show project salon_crm
-```
+1. Angular Language Service
+2. Nx Console
+3. ESLint
+4. Editor Config
+5. Auto Rename Tag (optional)
+6. angular2-switcher (optional)
+7. GitLense (optional)
+8. Code Spell Checker
+9. Material Icon Theme (optional)
+10. px to rem, rpx, vw
+11. Todo Tree (optional)
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/angular:app demo
-```
-
-To generate a new library, use:
-
-```sh
-npx nx g @nx/angular:lib mylib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Set up CI!
-
-### Step 1
-
-To connect to Nx Cloud, run the following command:
-
-```sh
-npx nx connect
-```
-
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
-
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-### Step 2
-
-Use the following command to configure a CI workflow for your workspace:
-
-```sh
-npx nx g ci-workflow
-```
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
+## Nx Console
 
 Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
 
 [Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-## Useful links
+## Nx Workflow
 
-Learn more:
+### Generator Commands
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-standalone-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```sh
+# Library generator (use this to create a new angular library for features, can be achieved with nx console as well)
+# this will create an angular library in the 
+# add other options as needed
+npx nx generate @nx/angular:library --directory=feature-auth --name=feature-auth --routing=true --changeDetection=OnPush --importPath=@salon-crm/features/feature-auth --prefix=auth --skipTests=true --style=scss --tags="type:feature, scope:auth" --no-interactive --dry-run
+```
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Using Nx Console
+
+If you are using Nx Console UI to generate a feature library in VS Code, follow these steps:
+
+1. Right click on the folder inside which you want to create a feature library in folder structure of project.
+2. Select 'Nx Generate' option (Note: This option will be visible only when you installed Nx Console VsCode Extension).
+3. After selection option enter 'Library' in search filed and select '@nx/angular - library - Create Angular Library' option.
+4. Fill in the required fields:
+
+- directory\*: feature-auth
+- name: feature-auth
+- routing: Check this checkbox if required
+- changeDetection: Select OnPush option
+- importPath: @salon-crm/features/feature-auth
+- prefix: auth
+- skipTests: Check this checkbox if not required
+- style: scss
+- tags: type:feature, scope:auth
+- Note: After filling all fields check the output of dry run logs for confirmation in terminal.
+
+5. Click "Generate" to generate the library.
+
+## Branch Organization and Deployment Flow
+
+Our repository follows a structured branching strategy to manage portals and deployment environments. This section describes how branches are organized and used for development and deployment.
+
+### Main Branches
+
+- `development` - Main integration branch for all development work
+- `staging` - Integration branch for staging environment
+- `master` - Production branch
+
+## Internationalization (i18n)
+
+The project uses `@jsverse/transloco` for handling translations. Translation files are stored in JSON format in `assets/i18n` directory.
+
+## Commit Message Guidelines
+
+Each commit message consists of a **header**, a **body**, and a **footer**. The header has a special format that includes a **type**, a **scope**, and a **subject**:
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+### Type
+
+Must be one of the following:
+
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code (formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies (nx, npm)
+- **ci**: Changes to CI configuration files and scripts
+- **chore**: Other changes that don't modify src or test files
+- **fixup**: Fixup commits are used to fix up previous commits. They should be used to fix up previous commits that are not perfect.
+- **revert**: Revert commits are used to revert previous commits. They should be used to revert previous commits that are not perfect.
+
+
