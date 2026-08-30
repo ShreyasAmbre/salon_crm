@@ -9,7 +9,7 @@ export const featureBookingsRoutes: Route[] = [
   {
     path:'allBookings',
     component: AllBookings,
-    title: 'pageTitle.allBookings'
+    title: 'pageTitle.bookings'
   },
   {
     path:'createBooking',
