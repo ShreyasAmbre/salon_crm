@@ -1,3 +1,66 @@
+# name: Deploy Angular to GitHub Pages
+
+# on:
+#   push:
+#     branches:
+#       - master
+#   workflow_dispatch:
+
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
+
+# concurrency:
+#   group: github-pages
+#   cancel-in-progress: true
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 24
+#           cache: npm
+
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Build Angular application
+#         run: npx nx build salon_crm --configuration=production --base-href=/salon_crm/
+
+#       - name: Setup Pages
+#         uses: actions/configure-pages@v5
+
+#       - name: Upload Pages artifact
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: ./dist/salon_crm/browser
+
+#   deploy:
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+
+#     runs-on: ubuntu-latest
+#     needs: build
+
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v4
+
+
+
+
+
+# v2
 name: Deploy Angular to GitHub Pages
 
 on:
@@ -35,6 +98,26 @@ jobs:
       - name: Build Angular application
         run: npx nx build salon_crm --configuration=production --base-href=/salon_crm/
 
+      # GitHub Pages does not natively support Angular SPA routes.
+      # Copy index.html to 404.html so Angular can handle routes
+      # such as /salon_crm/login after a browser refresh.
+      - name: Create SPA fallback
+        run: |
+          cp dist/salon_crm/browser/index.html dist/salon_crm/browser/404.html
+
+      - name: Verify build output
+        run: |
+          echo "Build output:"
+          ls -la dist/salon_crm/browser
+
+          echo ""
+          echo "Base href:"
+          grep -o '<base href="[^"]*"' dist/salon_crm/browser/index.html
+
+          echo ""
+          echo "SPA fallback:"
+          ls -lh dist/salon_crm/browser/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -46,7 +129,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
     needs: build
@@ -55,3 +137,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
