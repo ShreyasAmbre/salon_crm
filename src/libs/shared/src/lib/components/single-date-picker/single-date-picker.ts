@@ -34,7 +34,7 @@ export class SingleDatePicker implements ControlValueAccessor {
   protected value: NgbDateStruct | null = null;
   protected disabled = false;
 
-  private onChange: (value: string | null) => void = () => {};
+  private onChange: (value: string | null) => void = () => { /* empty */ };
   private onTouched!: () => void;
 
   writeValue(value: string | null): void {
