@@ -75,6 +75,10 @@
     "updateCustomer": "Update Customer",
     "customerDetails": "Customer Details",
     "customerHistory": "Customer History",
+    "bookings": "Bookings",
+    "createBooking": "Create Booking",
+    "updateBooking": "Update Booking",
+    "bookingDetails": "Booking Details",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -209,6 +213,24 @@
       "update": "{{ common.update }}"
     }
   },
+  "bookings": {
+    "title": "Bookings",
+    "createBookingBtnLabel": "Create Booking",
+    "noDataAvailable":"{{ common.noDataAvailable }}",
+    "header": {
+      "id": "ID",
+      "customerName": "Customer Name",
+      "customerWhatsappNo": "Customer WhatsApp No.",
+      "serviceName": "Service Name",
+      "categoryName": "Category Name",
+      "bookingDate": "Booking Date",
+      "startTime": "Start Time",
+      "amount": "Amount",
+      "paymentStatus": "Payment Status",
+      "bookingStatus": "Booking Status",
+      "actions": "{{ common.actions }}"
+    }
+  },
   "tanStackTable": {
     "actionsCell": {
       "actions": "Actions",
@@ -223,7 +245,16 @@
     },
     "statusCell": {
       "serviceStatusActive": "{{ common.active }}",
-      "serviceStatusInActive": "{{ common.inactive }}"
+      "serviceStatusInActive": "{{ common.inactive }}",
+      "bookingPaymentStatusPending": "Pending",
+      "bookingPaymentStatusPaid": "Paid",
+      "bookingPaymentStatusPartial": "Partial",
+      "bookingPaymentStatusRefunded": "Refunded",
+      "bookingStatusPending": "Pending",
+      "bookingStatusConfirmed": "Confirmed",
+      "bookingStatusCompleted": "Completed",
+      "bookingStatusCancelled": "Cancelled",
+      "bookingStatusNoShow": "No Show"
     },
     "pagination": {
       "show": "Show",

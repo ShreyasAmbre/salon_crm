@@ -75,6 +75,10 @@
     "updateCustomer": "تحديث العميل",
     "customerDetails": "تفاصيل العميل",
     "customerHistory": "سجل العميل",
+    "bookings": "الحجوزات",
+    "createBooking": "إنشاء حجز",
+    "updateBooking": "تحديث الحجز",
+    "bookingDetails": "تفاصيل الحجز",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -209,6 +213,24 @@
       "update": "{{ common.update }}"
     }
   },
+  "bookings": {
+    "title": "الحجوزات",
+    "createBookingBtnLabel": "إنشاء حجز",
+    "noDataAvailable": "{{ common.noDataAvailable }}",
+    "header": {
+      "id": "المعرّف",
+      "customerName": "اسم العميل",
+      "customerWhatsappNo": "رقم واتساب العميل",
+      "serviceName": "اسم الخدمة",
+      "categoryName": "اسم الفئة",
+      "bookingDate": "تاريخ الحجز",
+      "startTime": "وقت البدء",
+      "amount": "المبلغ",
+      "paymentStatus": "حالة الدفع",
+      "bookingStatus": "حالة الحجز",
+      "actions": "{{ common.actions }}"
+    }
+  },
   "tanStackTable": {
     "actionsCell": {
       "actions": "الإجراءات",
@@ -223,7 +245,16 @@
     },
     "statusCell": {
       "serviceStatusActive": "{{ common.active }}",
-      "serviceStatusInActive": "{{ common.inactive }}"
+      "serviceStatusInActive": "{{ common.inactive }}",
+      "bookingPaymentStatusPending": "قيد الانتظار",
+      "bookingPaymentStatusPaid": "مدفوع",
+      "bookingPaymentStatusPartial": "مدفوع جزئيًا",
+      "bookingPaymentStatusRefunded": "تم استرداده",
+      "bookingStatusPending": "قيد الانتظار",
+      "bookingStatusConfirmed": "مؤكد",
+      "bookingStatusCompleted": "مكتمل",
+      "bookingStatusCancelled": "ملغى",
+      "bookingStatusNoShow": "لم يحضر"
     },
     "pagination": {
       "show": "عرض",

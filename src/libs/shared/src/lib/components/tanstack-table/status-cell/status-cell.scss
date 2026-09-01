@@ -22,6 +22,87 @@
   font-weight: 400;
   font-size: 0.75rem;
   padding: 0.45rem;
-  background-color: #fce5a1;
+  background-color: #f9e6ae;
   color: #ffc107;
+}
+
+.status-pending {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fce5a1;
+  color: #e6ac00;
+}
+
+.status-paid {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #a1e1fc;
+  color: #007bff;
+}
+
+.status-partial {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fcd5a1;
+  color: #ff9900;
+}
+
+.status-refunded {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fca1a1;
+  color: #ff0000;
+}
+
+.booking-status-pending {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fcd5a1;
+  color: #ff9900;
+}
+
+.booking-status-confirmed {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #a1e1fc;
+  color: #007bff;
+}
+
+.booking-status-completed {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #d9ffcd;
+  color: #2ee600;
+}
+
+.booking-status-cancelled {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fca1a1;
+  color: #ff0000;
+}
+
+.booking-status-no-show {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  background-color: #fcd5a1;
+  color: #ff9900;
 }

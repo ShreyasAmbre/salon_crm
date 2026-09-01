@@ -4,7 +4,8 @@ export interface BookingDetails {
   id: number;
 
   customerId: number;
-  customerName: string;
+  customerFirstName: string;
+  customerLastName: string;
   customerWhatsappNo: string;
 
   serviceId: number;
@@ -22,6 +23,9 @@ export interface BookingDetails {
 
   paymentStatus: PaymentStatusTypeInterface;
   bookingStatus: BookingStatusTypeInterface;
+
+  createdAt: string;
+  updatedAt: string;
 
   note?: string;
 }

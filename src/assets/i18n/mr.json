@@ -36,7 +36,7 @@
     "actions": "कृती",
     "male": "पुरुष",
     "female": "महिला",
-    "unisex": "सर्वांसाठी"
+    "unisex": "युनिसेक्स"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -75,6 +75,10 @@
     "updateCustomer": "ग्राहक अपडेट करा",
     "customerDetails": "ग्राहकाचा तपशील",
     "customerHistory": "ग्राहक इतिहास",
+    "bookings": "बुकिंग",
+    "createBooking": "बुकिंग तयार करा",
+    "updateBooking": "बुकिंग अपडेट करा",
+    "bookingDetails": "बुकिंगचा तपशील",
     "suffix": "{{ pageTitle.defaultTitle }}"
   },
   "auth": {
@@ -209,6 +213,24 @@
       "update": "{{ common.update }}"
     }
   },
+  "bookings": {
+    "title": "बुकिंग",
+    "createBookingBtnLabel": "बुकिंग तयार करा",
+    "noDataAvailable": "{{ common.noDataAvailable }}",
+    "header": {
+      "id": "ID",
+      "customerName": "ग्राहकाचे नाव",
+      "customerWhatsappNo": "ग्राहकाचा WhatsApp क्रमांक",
+      "serviceName": "सेवेचे नाव",
+      "categoryName": "श्रेणीचे नाव",
+      "bookingDate": "बुकिंगची तारीख",
+      "startTime": "सुरुवातीची वेळ",
+      "amount": "रक्कम",
+      "paymentStatus": "पेमेंटची स्थिती",
+      "bookingStatus": "बुकिंगची स्थिती",
+      "actions": "{{ common.actions }}"
+    }
+  },
   "tanStackTable": {
     "actionsCell": {
       "actions": "कृती",
@@ -223,7 +245,16 @@
     },
     "statusCell": {
       "serviceStatusActive": "{{ common.active }}",
-      "serviceStatusInActive": "{{ common.inactive }}"
+      "serviceStatusInActive": "{{ common.inactive }}",
+      "bookingPaymentStatusPending": "प्रलंबित",
+      "bookingPaymentStatusPaid": "भरलेले",
+      "bookingPaymentStatusPartial": "अंशतः भरलेले",
+      "bookingPaymentStatusRefunded": "परतावा दिलेला",
+      "bookingStatusPending": "प्रलंबित",
+      "bookingStatusConfirmed": "निश्चित",
+      "bookingStatusCompleted": "पूर्ण",
+      "bookingStatusCancelled": "रद्द केलेले",
+      "bookingStatusNoShow": "उपस्थित राहिले नाही"
     },
     "pagination": {
       "show": "दाखवा",

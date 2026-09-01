@@ -124,3 +124,6 @@ Must be one of the following:
 - **revert**: Revert commits are used to revert previous commits. They should be used to revert previous commits that are not perfect.
 
 
+### Notes To Be Discuss
+- Onboarding Business and Business User Account  
+- Staff module not yet added  

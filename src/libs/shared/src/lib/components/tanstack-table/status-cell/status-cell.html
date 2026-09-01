@@ -13,3 +13,48 @@
         }
       }
     }
+
+    @if (isBookingPaymentStatus()) {
+      @switch (bookingPaymentStatusId()) {
+        @case (bookingPaymentStatusType.PENDING) {
+          <span class="badge status-pending">{{ t('bookingPaymentStatusPending') }}</span>
+        }
+        @case (bookingPaymentStatusType.PAID) {
+          <span class="badge status-paid">{{ t('bookingPaymentStatusPaid') }}</span>
+        }
+        @case (bookingPaymentStatusType.PARTIAL) {
+          <span class="badge status-partial">{{ t('bookingPaymentStatusPartial') }}</span>
+        }
+        @case (bookingPaymentStatusType.REFUNDED) {
+          <span class="badge status-refunded">{{ t('bookingPaymentStatusRefunded') }}</span>
+        }
+        @default {
+          <span class="badge badge-primary">NA</span>
+        }
+      }
+    }
+
+    @if (isBookingStatus()) {
+      @switch (bookingStatusId()) {
+        @case (bookingStatusType.PENDING) {
+          <span class="badge booking-status-pending">{{ t('bookingStatusPending') }}</span>
+        }
+        @case (bookingStatusType.CONFIRMED) {
+          <span class="badge booking-status-confirmed">{{ t('bookingStatusConfirmed') }}</span>
+        }
+        @case (bookingStatusType.COMPLETED) {
+          <span class="badge booking-status-completed">{{ t('bookingStatusCompleted') }}</span>
+        }
+        @case (bookingStatusType.CANCELLED) {
+          <span class="badge booking-status-cancelled">{{ t('bookingStatusCancelled') }}</span>
+        }
+        @case (bookingStatusType.NO_SHOW) {
+          <span class="badge booking-status-no-show">{{ t('bookingStatusNoShow') }}</span>
+        }
+        @default {
+          <span class="badge badge-primary">NA</span>
+        }
+      }
+    }
+  </div>
+</ng-container>
