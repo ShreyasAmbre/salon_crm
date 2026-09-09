@@ -36,7 +36,9 @@
     "actions": "الإجراءات",
     "male": "ذكر",
     "female": "أنثى",
-    "unisex": "للجنسين"
+    "unisex": "للجنسين",
+    "available": "متاح",
+    "notAvailable": "غير متاح"
   },
   "header": {
     "defaultHeader": "مرحبًا",
@@ -229,6 +231,46 @@
       "paymentStatus": "حالة الدفع",
       "bookingStatus": "حالة الحجز",
       "actions": "{{ common.actions }}"
+    },
+    "createUpdateBooking": {
+      "createBookingTitle": "إنشاء حجز",
+      "updateBookingTitle": "تحديث الحجز",
+      "bookingDetails": "تفاصيل الحجز",
+      "customerAvailable": "العميل متاح",
+      "available": "{{ common.available }}",
+      "notAvailable": "{{ common.notAvailable }}",
+      "customerSearch": "بحث عن العميل",
+      "customerDetails": "تفاصيل العميل",
+      "searchCustomer": "البحث عن عميل",
+      "customerFirstName": "الاسم الأول للعميل",
+      "enterCustomerFirstName": "أدخل الاسم الأول",
+      "customerLastName": "اسم العائلة للعميل",
+      "enterCustomerLastName": "أدخل اسم العائلة",
+      "customerEmail": "البريد الإلكتروني للعميل",
+      "enterCustomerEmail": "أدخل البريد الإلكتروني للعميل",
+      "customerWhatsappNumber": "رقم واتساب العميل",
+      "enterCustomerWhatsAppNo": "أدخل رقم واتساب العميل",
+      "appointmentDetails": "تفاصيل الموعد",
+      "service": "الخدمة",
+      "selectService": "اختر الخدمة",
+      "category": "الفئة",
+      "selectCategory": "اختر الفئة",
+      "bookingDate": "تاريخ الحجز",
+      "selectBookingDate": "اختر تاريخ الحجز",
+      "startTime": "وقت البدء",
+      "selectStartTime": "اختر وقت البدء",
+      "endTime": "وقت الانتهاء",
+      "selectEndTime": "اختر وقت الانتهاء",
+      "bookingDetailsSeparationLabel": "تفاصيل الحجز",
+      "bookingStatus": "حالة الحجز",
+      "selectBookingStatus": "اختر حالة الحجز",
+      "paymentStatus": "حالة الدفع",
+      "selectPaymentStatus": "اختر حالة الدفع",
+      "bookingNotes": "ملاحظات الحجز",
+      "enterBookingNotes": "أدخل ملاحظات الحجز",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {
@@ -277,7 +319,8 @@
     "minValue": "الحد الأدنى للقيمة المسموح بها: {{_value}}",
     "maxValue": "الحد الأقصى للقيمة المسموح بها: {{_value}}",
     "pattern": "يجب أن تكون قيمة الحقل صالحة",
-    "minimumAge": "الحد الأدنى للعمر المطلوب هو {{_value}} سنة"
+    "minimumAge": "الحد الأدنى للعمر المطلوب هو {{_value}} سنة",
+    "mobileNumberInvalid": "رقم الهاتف المحمول غير صالح"
   },
   "footer": {
     "footerText": "{{ _value }} جميع الحقوق محفوظة لنظام إدارة الصالون"

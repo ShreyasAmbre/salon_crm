@@ -27,6 +27,7 @@ export const errorTailorConfig: ErrorTailorConfig = {
         min: (error) => service.translate('formError.minValue', { _value: error.min }),
         max: (error) => service.translate('formError.maxValue', { _value: error.max }),
         minimumAge: (error) => service.translate('formError.minimumAge', { _value: error.requiredAge }),
+        mobileNumberInvalid: () => service.translate('formError.mobileNumberInvalid'),
       };
     },
     deps: [TranslocoService],

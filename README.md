@@ -127,3 +127,31 @@ Must be one of the following:
 ### Notes To Be Discuss
 - Onboarding Business and Business User Account  
 - Staff module not yet added  
+
+
+### Developer Notes
+- Create Booking Flow 
+  - Section 1 Customer: 
+    - Input Fields - Customer Name, WhatsApp No, Email (optional)
+    - Note - If customer is present user should able to search & select from the lookup
+    - Note - If customer is new provide above input field to fill in the details 
+  - Section 2 Appointment Details:
+    - Input Fields 
+      - Selection of service using lookup
+      - Auto filled category based on service selection 
+      - Selection of Booking Date
+      - Selection of Start Time
+      - Auto calculation of End Time based on service  
+  - Section 3 Booking Details:
+    - Input Fields
+      - Booking Status (readonly) - PENDING (byDefault), CONFIRMED, COMPLETED, CANCELLED, NO_SHOW
+      - Payment Status (readonly) - PENDING (byDefault), PAID, PARTIAL, REFUNDED    
+      - Notes - Free Input
+- Update Booking Flow
+  - Fields Allowed to Update
+    - Customer Details 
+    - Appointment Details
+    - Note: In Booking Details section 
+      - User is allowed to update Booking Status on those status - PENDING, CONFIRMED
+      - Booking Status are restricted - COMPLETED, CANCELLED, NO_SHOW 
+        - Why? : Need Clarity on Update Flow of Booking Status    

@@ -36,7 +36,9 @@
     "actions": "कृती",
     "male": "पुरुष",
     "female": "महिला",
-    "unisex": "युनिसेक्स"
+    "unisex": "युनिसेक्स",
+    "available": "उपलब्ध",
+    "notAvailable": "उपलब्ध नाही"
   },
   "header": {
     "defaultHeader": "स्वागत आहे",
@@ -229,6 +231,46 @@
       "paymentStatus": "पेमेंटची स्थिती",
       "bookingStatus": "बुकिंगची स्थिती",
       "actions": "{{ common.actions }}"
+    },
+    "createUpdateBooking": {
+      "createBookingTitle": "बुकिंग तयार करा",
+      "updateBookingTitle": "बुकिंग अपडेट करा",
+      "bookingDetails": "बुकिंगचा तपशील",
+      "customerAvailable": "ग्राहक उपलब्ध आहे",
+      "available": "{{ common.available }}",
+      "notAvailable": "{{ common.notAvailable }}",
+      "customerSearch": "ग्राहक शोध",
+      "customerDetails": "ग्राहकाचा तपशील",
+      "searchCustomer": "ग्राहक शोधा",
+      "customerFirstName": "ग्राहकाचे पहिले नाव",
+      "enterCustomerFirstName": "पहिले नाव प्रविष्ट करा",
+      "customerLastName": "ग्राहकाचे आडनाव",
+      "enterCustomerLastName": "आडनाव प्रविष्ट करा",
+      "customerEmail": "ग्राहकाचा ईमेल",
+      "enterCustomerEmail": "ग्राहकाचा ईमेल प्रविष्ट करा",
+      "customerWhatsappNumber": "ग्राहकाचा WhatsApp क्रमांक",
+      "enterCustomerWhatsAppNo": "ग्राहकाचा WhatsApp क्रमांक प्रविष्ट करा",
+      "appointmentDetails": "अपॉइंटमेंटचा तपशील",
+      "service": "सेवा",
+      "selectService": "सेवा निवडा",
+      "category": "श्रेणी",
+      "selectCategory": "श्रेणी निवडा",
+      "bookingDate": "बुकिंगची तारीख",
+      "selectBookingDate": "बुकिंगची तारीख निवडा",
+      "startTime": "सुरुवातीची वेळ",
+      "selectStartTime": "सुरुवातीची वेळ निवडा",
+      "endTime": "समाप्तीची वेळ",
+      "selectEndTime": "समाप्तीची वेळ निवडा",
+      "bookingDetailsSeparationLabel": "बुकिंगचा तपशील",
+      "bookingStatus": "बुकिंगची स्थिती",
+      "selectBookingStatus": "बुकिंगची स्थिती निवडा",
+      "paymentStatus": "पेमेंटची स्थिती",
+      "selectPaymentStatus": "पेमेंटची स्थिती निवडा",
+      "bookingNotes": "बुकिंगच्या नोंदी",
+      "enterBookingNotes": "बुकिंगच्या नोंदी प्रविष्ट करा",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {
@@ -277,7 +319,8 @@
     "minValue": "किमान अनुमत मूल्य: {{_value}}",
     "maxValue": "कमाल अनुमत मूल्य: {{_value}}",
     "pattern": "फील्ड वैध असणे आवश्यक आहे",
-    "minimumAge": "किमान {{_value}} वर्षे वय आवश्यक आहे"
+    "minimumAge": "किमान {{_value}} वर्षे वय आवश्यक आहे",
+    "mobileNumberInvalid": "अवैध मोबाइल क्रमांक"
   },
   "footer": {
     "footerText": "{{ _value }} सलून CRM सर्व हक्क राखीव"

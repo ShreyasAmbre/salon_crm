@@ -36,7 +36,9 @@
     "actions": "Actions",
     "male": "Male",
     "female": "Female",
-    "unisex": "Unisex"
+    "unisex": "Unisex",
+    "available": "Available",
+    "notAvailable": "Not Available"
   },
   "header": {
     "defaultHeader": "Welcome",
@@ -229,6 +231,46 @@
       "paymentStatus": "Payment Status",
       "bookingStatus": "Booking Status",
       "actions": "{{ common.actions }}"
+    },
+    "createUpdateBooking": {
+      "createBookingTitle": "Create Booking",
+      "updateBookingTitle": "Update Booking",
+      "bookingDetails": "Booking Details",
+      "customerAvailable": "Customer Available",
+      "available": "{{ common.available }}",
+      "notAvailable": "{{ common.notAvailable }}",
+      "customerSearch": "Customer Search",
+      "customerDetails" : "Customer Details",
+      "searchCustomer": "Search customer",
+      "customerFirstName": "Customer First Name",
+      "enterCustomerFirstName": "Enter first name",
+      "customerLastName": "Customer Last Name",
+      "enterCustomerLastName": "Enter last name",
+      "customerEmail": "Customer Email",
+      "enterCustomerEmail": "Enter customer email",
+      "customerWhatsappNumber": "Customer WhatsApp No.",
+      "enterCustomerWhatsAppNo": "Enter customer whatsapp no.",
+      "appointmentDetails": "Appointment Details",
+      "service": "Service",
+      "selectService": "Select service",
+      "category": "Category",
+      "selectCategory": "Select category",
+      "bookingDate": "Booking Date",
+      "selectBookingDate": "Select booking date",
+      "startTime": "Start Time",
+      "selectStartTime": "Select start time",
+      "endTime": "End Time",
+      "selectEndTime": "Select end time",
+      "bookingDetailsSeparationLabel": "Booking Details",
+      "bookingStatus": "Booking Status",
+      "selectBookingStatus": "Select booking status",
+      "paymentStatus": "Payment Status",
+      "selectPaymentStatus": "Select payment status",
+      "bookingNotes": "Booking Notes",
+      "enterBookingNotes": "Enter booking notes",
+      "cancel": "{{ common.cancel }}",
+      "create": "{{ common.create }}",
+      "update": "{{ common.update }}"
     }
   },
   "tanStackTable": {
@@ -277,7 +319,8 @@
     "minValue": "Minimum value allowed: {{_value}}",
     "maxValue": "Maximum value allowed: {{_value}}",
     "pattern": "Field should be valid",
-    "minimumAge": "Minimum {{_value}} years of age is required"
+    "minimumAge": "Minimum {{_value}} years of age is required",
+    "mobileNumberInvalid": "Invalid mobile no."
   },
   "footer": {
     "footerText": "{{ _value }} Salon CRM Rights Reserved"

@@ -1,0 +1,79 @@
+:host {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+
+  .section-title-wrapper {
+    .section-title {
+      margin: 5% 0%;
+      font-family: var(--font-primary);
+      font-weight: 600;
+      color: var(--blue-dark-color);
+    }
+  }
+
+  .page-card {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+
+    .form-control,
+    .form-select {
+      height: 3rem;
+    }
+
+    .form-btn {
+      height: 48px;
+      min-width: 11.8rem;
+    }
+
+    .date-input-wrapper {
+      .align-cal-icon {
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0;
+      }
+    }
+  }
+
+  .sub-title {
+    font-size: 1.06rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--black-dark-color);
+  }
+}
+
+.section-separation {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.section-separation::before,
+.section-separation::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.section-separation:not(:empty)::before {
+  margin-inline-end: 15px;
+}
+
+.section-separation:not(:empty)::after {
+  margin-inline-start: 15px;
+}
+

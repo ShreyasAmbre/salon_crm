@@ -1,12 +1,12 @@
 <ng-container *transloco="let t; prefix: 'singleDatePicker'">
 
-  <div class="date-input-wrapper position-relative">
+  <div class="date-input-wrapper">
 
     <input
       #datePickerInput="ngbDatepicker"
       ngbDatepicker
       type="text"
-      class="form-control"
+      class="form-control shared-single-date-picker"
       [placeholder]="t(placeholder())"
       [minDate]="minDate()!"
       [maxDate]="maxDate()!"

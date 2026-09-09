@@ -51,6 +51,10 @@ input.form-control.filter-input:focus-visible {
   outline: none;
 }
 
+input.form-control.shared-single-date-picker {
+  line-height: 0.1rem;
+}
+
 // Below Input Styling is for TanStack Table Checkbox only
 .tanstack-table,
 .tanstack-border-table {
@@ -97,7 +101,7 @@ input.form-control.filter-input:focus-visible {
   gap: 10px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
 }
 
