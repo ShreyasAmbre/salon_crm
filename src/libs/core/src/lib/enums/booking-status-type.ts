@@ -9,10 +9,25 @@ export const BOOKING_STATUS_TYPE = {
 export type BookingStatusTypeInterface =
   (typeof BOOKING_STATUS_TYPE)[keyof typeof BOOKING_STATUS_TYPE];
 
-export const bookingIdMap: Record<string, BookingStatusTypeInterface> = {
-  pending: BOOKING_STATUS_TYPE.PENDING,
-  confirmed: BOOKING_STATUS_TYPE.CONFIRMED,
-  completed: BOOKING_STATUS_TYPE.COMPLETED,
-  cancelled: BOOKING_STATUS_TYPE.CANCELLED,
-  noShow: BOOKING_STATUS_TYPE.NO_SHOW,
+export type BookingStatusName = 'Pending' | 'Confirmed' | 'Completed' | 'Cancelled' | 'NoShow'
+
+export const bookingIdMap: Record<BookingStatusName, BookingStatusTypeInterface> = {
+  Pending: BOOKING_STATUS_TYPE.PENDING,
+  Confirmed: BOOKING_STATUS_TYPE.CONFIRMED,
+  Completed: BOOKING_STATUS_TYPE.COMPLETED,
+  Cancelled: BOOKING_STATUS_TYPE.CANCELLED,
+  NoShow: BOOKING_STATUS_TYPE.NO_SHOW,
 };
+
+export type BookingStatusList = {
+  id: BookingStatusTypeInterface
+  statusName: BookingStatusName
+}
+
+export const bookingStatusList: BookingStatusList[] = [
+  { id: 1, statusName: 'Pending' },
+  { id: 2, statusName: 'Confirmed' },
+  { id: 3, statusName: 'Completed' },
+  { id: 4, statusName: 'Cancelled' },
+  { id: 5, statusName: 'NoShow' },
+]

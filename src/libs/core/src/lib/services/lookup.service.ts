@@ -1,5 +1,5 @@
 import { Service } from '@angular/core';
-import { GENDER_TYPE, SERVICE_STATUS_TYPE } from '../enums';
+import { bookingStatusList, BookingStatusList, GENDER_TYPE, PaymentStatusList, paymentStatusList, SERVICE_STATUS_TYPE } from '../enums';
 import { CategoryDetailsLookup, CustomerLookup, DurationLookup, GenderLookup, NationalityLookup, ServiceLookup, StatusLookup } from '../models';
 
 @Service()
@@ -110,4 +110,6 @@ export class LookupService {
     }
   ];
 
+  readonly bookingStatusLookupList: BookingStatusList[] = bookingStatusList;
+  readonly paymentStatusLookupList: PaymentStatusList[] = paymentStatusList;
 }

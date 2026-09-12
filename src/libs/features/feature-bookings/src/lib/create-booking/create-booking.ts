@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CategoryDetailsLookup, CustomerLookup, LookupService, NationalityLookup, ServiceLookup } from '@salon-crm/core';
+import { BOOKING_STATUS_TYPE, BookingStatusList, CategoryDetailsLookup, CustomerLookup, LookupService, NationalityLookup, PAYMENT_STATUS_TYPE, PaymentStatusList, ServiceLookup } from '@salon-crm/core';
 import { CountryCodeSelect, dateToNgbDate, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
@@ -44,8 +44,8 @@ export class CreateBooking {
   protected readonly categoryList = signal<CategoryDetailsLookup[]>(this.#lookupService.categoryList);
   protected readonly customerList = signal<CustomerLookup[]>(this.#lookupService.customerLookupList);
   protected readonly serviceList = signal<ServiceLookup[]>(this.#lookupService.serviceLookupList);
-  protected readonly bookingStatusList = signal([]);
-  protected readonly paymentStatusList = signal([]);
+  protected readonly bookingStatusList = signal<BookingStatusList[]>(this.#lookupService.bookingStatusLookupList);
+  protected readonly paymentStatusList = signal<PaymentStatusList[]>(this.#lookupService.paymentStatusLookupList);
 
 
   protected readonly form = this.#fb.group({
@@ -63,8 +63,8 @@ export class CreateBooking {
     startTime: [null as NgbTimeStruct | null, [Validators.required]],
     endTime: [null as NgbTimeStruct | null, [Validators.required]],
 
-    bookingStatus: [null as number | null, [Validators.required]],
-    paymentStatus: [null as number | null, [Validators.required]],
+    bookingStatus: [{ value: BOOKING_STATUS_TYPE.PENDING, disabled: true }, [Validators.required]],
+    paymentStatus: [{ value: PAYMENT_STATUS_TYPE.PENDING, disabled: true }, [Validators.required]],
     bookingNotes: [''],
   });
 
