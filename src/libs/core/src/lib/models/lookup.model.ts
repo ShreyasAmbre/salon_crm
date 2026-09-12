@@ -46,3 +46,10 @@ export type CustomerLookup = {
   whatsappNumber: string;
 }
 
+export type ServiceLookup = {
+  id: number;
+  serviceName: string;
+  categoryId: number;
+  categoryName: string;
+}
+

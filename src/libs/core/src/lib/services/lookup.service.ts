@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 import { GENDER_TYPE, SERVICE_STATUS_TYPE } from '../enums';
-import { CategoryDetailsLookup, CustomerLookup, DurationLookup, GenderLookup, NationalityLookup, StatusLookup } from '../models';
+import { CategoryDetailsLookup, CustomerLookup, DurationLookup, GenderLookup, NationalityLookup, ServiceLookup, StatusLookup } from '../models';
 
 @Service()
 export class LookupService {
@@ -93,5 +93,21 @@ export class LookupService {
       email: 'sneha.kulkarni@example.com',
       whatsappNumber: '+91 9890123456',
     },
-  ]
+  ];
+
+  readonly serviceLookupList: ServiceLookup[] = [
+    {
+      id: 1,
+      serviceName: 'Classic Haircut',
+      categoryId: 1,
+      categoryName: 'Hair',
+    },
+    {
+      id: 3,
+      serviceName: 'Beard Trim',
+      categoryId: 2,
+      categoryName: 'Grooming',
+    }
+  ];
+
 }

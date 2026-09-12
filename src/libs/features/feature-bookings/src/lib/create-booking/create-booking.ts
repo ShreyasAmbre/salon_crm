@@ -5,8 +5,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CategoryDetailsLookup, CustomerLookup, LookupService, NationalityLookup } from '@salon-crm/core';
-import { CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
+import { CategoryDetailsLookup, CustomerLookup, LookupService, NationalityLookup, ServiceLookup } from '@salon-crm/core';
+import { CountryCodeSelect, dateToNgbDate, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -38,11 +38,12 @@ export class CreateBooking {
 
   protected isRtl = this.#languageService.isRtl;
   protected currentLanguage = this.#languageService.currentLanguage();
+  readonly minDate = dateToNgbDate(new Date());
 
   protected readonly nationalityList = signal<NationalityLookup[]>(this.#lookupService.nationalityList);
   protected readonly categoryList = signal<CategoryDetailsLookup[]>(this.#lookupService.categoryList);
   protected readonly customerList = signal<CustomerLookup[]>(this.#lookupService.customerLookupList);
-  protected readonly serviceList = signal([]);
+  protected readonly serviceList = signal<ServiceLookup[]>(this.#lookupService.serviceLookupList);
   protected readonly bookingStatusList = signal([]);
   protected readonly paymentStatusList = signal([]);
 
@@ -54,10 +55,10 @@ export class CreateBooking {
     customerLastName: ['', [Validators.required]],
     customerPhoneCode: [{ value: '+91', disabled: true },],
     customerWhatsAppNo: ['', [Validators.required, Validators.pattern(SHARED_PATTERNS.INDIAN_CONTACT_NUMBER)]],
-    customerEmail: ['', [Validators.required, Validators.email]],
+    customerEmail: ['', [Validators.email]],
 
-    service: [null as number | null, [Validators.required]],
-    category: [null as number | null, [Validators.required]],
+    service: [null as ServiceLookup | null, [Validators.required]],
+    category: [{ value: null as number | null, disabled: true }, [Validators.required]],
     bookingDate: ['', [Validators.required]],
     startTime: [null as NgbTimeStruct | null, [Validators.required]],
     endTime: [null as NgbTimeStruct | null, [Validators.required]],
@@ -73,10 +74,12 @@ export class CreateBooking {
 
   isCustomerAvailableInputSignal = toSignal(this.f.isCustomerAvailable.valueChanges, { initialValue: this.f.isCustomerAvailable.value, });
   isCustomerSelected = toSignal(this.f.customerSearch.valueChanges, { initialValue: this.f.customerSearch.value });
+  isServiceSelected = toSignal(this.f.service.valueChanges, { initialValue: this.f.service.value });
 
   formChangesExplicitEffect = explicitEffect(
-    [this.isCustomerAvailableInputSignal, this.isCustomerSelected], (
-    [isCustomerAvailableInputSignal, isCustomerSelected]) => {
+    [this.isCustomerAvailableInputSignal, this.isCustomerSelected, this.isServiceSelected], (
+    [isCustomerAvailableInputSignal, isCustomerSelected, isServiceSelected]) => {
+
     const customerFields = [
       this.f.customerFirstName,
       this.f.customerLastName,
@@ -100,8 +103,13 @@ export class CreateBooking {
     }
 
     if(isCustomerSelected){
-      console.log(isCustomerSelected);
       this.patchSelectedCustomerDetails();
+    }
+
+    if(isServiceSelected){
+      console.log(isServiceSelected);
+
+      this.f.category.setValue(isServiceSelected.categoryId)
     }
   });
 

@@ -27,9 +27,9 @@ import { TranslocoModule } from '@jsverse/transloco';
 export class SingleDatePicker implements ControlValueAccessor {
   datePickerInput = viewChild<NgbInputDatepicker>('datePickerInput');
 
-  protected readonly placeholder = input<string>('selectDate');
-  protected readonly minDate = input<NgbDateStruct>();
-  protected readonly maxDate = input<NgbDateStruct>();
+  readonly placeholder = input<string>('selectDate');
+  readonly minDate = input<NgbDateStruct>();
+  readonly maxDate = input<NgbDateStruct>();
 
   protected value: NgbDateStruct | null = null;
   protected disabled = false;

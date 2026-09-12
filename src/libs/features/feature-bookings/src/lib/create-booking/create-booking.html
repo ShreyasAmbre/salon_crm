@@ -153,8 +153,7 @@
               [items]="serviceList()"
               formControlName="service"
               [placeholder]="t('selectService')"
-              bindLabel="name"
-              bindValue="id"
+              bindLabel="serviceName"
             />
             <div class="invalid-feedback d-block">
               @if (f.service.touched || f.service.dirty) {
@@ -190,7 +189,7 @@
             <label class="form-label" for="bookingDate" sharedRequiredStar>
               {{ t('bookingDate') }}
             </label>
-            <shared-single-date-picker formControlName="bookingDate" />
+            <shared-single-date-picker formControlName="bookingDate" [minDate]="minDate" />
             <div class="invalid-feedback d-block">
               @if (f.bookingDate.touched || f.bookingDate.dirty) {
                 @if (f.bookingDate.hasError('required')) {
