@@ -5,10 +5,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslocoModule } from '@jsverse/transloco';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CategoryDetailsLookup, LookupService, NationalityLookup } from '@salon-crm/core';
+import { CategoryDetailsLookup, CustomerLookup, LookupService, NationalityLookup } from '@salon-crm/core';
 import { CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
 import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { explicitEffect } from 'ngxtension/explicit-effect';
+
 @Component({
   selector: 'bookings-create-booking',
   imports: [
@@ -38,7 +41,7 @@ export class CreateBooking {
 
   protected readonly nationalityList = signal<NationalityLookup[]>(this.#lookupService.nationalityList);
   protected readonly categoryList = signal<CategoryDetailsLookup[]>(this.#lookupService.categoryList);
-  protected readonly customerList = signal([]);
+  protected readonly customerList = signal<CustomerLookup[]>(this.#lookupService.customerLookupList);
   protected readonly serviceList = signal([]);
   protected readonly bookingStatusList = signal([]);
   protected readonly paymentStatusList = signal([]);
@@ -46,7 +49,7 @@ export class CreateBooking {
 
   protected readonly form = this.#fb.group({
     isCustomerAvailable: [false, [Validators.required]],
-    customerSearch: [null as number | null, [Validators.required]],
+    customerSearch: [null as CustomerLookup | null, [Validators.required]],
     customerFirstName: ['', [Validators.required]],
     customerLastName: ['', [Validators.required]],
     customerPhoneCode: [{ value: '+91', disabled: true },],
@@ -68,6 +71,40 @@ export class CreateBooking {
     return this.form.controls
   }
 
+  isCustomerAvailableInputSignal = toSignal(this.f.isCustomerAvailable.valueChanges, { initialValue: this.f.isCustomerAvailable.value, });
+  isCustomerSelected = toSignal(this.f.customerSearch.valueChanges, { initialValue: this.f.customerSearch.value });
+
+  formChangesExplicitEffect = explicitEffect(
+    [this.isCustomerAvailableInputSignal, this.isCustomerSelected], (
+    [isCustomerAvailableInputSignal, isCustomerSelected]) => {
+    const customerFields = [
+      this.f.customerFirstName,
+      this.f.customerLastName,
+      this.f.customerWhatsAppNo,
+      this.f.customerEmail,
+    ];
+
+    // Note: If customer is available user will select the customer and below field will ne auto filled and disabled.
+    customerFields.forEach((control) => {
+      if (isCustomerAvailableInputSignal) {
+        control.disable({ emitEvent: false });
+      } else {
+        control.enable({ emitEvent: false });
+      }
+    });
+
+    if(isCustomerAvailableInputSignal){
+      this.f.customerSearch.enable({ emitEvent: false });
+    }else {
+      this.f.customerSearch.disable({ emitEvent: false });
+    }
+
+    if(isCustomerSelected){
+      console.log(isCustomerSelected);
+      this.patchSelectedCustomerDetails();
+    }
+  });
+
   protected onSubmitForm() {
     console.log("On Submit");
     this.navigateToList();
@@ -76,6 +113,16 @@ export class CreateBooking {
   protected clearForm() {
     this.form.reset();
     this.navigateToList();
+  }
+
+  private patchSelectedCustomerDetails(){
+    const selectedCustomer = this.isCustomerSelected();
+    this.form.patchValue({
+      customerFirstName: selectedCustomer?.firstName,
+      customerLastName: selectedCustomer?.lastName,
+      customerWhatsAppNo: selectedCustomer?.whatsappNumber,
+      customerEmail: selectedCustomer?.email,
+    });
   }
 
   private navigateToList(){

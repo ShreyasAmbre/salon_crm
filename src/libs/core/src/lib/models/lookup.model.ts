@@ -38,3 +38,11 @@ export type NationalityLookup = {
   isEnabled?: boolean;
 };
 
+export type CustomerLookup = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  whatsappNumber: string;
+}
+

@@ -35,9 +35,19 @@
               [items]="customerList()"
               formControlName="customerSearch"
               [placeholder]="t('searchCustomer')"
-              bindLabel="name"
-              bindValue="id"
-            />
+              bindLabel="firstName">
+              <ng-template ng-option-tmp let-customer="item">
+                <div class="customer-option">
+                  <span class="customer-option__name">
+                    {{ customer.firstName }} {{ customer.lastName }} -
+                  </span>
+
+                  <span class="customer-option__phone">
+                    {{ customer.whatsappNumber }}
+                  </span>
+                </div>
+              </ng-template>
+            </ng-select>
             <div class="invalid-feedback d-block">
               @if (f.customerSearch.touched || f.customerSearch.dirty) {
                 @if (f.customerSearch.hasError('required')) {
