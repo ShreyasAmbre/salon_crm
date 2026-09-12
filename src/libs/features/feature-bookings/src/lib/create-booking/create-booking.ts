@@ -8,7 +8,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { CategoryDetailsLookup, LookupService, NationalityLookup } from '@salon-crm/core';
 import { CountryCodeSelect, LanguageService, RequiredStarDirective, SHARED_PATTERNS, SingleDatePicker } from '@salon-crm/shared';
 import { NgxMaskDirective } from 'ngx-mask';
-
+import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'bookings-create-booking',
   imports: [
@@ -21,6 +21,7 @@ import { NgxMaskDirective } from 'ngx-mask';
     CountryCodeSelect,
     SingleDatePicker,
     FontAwesomeModule,
+    NgbTimepickerModule,
   ],
   templateUrl: './create-booking.html',
   styleUrl: './create-booking.scss',
@@ -55,8 +56,8 @@ export class CreateBooking {
     service: [null as number | null, [Validators.required]],
     category: [null as number | null, [Validators.required]],
     bookingDate: ['', [Validators.required]],
-    startTime: ['', [Validators.required]],
-    endTime: ['', [Validators.required]],
+    startTime: [null as NgbTimeStruct | null, [Validators.required]],
+    endTime: [null as NgbTimeStruct | null, [Validators.required]],
 
     bookingStatus: [null as number | null, [Validators.required]],
     paymentStatus: [null as number | null, [Validators.required]],

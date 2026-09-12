@@ -176,7 +176,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-12">
             <label class="form-label" for="bookingDate" sharedRequiredStar>
               {{ t('bookingDate') }}
             </label>
@@ -184,6 +184,56 @@
             <div class="invalid-feedback d-block">
               @if (f.bookingDate.touched || f.bookingDate.dirty) {
                 @if (f.bookingDate.hasError('required')) {
+                  {{ 'formError.required' | transloco }}
+                }
+              }
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="startTime" sharedRequiredStar>
+              {{ t('startTime') }}
+            </label>
+
+            <div class="time-picker-wrapper">
+              <ngb-timepicker
+                id="startTime"
+                formControlName="startTime"
+                [meridian]="true"
+                [spinners]="true"
+                [seconds]="false"
+                [size]="'small'"
+              />
+            </div>
+
+            <div class="invalid-feedback d-block">
+              @if (f.startTime.touched || f.startTime.dirty) {
+                @if (f.startTime.hasError('required')) {
+                  {{ 'formError.required' | transloco }}
+                }
+              }
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="endTime" sharedRequiredStar>
+              {{ t('endTime') }}
+            </label>
+
+            <div class="time-picker-wrapper">
+              <ngb-timepicker
+                id="endTime"
+                formControlName="endTime"
+                [meridian]="true"
+                [spinners]="true"
+                [seconds]="false"
+                [size]="'small'"
+              />
+            </div>
+
+            <div class="invalid-feedback d-block">
+              @if (f.endTime.touched || f.endTime.dirty) {
+                @if (f.endTime.hasError('required')) {
                   {{ 'formError.required' | transloco }}
                 }
               }
